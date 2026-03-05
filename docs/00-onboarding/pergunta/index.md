@@ -22,6 +22,7 @@ Uma hipótese boa é clara o suficiente para você completar a frase:
 > **Se X, então Y (medido por Z), comparado a W.**
 
 Na forma mais formal, falamos em:
+
 - **Hipótese nula** ($H_0$): não há efeito/diferença no parâmetro definido (efeito = 0).
 - **Hipótese alternativa** ($H_1$): há efeito/diferença (efeito ≠ 0, ou efeito > 0 / < 0, se direcional).
 
@@ -38,6 +39,7 @@ Na forma mais formal, falamos em:
 Com a chegada das “ômicas” e dos ensaios em larga escala, ficou comum uma abordagem mais **data-driven** (agnóstica, exploratória), focada em descoberta de padrões e geração de hipóteses.
 
 No HCI/HCA, você vai usar as duas coisas:
+
 - às vezes uma abordagem mais **clássica** (testando uma hipótese específica)
 - às vezes uma abordagem mais **exploratória**
 - e muitas vezes uma mistura das duas
@@ -52,6 +54,7 @@ Vamos pensar nos experimentos em dois “modos”:
 
 ### Experimentos exploratórios
 Servem para **descobrir padrões**, mapear variabilidade e gerar/refinar hipóteses.
+
 - brilha em: escala, descoberta, geração de hipóteses
 - pode te trair em: confundidores (lote, placa, densidade, tempo, viés de segmentação), múltiplas comparações e overclaim
 
@@ -60,22 +63,24 @@ Servem para **descobrir padrões**, mapear variabilidade e gerar/refinar hipóte
 
 ### Experimentos confirmatórios
 Servem para **testar uma hipótese específica** com:
+
 - endpoint principal (o que você mede)
-- unidade experimental (qual é o n)
+- unidade experimental (qual é o $n$)
 - critérios de QC/exclusão
 - plano de análise
 
 No nosso contexto, *Live Cell Painting* frequentemente entra como **exploratório** (gera hipóteses) e depois você confirma com intervenções mais específicas — ou com um desenho confirmatório dentro do próprio HCI, se o plano estiver bem definido.
 
 ### E os experimentos piloto?
-**Piloto** é outra coisa: geralmente menor escala, etapa de padronização e calibração.
+**Experimento Piloto** é outra coisa: geralmente menor escala, etapa de padronização e calibração.
 Objetivos típicos:
+
 - acertar controles positivos/negativos
 - estimar variabilidade e tamanho de efeito
 - decidir número de poços/placas (n) razoável
 - validar se o ensaio “responde” e se o QC é consistente
 
-Não subestime: experimento confirmatório sem controles bem acertados costuma morrer na praia.
+Não subestime o experimento piloto, sem condições bem determinadas seu experimento costuma morrer na praia.
 
 ---
 
@@ -86,11 +91,12 @@ Outra distinção útil:
 - **Correlacional/observacional:** você observa associações e padrões (sem manipular um fator causal de forma limpa).
 - **Intervencional:** você manipula uma variável (X) de forma controlada para fortalecer inferência causal.
 
-Nós vamos usar correlações o tempo todo (ex.: comparar perfis fenotípicos, avaliar dose–resposta, explorar clusters). Elas são poderosas — e também perigosas (confundidores). Veja exemplos clássicos de correlações espúrias: [Spurious correlations](https://www.tylervigen.com/spurious-correlations).
+Nós vamos usar correlações o tempo todo (ex.: comparar perfis fenotípicos, avaliar dose–resposta, explorar *clusters*). Elas são poderosas — e também perigosas (confundidores). Veja exemplos clássicos de correlações espúrias: [Spurious correlations](https://www.tylervigen.com/spurious-correlations).
 
 Intervenções ajudam quando você precisa sustentar causalidade/MoA:
+
 - dose/tempo bem controlados
-- resgate de fenótipo (recovery)
+- resgate de fenótipo (*recovery*)
 - knockdown/overexpression
 - mudanças controladas de ambiente (soro, matriz, estresse, co-poluentes)
 - randomização/bloqueio (reduz confundidores)
@@ -123,10 +129,12 @@ $$
     *Hope for the best, but plan for the worst.*
 
 Por que diferenciar erros?
+
 1) Para saber **onde agir** para reduzir ruído (mais unidades experimentais? mais medições? melhor calibração?)
 2) Para testar hipóteses corretamente: **o n do teste vem da unidade experimental**, não da quantidade de células/imagens.
 
 Também temos duas ferramentas clássicas para reduzir viés e confundidores:
+
 - **Blocking (bloqueio):** balancear condições dentro de “blocos” (dia, placa, operador)
 - **Blinding (cegamento):** analisar sem saber a condição, quando possível
 
@@ -146,10 +154,11 @@ Para não cair nisso, internalize três conceitos:
     *The sample size is where you randomise.*
 
 Em HCA, é comum:
+
 - unidade experimental = **poço** (tratamento aplicado por poço)
 - unidade observacional = **células/imagens** dentro do poço
 
-Isso implica um ponto crucial: **mais células não aumentam o n experimental** — elas aumentam a precisão da estimativa *dentro* do poço.
+Isso implica um ponto crucial: **mais células não aumentam o $n$ experimental** — elas aumentam a precisão da estimativa *dentro* do poço.
 
 ---
 
@@ -158,7 +167,7 @@ Isso implica um ponto crucial: **mais células não aumentam o n experimental** 
 1) **Hipótese em 2 linhas**  
    Escreva sua hipótese no formato: “Se X, então Y (medido por Z), comparado a W.”
 
-2) **H0/H1 operacional**  
+2) **$H_0$/$H_1$ operacional**  
    Defina $H_0$ e $H_1$ usando uma métrica que você realmente pretende usar (ex.: distância de perfil vs controle, contagem celular, etc.).
 
 3) **Qual é o seu n?**  
