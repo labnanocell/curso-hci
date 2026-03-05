@@ -29,6 +29,6 @@ A pessoa consegue:
 
 ### Tópicos
 
-- [Pergunta científica e operacionalização](pergunta/)
-- [Desenho experimental](desenho-experimental/)
-- [Batch effects](batch-effects/)
+- [Pergunta científica e operacionalização](pergunta/index.md)
+- [Desenho experimental](desenho-experimental/index.md)
+- [Batch effects](batch-effects/index.md)
