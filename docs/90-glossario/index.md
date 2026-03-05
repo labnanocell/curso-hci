@@ -15,299 +15,70 @@
 
 ---
 
-## Capítulo 1
-### Hipótese
+## Capítulo 1 — Pergunta, hipótese e unidades
 
-### Hipótese nula
+> Termos-base para transformar uma pergunta biológica em um teste claro, com unidade correta e interpretação honesta.
 
-### Hipótese alternativa 
+<a id="hipotese"></a>
+**Hipótese**  
+- **Definição:** afirmação **testável** sobre como uma variável (ou condição) afeta um desfecho observado.  
+- **Por que importa no HCA:** define *o que* você vai medir (fenótipo), *como* comparar condições e *qual* evidência conta como suporte.  
+- **Como reconhecer/medir:** consegue ser escrita como “Se X, então Y”, com Y observável (ex.: mudança em perfil fenotípico, contagem celular, intensidade, morfologia).  
+- **Erros comuns:** hipótese vaga (“vai mudar alguma coisa”); confundir objetivo com hipótese; mudar a hipótese depois de ver o resultado.  
+- **Relacionados:** [Hipótese nula](#hipotese-nula), [Hipótese alternativa](#hipotese-alternativa), [Experimentos exploratórios](#experimentos-exploratorios), [Unidade experimental](#unidade-experimental)
 
-### Experimentos Exploratórios
+<a id="hipotese-nula"></a>
+**Hipótese nula (H0)**  
+- **Definição:** modelo “padrão” assumido para teste estatístico, geralmente “**não há diferença/efeito**” entre condições (ou efeito = 0).  
+- **Por que importa no HCA:** ancora a inferência: p-valor e IC respondem “os dados são compatíveis com H0?”; ajuda a evitar conclusões baseadas só em visualizações.  
+- **Como reconhecer/medir:** você consegue formular qual métrica/perfil comparado deveria ser igual sob H0 (ex.: tratamento = controle após normalização).  
+- **Erros comuns:** interpretar “não rejeitar H0” como “provou que não existe efeito”; usar H0 genérica sem definir métrica/unidade.  
+- **Relacionados:** [Hipótese alternativa](#hipotese-alternativa), [Experimentos confirmatórios](#experimentos-confirmatorios), [Unidade observacional](#unidade-observacional)
 
-### Experimentos Confirmatórios 
+<a id="hipotese-alternativa"></a>
+**Hipótese alternativa (H1/Ha)**  
+- **Definição:** hipótese que compete com H0; descreve **que existe efeito/diferença** (direcional ou não).  
+- **Por que importa no HCA:** orienta poder estatístico, escolha de métrica e expectativa de sinal (ex.: aumento/diminuição; mudança de perfil).  
+- **Como reconhecer/medir:** consegue dizer o sentido esperado (quando aplicável) e em qual escala/unidade (poço, placa, experimento).  
+- **Erros comuns:** Ha “flexível demais” (qualquer coisa serve); usar teste unilateral sem justificativa; declarar direcionalidade depois de ver os dados.  
+- **Relacionados:** [Hipótese nula](#hipotese-nula), [Experimentos confirmatórios](#experimentos-confirmatorios), [Unidade experimental](#unidade-experimental)
 
-## A) Termos essenciais (HCA/HCI)
+<a id="experimentos-exploratorios"></a>
+**Experimentos exploratórios**  
+- **Definição:** estudos para **descobrir padrões**, gerar hipóteses e mapear variabilidade; não têm como foco principal “provar” uma hipótese pré-registrada.  
+- **Por que importa no HCA:** HCA é naturalmente rico para exploração (muitas features); exploração bem feita gera hipóteses melhores e evita overclaim.  
+- **Como reconhecer/medir:** múltiplas visualizações, QC/diagnóstico, busca de clusters/assinaturas; perguntas evoluem durante a análise.  
+- **Erros comuns:** tratar exploração como confirmação; testar muitas coisas sem controle e concluir causalidade; não separar claramente o que foi explorado vs confirmado.  
+- **Relacionados:** [Experimentos confirmatórios](#experimentos-confirmatorios), [Hipótese](#hipotese)
 
-### High-Content Imaging (HCI)
-- **Definição:** aquisição automatizada e padronizada de imagens em larga escala (muitos campos/poços/placas), geralmente com microscopia e automação.
-- **Por que importa no HCA:** sem padronização e escala, não há comparabilidade robusta.
-- **Erros comuns:** achar que HCI = HCA; fazer HCI sem metadados completos.
-- **Relacionados:** [[High-Content Analysis (HCA)]], [[Metadados]]
+<a id="experimentos-confirmatorios"></a>
+**Experimentos confirmatórios**  
+- **Definição:** estudos desenhados para **testar uma hipótese específica** com critérios de decisão definidos (métricas, unidade, comparação, regras de exclusão).  
+- **Por que importa no HCA:** evita “p-hacking” e conclusões frágeis; força clareza de unidade experimental e replicação biológica.  
+- **Como reconhecer/medir:** plano explícito: quais condições, qual métrica principal, como normaliza, quantas réplicas, como testa, o que conta como sucesso/fracasso.  
+- **Erros comuns:** confirmar com o mesmo dataset usado para explorar; mudar endpoint/threshold após ver resultados; ignorar batch effects e unidade correta.  
+- **Relacionados:** [Hipótese nula](#hipotese-nula), [Hipótese alternativa](#hipotese-alternativa), [Unidade experimental](#unidade-experimental)
 
-### High-Content Analysis (HCA)
-- **Definição:** extração e análise quantitativa de medidas a partir de imagens (segmentação, features, perfis, estatística/ML).
-- **Por que importa no HCA:** transforma imagem em dado analisável e reprodutível.
-- **Erros comuns:** pular QC; misturar batches sem diagnóstico.
-- **Relacionados:** [[QC]], [[Features]], [[Profiling]]
+<a id="unidade-biologica"></a>
+**Unidade biológica**  
+- **Definição:** a entidade biológica sobre a qual você quer generalizar a conclusão (ex.: **um doador**, uma linhagem, uma cultura independente, um animal).  
+- **Por que importa no HCA:** define o nível em que “replicação biológica” existe; evita confundir repetição técnica com evidência biológica.  
+- **Como reconhecer/medir:** você consegue listar quais repetições são verdadeiramente independentes biologicamente (dias diferentes, passagens diferentes, doadores diferentes).  
+- **Erros comuns:** chamar campos/poços de “replicação biológica”; misturar passagens/dias sem registrar; generalizar além da unidade biológica real.  
+- **Relacionados:** [Unidade experimental](#unidade-experimental), [Unidade observacional](#unidade-observacional)
 
-### Fenótipo (em HCA)
-- **Definição:** padrão mensurável em nível celular/poço (morfologia, textura, intensidade, organização) associado a um estado biológico/perturbação.
-- **Por que importa no HCA:** o objetivo é detectar e comparar fenótipos com rigor.
-- **Erros comuns:** confundir artefato (aquisição/placa) com fenótipo.
-- **Relacionados:** [[Artefato]], [[Batch effect]], [[Controle]]
+<a id="unidade-experimental"></a>
+**Unidade experimental**  
+- **Definição:** menor unidade que pode receber um tratamento **independentemente** (onde a randomização/atribuição acontece).  
+- **Por que importa no HCA:** é a unidade correta para inferência estatística; evita pseudorreplicação (ex.: tratar células individuais como independentes quando o tratamento é por poço).  
+- **Como reconhecer/medir:** pergunte: “o que eu randomizo?” e “o que eu trato separadamente?” — frequentemente é **o poço** (ou a placa) em HCA.  
+- **Erros comuns:** usar célula como unidade quando o tratamento é por poço; ignorar correlação intra-poço; misturar níveis (célula/poço/placa) sem modelo adequado.  
+- **Relacionados:** [Unidade observacional](#unidade-observacional), [Unidade biológica](#unidade-biologica), [Experimentos confirmatórios](#experimentos-confirmatorios)
 
-### Perturbação (perturbation)
-- **Definição:** intervenção experimental (fármaco, siRNA, nanopartícula, condição de meio, etc.) que pode alterar o fenótipo.
-- **Por que importa no HCA:** define a unidade de comparação e a interpretação causal.
-- **Erros comuns:** perturbações mal ancoradas por controles inadequados.
-- **Relacionados:** [[Controles]], [[Desenho experimental]]
-
----
-
-## B) Microscopia e fluorescência
-
-### Resolução
-- **Definição:** capacidade de distinguir dois objetos próximos como distintos.
-- **Por que importa no HCA:** limita o que pode ser segmentado/medido (ex.: organelas pequenas).
-- **Como reconhecer/medir:** perda de detalhes finos; estruturas “fundidas”.
-- **Erros comuns:** aumentar zoom sem melhorar resolução real; ignorar NA e amostragem.
-- **Relacionados:** [[NA (Abertura Numérica)]], [[Nyquist]]
-
-### NA (Abertura Numérica)
-- **Definição:** parâmetro da objetiva relacionado à coleta de luz e resolução.
-- **Por que importa no HCA:** maior NA → melhor resolução e sinal (em geral).
-- **Erros comuns:** comparar datasets com objetivas/NA diferentes como se fossem iguais.
-- **Relacionados:** [[Resolução]], [[SNR]]
-
-### Nyquist (Amostragem de Nyquist)
-- **Definição:** critério para amostrar a imagem (tamanho de pixel efetivo) sem perder informação.
-- **Por que importa no HCA:** subamostragem pode destruir detalhes úteis para segmentação/features.
-- **Erros comuns:** usar binning/pixel size inadequado por conveniência.
-- **Relacionados:** [[Resolução]], [[Binning]]
-
-### SNR (Signal-to-Noise Ratio)
-- **Definição:** relação entre sinal útil e ruído.
-- **Por que importa no HCA:** SNR baixo gera segmentação ruim e features instáveis.
-- **Como reconhecer/medir:** imagem “granulada”, baixa separação objeto/fundo; métricas de ruído.
-- **Erros comuns:** compensar SNR baixo com pós-processamento não rastreável.
-- **Relacionados:** [[Saturação]], [[Background]]
-
-### Saturação
-- **Definição:** pixels no limite máximo do sensor (perda de informação).
-- **Por que importa no HCA:** distorce intensidades e features; pode mascarar fenótipos.
-- **Como reconhecer/medir:** pixels “estourados”; histograma truncado no máximo.
-- **Erros comuns:** “deixar bonito” para figura e reutilizar a mesma aquisição para análise.
-- **Relacionados:** [[Dynamic range]], [[Exposição]]
-
-### Bleed-through / Crosstalk
-- **Definição:** sinal de um fluoróforo vazando para o canal de outro.
-- **Por que importa no HCA:** gera medidas falsas e correlações artificiais entre canais.
-- **Como reconhecer/medir:** estruturas idênticas em canais diferentes sem motivo biológico.
-- **Erros comuns:** ignorar controles single-stain; trocar filtros sem documentar.
-- **Relacionados:** [[Controles]], [[Autofluorescência]]
-
-### Autofluorescência
-- **Definição:** fluorescência intrínseca de células, plástico, meio ou contaminantes.
-- **Por que importa no HCA:** aumenta background e pode simular fenótipos.
-- **Erros comuns:** não medir background do meio/plástico; não considerar espectro.
-- **Relacionados:** [[Background]], [[Bleed-through]]
-
-### Fototoxicidade
-- **Definição:** dano biológico induzido pela luz (especialmente em time-lapse/LCP).
-- **Por que importa no HCA:** cria fenótipos artificiais e altera dinâmica celular.
-- **Como reconhecer/medir:** mudança progressiva com tempo de exposição; morte/blebbing dependente de iluminação.
-- **Erros comuns:** comparar time-lapse com protocolos de iluminação diferentes.
-- **Relacionados:** [[Photobleaching]], [[LCP]]
-
-### Photobleaching
-- **Definição:** perda de fluorescência ao longo do tempo por degradação fotoquímica.
-- **Por que importa no HCA:** distorce séries temporais e medidas de intensidade.
-- **Erros comuns:** interpretar queda de sinal como efeito biológico.
-- **Relacionados:** [[Fototoxicidade]], [[Time-lapse]]
-
----
-
-## C) Ensaios e desenho experimental
-
-### Controle negativo (negcon)
-- **Definição:** condição que representa “baseline” (ex.: células não tratadas, veículo).
-- **Por que importa no HCA:** ancora normalização e interpretação.
-- **Erros comuns:** usar “negcon” inconsistente entre placas; misturar veículos diferentes.
-- **Relacionados:** [[Normalização]], [[Batch effect]]
-
-### Controle positivo (poscon)
-- **Definição:** condição que deve produzir um efeito conhecido (ancora sensibilidade do ensaio).
-- **Por que importa no HCA:** valida que o ensaio “responde” e ajuda QC.
-- **Erros comuns:** poscon fraco/inconsistente; não monitorar potência ao longo do tempo.
-- **Relacionados:** [[QC]], [[Replicação]]
-
-### Replicação biológica vs técnica
-- **Definição:** biológica = experimentos independentes; técnica = repetição dentro do mesmo experimento.
-- **Por que importa no HCA:** define generalização e robustez.
-- **Erros comuns:** tratar replicação técnica como evidência biológica.
-- **Relacionados:** [[Batch effect]], [[Desenho experimental]]
-
-### Randomização
-- **Definição:** distribuição aleatória das condições na placa/ordem de aquisição.
-- **Por que importa no HCA:** reduz viés por posição e fatores sistemáticos.
-- **Erros comuns:** colocar controles sempre nas bordas; blocos grandes por condição.
-- **Relacionados:** [[Efeito de borda]], [[Plate layout]]
-
-### Efeito de borda (edge effect)
-- **Definição:** diferenças sistemáticas em poços da borda (evaporação, temperatura, etc.).
-- **Por que importa no HCA:** cria padrões confundidores.
-- **Como reconhecer/medir:** gradientes por linha/coluna; padrões repetidos em várias placas.
-- **Erros comuns:** ignorar; usar borda para condições críticas.
-- **Relacionados:** [[Batch effect]], [[QC]]
-
-### Plate layout
-- **Definição:** mapeamento de condições/controles em uma placa.
-- **Por que importa no HCA:** influencia batch effects, QC e poder estatístico.
-- **Erros comuns:** layout sem controles distribuídos; não registrar mapa como metadado.
-- **Relacionados:** [[Metadados]], [[Randomização]]
-
----
-
-## D) QC (Controle de Qualidade)
-
-### QC (Quality Control)
-- **Definição:** conjunto de métricas e regras para detectar e excluir dados problemáticos antes da análise.
-- **Por que importa no HCA:** “garbage in, garbage out”.
-- **Como reconhecer/medir:** métricas de foco, saturação, blur, outliers de intensidade, contagem de células.
-- **Erros comuns:** definir thresholds após ver o resultado; excluir sem registrar.
-- **Relacionados:** [[Exclusão]], [[Rastreabilidade]]
-
-### Threshold (limiar)
-- **Definição:** valor de corte para separar objeto/fundo ou decidir exclusões.
-- **Por que importa no HCA:** thresholds mudam segmentação e QC.
-- **Erros comuns:** usar thresholds arbitrários sem evidência; não documentar.
-- **Relacionados:** [[Segmentação]], [[Ilumination correction]]
-
-### Exclusão (exclusion)
-- **Definição:** remoção documentada de imagens/poços/células por critérios pré-definidos.
-- **Por que importa no HCA:** protege contra artefatos e viés, se bem feito.
-- **Erros comuns:** excluir seletivamente para “melhorar resultado”.
-- **Relacionados:** [[Ética e integridade]], [[QC report]]
-
----
-
-## E) Segmentação e features
-
-### Segmentação
-- **Definição:** separar objetos (núcleo, célula, organelas) do fundo e entre si.
-- **Por que importa no HCA:** define as unidades de medida (single-cell).
-- **Erros comuns:** over/under-segmentation; segmentar “célula” quando mede só núcleo.
-- **Relacionados:** [[Over-segmentation]], [[Under-segmentation]]
-
-### Over-segmentation
-- **Definição:** dividir um objeto real em vários.
-- **Sinal típico:** aumento artificial do número de células; objetos pequenos demais.
-- **Relacionados:** [[Segmentação]], [[Watershed]]
-
-### Under-segmentation
-- **Definição:** fundir objetos distintos em um só.
-- **Sinal típico:** objetos grandes demais; contagem baixa e variância estranha.
-- **Relacionados:** [[Segmentação]]
-
-### Features (atributos)
-- **Definição:** medidas numéricas extraídas de objetos/imagens (forma, intensidade, textura, vizinhança).
-- **Por que importa no HCA:** são a base para perfis e ML.
-- **Erros comuns:** usar features instáveis/ruidosas; não filtrar redundância.
-- **Relacionados:** [[Profiling]], [[Normalização]]
-
----
-
-## F) Profiling e análise exploratória
-
-### Perfil fenotípico (profile)
-- **Definição:** vetor de features agregadas e normalizadas representando uma condição (ex.: poço/perturbação).
-- **Por que importa no HCA:** permite comparar tratamentos e detectar assinaturas.
-- **Erros comuns:** comparar perfis sem controles; misturar batches sem correção/diagnóstico.
-- **Relacionados:** [[Normalização]], [[Batch effect]]
-
-### Normalização
-- **Definição:** transformar medidas para torná-las comparáveis (frequentemente em relação ao controle por placa).
-- **Por que importa no HCA:** reduz variação técnica sistemática.
-- **Erros comuns:** normalizar usando informação do teste (leakage); normalizar com controle ruim.
-- **Relacionados:** [[Leakage]], [[Controle negativo]]
-
-### Batch effect
-- **Definição:** variação sistemática não-biológica associada a lote/dia/placa/operador/instrumento.
-- **Por que importa no HCA:** pode dominar o sinal e gerar falsos padrões.
-- **Como reconhecer/medir:** agrupamento por placa/dia em PCA/UMAP; shifts em distribuições.
-- **Erros comuns:** “corrigir” sem diagnosticar; confundir batch com fenótipo real.
-- **Relacionados:** [[Randomização]], [[PCA]], [[UMAP]]
-
-### PCA
-- **Definição:** método linear que reduz dimensionalidade maximizando variância explicada.
-- **Por que importa no HCA:** útil para QC, batch diagnosis e exploração inicial.
-- **Erros comuns:** interpretar PCs como fatores biológicos sem checar controles.
-- **Relacionados:** [[UMAP]], [[Batch effect]]
-
-### UMAP
-- **Definição:** método não-linear de visualização/embedding.
-- **Por que importa no HCA:** bom para padrões globais e clusters exploratórios.
-- **Erros comuns:** tratar como evidência confirmatória; comparar UMAPs com parâmetros diferentes.
-- **Relacionados:** [[PCA]], [[Clustering]]
-
----
-
-## G) Machine Learning (ML) para HCA
-
-### Baseline model
-- **Definição:** modelo simples e robusto usado como referência (ex.: regressão logística, random forest).
-- **Por que importa no HCA:** evita “pular” direto para DL sem necessidade.
-- **Erros comuns:** escolher modelo complexo sem ganho real.
-- **Relacionados:** [[Validação]], [[Overfitting]]
-
-### Split (treino/teste/validação)
-- **Definição:** separação de dados para avaliar generalização.
-- **Por que importa no HCA:** splits errados causam otimismo artificial.
-- **Erros comuns:** split aleatório ignorando placa/batch.
-- **Relacionados:** [[Leakage]], [[Batch effect]]
-
-### Leakage
-- **Definição:** uso indevido de informação do teste no treino (direto ou indireto).
-- **Por que importa no HCA:** infla performance e quebra validade científica.
-- **Erros comuns:** normalizar com estatísticas globais; escolher features olhando o teste.
-- **Relacionados:** [[Normalização]], [[Split]]
-
-### Overfitting
-- **Definição:** modelo aprende padrões específicos do treino e não generaliza.
-- **Sinais:** performance alta no treino e baixa fora; instabilidade entre splits.
-- **Relacionados:** [[Regularização]], [[Validação cruzada]]
-
-### AUROC
-- **Definição:** área sob a curva ROC (discriminação global).
-- **Por que importa no HCA:** métrica comum em classificação (com limites).
-- **Erros comuns:** usar AUROC em classes muito desbalanceadas sem PR/AUPRC.
-- **Relacionados:** [[AUPRC]], [[Confusion matrix]]
-
----
-
-## H) Reprodutibilidade, dados e integridade
-
-### Metadados
-- **Definição:** dados que descrevem os dados (condição, dose, tempo, placa, poço, instrumento, etc.).
-- **Por que importa no HCA:** sem metadados completos, não há rastreabilidade nem análise correta.
-- **Erros comuns:** nomes inconsistentes; unidades misturadas; campos faltantes.
-- **Relacionados:** [[Data dictionary]], [[Ontologias]]
-
-### Data dictionary
-- **Definição:** tabela que define cada campo de metadado (tipo, valores válidos, exemplos).
-- **Por que importa no HCA:** reduz ambiguidade e automatiza validação.
-- **Relacionados:** [[Metadados]]
-
-### Rastreabilidade (traceability)
-- **Definição:** capacidade de reconstruir decisões, parâmetros, versões e exclusões.
-- **Por que importa no HCA:** garante integridade e reprodutibilidade.
-- **Erros comuns:** pipelines/notebooks sem versão; mudanças sem log.
-- **Relacionados:** [[Ética e integridade]], [[Reprodutibilidade]]
-
-### Reprodutibilidade
-- **Definição:** outra pessoa (ou você no futuro) consegue reproduzir resultados com os mesmos dados e código.
-- **Por que importa no HCA:** base para ciência confiável e colaboração.
-- **Erros comuns:** ambientes não travados; notebooks que dependem de ordem manual.
-- **Relacionados:** [[Ambientes Python]], [[Git]], [[README]]
-
-### OME-TIFF
-- **Definição:** formato de imagem que embute metadados padronizados para microscopia.
-- **Por que importa no HCA:** preserva contexto de aquisição e facilita interoperabilidade.
-- **Erros comuns:** perder metadados ao converter formatos.
-- **Relacionados:** [[Metadados]], [[Data management]]
-
-### CSV vs Parquet
-- **Definição:** CSV é texto simples; Parquet é binário colunar e eficiente.
-- **Por que importa no HCA:** performance e tamanho importam em datasets grandes.
-- **Erros comuns:** usar CSV gigante e “travar tudo”; perder tipos/precisão sem perceber.
-- **Relacionados:** [[Performance]], [[Data management]]
+<a id="unidade-observacional"></a>
+**Unidade observacional**  
+- **Definição:** unidade na qual as medidas são registradas (ex.: **célula**, campo, imagem, poço), podendo haver várias por unidade experimental.  
+- **Por que importa no HCA:** HCA tem muita “subamostragem” (milhares de células por poço); você precisa resumir/modelar corretamente sem inflar n artificialmente.  
+- **Como reconhecer/medir:** você consegue dizer “quantas observações por unidade experimental” (ex.: 9 campos/poço, 2.000 células/poço).  
+- **Erros comuns:** reportar n = número de células quando n experimental é número de poços/experimentos; fazer teste estatístico como se tudo fosse independente.  
+- **Relacionados:** [Unidade experimental](#unidade-experimental), [Unidade biológica](#unidade-biologica)
