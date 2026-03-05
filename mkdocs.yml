@@ -1,0 +1,45 @@
+site_name: Curso HCI
+site_description: High-Content Imaging & Analysis — material de consulta
+site_url: https://labnanocell.github.io/curso-hci/
+
+theme:
+  name: material
+  language: pt
+  pallete:
+    - scheme: default
+      primary: custom
+      accent: custom
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.highlight:
+      anchor_linenums: true
+
+plugins:
+  - search
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Início: index.md
+  - Onboarding: 00-onboarding/index.md
+  - Pergunta & hipótese: 01-pergunta-hipotese/index.md
+  - Desenho experimental: 02-desenho-experimental/index.md
+  - Glossário: 90-glossario/index.md
