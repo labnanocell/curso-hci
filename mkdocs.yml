@@ -1,4 +1,4 @@
-site_name: Curso HCI
+site_name: Curso HCI NanoCell
 site_description: High-Content Imaging & Analysis — material de consulta
 site_url: https://labnanocell.github.io/curso-hci/
 
@@ -40,7 +40,9 @@ extra_css:
 
 nav:
   - Início: index.md
-  - Onboarding: 00-onboarding/index.md
-  - Pergunta & hipótese: 01-pergunta-hipotese/index.md
-  - Desenho experimental: 02-desenho-experimental/index.md
+  - Onboarding:
+      - Visão geral: 00-onboarding/index.md
+      - Pergunta científica: 00-onboarding/pergunta/index.md
+      - Desenho experimental: 00-onboarding/desenho-experimental/index.md
+      - Batch effects: 00-onboarding/batch-effects/index.md
   - Glossário: 90-glossario/index.md
