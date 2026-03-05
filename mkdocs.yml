@@ -1,11 +1,11 @@
-site_name: Curso HCI NanoCell
+site_name: Curso HCI
 site_description: High-Content Imaging & Analysis — material de consulta
 site_url: https://labnanocell.github.io/curso-hci/
 
 theme:
   name: material
   language: pt
-  pallete:
+  palette:
     - scheme: default
       primary: custom
       accent: custom
