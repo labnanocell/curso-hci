@@ -10,9 +10,10 @@ theme:
       primary: custom
       accent: custom
   features:
+    # - navigation.instant
     - navigation.tracking
     - navigation.sections
-    - navigation.expand
+    # - navigation.expand
     - navigation.top
     - navigation.indexes
     - search.suggest
