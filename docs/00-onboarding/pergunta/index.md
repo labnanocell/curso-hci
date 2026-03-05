@@ -181,6 +181,5 @@ Isso implica um ponto crucial: **mais células não aumentam o n experimental** 
 
 
 ## Para aprofundar (opcional)
-- Experimental design e pseudorreplicação (Lazic)
-- Batch effects em ensaios de alto conteúdo (conceitos + diagnóstico)
-- Múltiplas comparações e “overclaim” em exploração
+- [What exactly is ‘N’ in cell culture and animal experiments?](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.2005282)
+- [Evaluating batch correction methods for image-based cell profiling](https://www.nature.com/articles/s41467-024-50613-5)
