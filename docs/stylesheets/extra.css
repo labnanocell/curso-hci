@@ -2,3 +2,20 @@
   --md-primary-fg-color: #EE7026;
   --md-accent-fg-color: #EE7026;
 }
+
+/* Logo no header: maior (quase altura da barra) */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 52px;   /* tente 40–52px */
+  width: auto;
+}
+
+/* Remove o título */
+.md-header__title {
+  display: none;
+}
+
+/* Empurra a busca para a direita */
+.md-header__inner {
+  justify-content: space-between;
+}
