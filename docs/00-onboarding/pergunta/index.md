@@ -107,11 +107,11 @@ Intervenções ajudam quando você precisa sustentar causalidade/MoA:
 A ideia central é que o seu resultado observado mistura componentes diferentes:
 
 $$
-\\textbf{Resultado} =
-\\textit{Efeito do tratamento} +
-\\textit{Efeito biológico} +
-\\textit{Efeito técnico} +
-\\textit{Erro}
+\mathbf{Resultado} =
+\mathrm{Efeito\ do\ tratamento} +
+\mathrm{Efeito\ biológico} +
+\mathrm{Efeito\ técnico} +
+\mathrm{Erro}
 $$
 
 - **Efeito do tratamento:** a perturbação de interesse (nanomaterial, dose, tempo, inibidor, etc.)
