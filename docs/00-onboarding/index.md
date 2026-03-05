@@ -27,3 +27,8 @@ A pessoa consegue:
 	1. biologia/microscopia/ensaio e 
 	2. dados/software/ML, convergindo em projetos.
 
+### Tópicos
+
+- [Pergunta científica e operacionalização](pergunta/)
+- [Desenho experimental](desenho-experimental/)
+- [Batch effects](batch-effects/)
