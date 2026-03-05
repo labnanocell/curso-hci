@@ -10,7 +10,6 @@ theme:
       primary: custom
       accent: custom
   features:
-    - navigation.instant
     - navigation.tracking
     - navigation.sections
     - navigation.expand
@@ -37,12 +36,3 @@ plugins:
 
 extra_css:
   - stylesheets/extra.css
-
-nav:
-  - Início: index.md
-  - Onboarding:
-      - Visão geral: 00-onboarding/index.md
-      - Pergunta científica: 00-onboarding/pergunta/index.md
-      - Desenho experimental: 00-onboarding/desenho-experimental/index.md
-      - Batch effects: 00-onboarding/batch-effects/index.md
-  - Glossário: 90-glossario/index.md
