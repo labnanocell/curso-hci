@@ -1,9 +1,3 @@
----
-hide:
-  - navigation
-  - toc
----
-
 # A sua hipótese é o farol do seu projeto
 
 Nos últimos anos o nosso laboratório tem se dedicado a análises de alto conteúdo (*high-content analysis*) em ensaios baseados em imagem (*image-based analysis*). Isso exige que pessoas com formação majoritariamente em biológicas se aventurem por regiões meio “obscuras” como computação, estatística e engenharia de dados.
