@@ -37,3 +37,12 @@ plugins:
 
 extra_css:
   - stylesheets/extra.css
+
+nav:
+  - Início: index.md
+  - Onboarding:
+      - Visão geral: 00-onboarding/index.md
+      - 00.1 Pergunta biológica: 00-onboarding/pergunta/index.md
+      - 00.2 Desenho experimental: 00-onboarding/desenho-experimental/index.md
+      - 00.3 Batch effects: 00-onboarding/batch-effects/index.md
+  - 90 Glossário: 90-glossario/index.md
