@@ -1,4 +1,19 @@
-# A sua hipótese é o farol do seu projeto
+# Da hipótese ao experimento
+
+**Ao final deste módulo, espera-se que você seja capaz de:**
+- formular uma hipótese testável e operacionalizável;
+- distinguir exploração de confirmação e correlação de intervenção;
+- identificar corretamente a unidade experimental e o $n$ do experimento;
+- reconhecer riscos de pseudorreplicação, confundimento e *overclaim*;
+- traduzir a pergunta biológica em um desenho analisável.
+
+**Entregável do módulo**
+- uma hipótese escrita no formato “Se X, então Y (medido por Z), comparado a W”;
+- definição de $H_0$ e $H_1$;
+- identificação da unidade biológica, experimental e observacional;
+- breve classificação do experimento como exploratório, confirmatório ou piloto.
+
+---
 
 Nos últimos anos o nosso laboratório tem se dedicado a análises de alto conteúdo (*high-content analysis*) em ensaios baseados em imagem (*image-based analysis*). Isso exige que pessoas com formação majoritariamente em biológicas se aventurem por regiões meio “obscuras” como computação, estatística e engenharia de dados.
 
@@ -7,6 +22,8 @@ Nessa jornada, é fácil se perder entre códigos, arquivos, planilhas, metadado
 ![Mapa da aventura do HCI/HCA](../../assets/img/hci-aventura-mapa.webp)
 
 **Pergunta → desenho experimental → aquisição → QC → análise → interpretação → comunicação → reprodutibilidade**
+
+Este módulo é o primeiro passo dessa jornada. Nele, vamos revisar conceitos fundamentais para garantir que a pergunta biológica esteja bem formulada e possa ser operacionalizada de forma clara. Isso é essencial para construir um desenho experimental capaz de testar a hipótese proposta, que por sua vez irá orientar a aquisição, o controle de qualidade, a análise das imagens e as demais etapas do projeto.
 
 ---
 
@@ -21,6 +38,8 @@ Uma hipótese boa é clara o suficiente para você completar a frase:
 
 > **Se X, então Y (medido por Z), comparado a W.**
 
+Esse formato já força um primeiro nível de operacionalização da hipótese, porque explicita a perturbação de interesse (X), o desfecho esperado (Y), como ele será medido (Z) e em relação a qual referência ou controle (W).
+
 Na forma mais formal, falamos em:
 
 - **Hipótese nula** ($H_0$): não há efeito/diferença no parâmetro definido (efeito = 0).
@@ -31,6 +50,8 @@ Na forma mais formal, falamos em:
     
     - $H_0$: não há alteração morfológica (diferença = 0) em relação ao controle, dentro da variabilidade esperada  
     - $H_1$: há alteração morfológica (diferença ≠ 0) em relação ao controle
+
+No contexto de HCA/HCI, isso também exige operacionalização: ou seja, traduzir a hipótese em algo que possa ser observado, medido e comparado de forma explícita. Em outras palavras, não basta dizer que “há efeito”; é preciso dizer qual efeito, medido como, em comparação com quê, e em que unidade de análise.
 
 !!! tip "Dica prática"
     Em HCA, quase sempre vale escrever também **como** você vai operacionalizar “alteração”: por exemplo, mudança no **perfil fenotípico** vs controle (distância, separação em embedding, classificador, etc.).
