@@ -1,6 +1,7 @@
 # Da hipótese ao experimento
 
 **Ao final deste módulo, espera-se que você seja capaz de:**
+
 - formular uma hipótese testável e operacionalizável;
 - distinguir exploração de confirmação e correlação de intervenção;
 - identificar corretamente a unidade experimental e o $n$ do experimento;
@@ -8,6 +9,7 @@
 - traduzir a pergunta biológica em um desenho analisável.
 
 **Entregável do módulo**
+
 - uma hipótese escrita no formato “Se X, então Y (medido por Z), comparado a W”;
 - definição de $H_0$ e $H_1$;
 - identificação da unidade biológica, experimental e observacional;
