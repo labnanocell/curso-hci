@@ -54,6 +54,7 @@ nav:
   - Início: index.md
   - Onboarding:
       - Visão geral: 00-onboarding/index.md
+      - 00.0 Introdução ao HCI/HCA: 00-onboarding/intro/index.md
       - 00.1 Pergunta biológica: 00-onboarding/pergunta/index.md
       - 00.2 Desenho experimental: 00-onboarding/desenho-experimental/index.md
       - 00.3 Batch effects: 00-onboarding/batch-effects/index.md
