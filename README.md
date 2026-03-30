@@ -6,6 +6,9 @@ The course was created primarily to train graduate students in the NanoCell Lab,
 
 ![Course map](docs/assets/img/hci-aventura-mapa.webp)
 
+Illustration created with ChatGPT.
+
+
 ## Access the course
 
 The public course website is available at:
