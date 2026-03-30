@@ -13,8 +13,9 @@
 - uma descrição curta, com suas próprias palavras, do que significam HCI e HCA;
 - uma distinção simples entre aquisição de imagens, análise de imagens e perfilamento fenotípico.
 
-> [!info] Ideia central
-> Se HCI produz imagens de forma estruturada, HCA transforma essas imagens em dados analisáveis.
+!!! info Ideia central
+    Se HCI produz imagens de forma estruturada, HCA transforma essas imagens em dados analisáveis.
+
 ## 1) Introdução
 
 A análise de imagens biológicas existe há muitas décadas e reúne diferentes abordagens, objetivos e ferramentas. Nos últimos anos, as abordagens baseadas em imagem ganharam ainda mais destaque, especialmente aquelas em que as imagens deixam de ser apenas ilustração ou “imagem representativa” e passam a ocupar um papel central na resposta à pergunta científica.
