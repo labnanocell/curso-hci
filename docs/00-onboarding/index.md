@@ -31,6 +31,7 @@ A pessoa consegue:
 
 ### Tópicos
 
+- [Introdução ao High-Content Imaging e High-Content Analysis](intro/index.md)
 - [Pergunta científica e operacionalização](pergunta/index.md)
 - [Desenho experimental](desenho-experimental/index.md)
 - [Batch effects](batch-effects/index.md)
