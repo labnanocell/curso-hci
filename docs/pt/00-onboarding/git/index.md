@@ -21,7 +21,7 @@ Nos últimos anos o nosso laboratório tem se dedicado a análises de alto conte
 
 Nessa jornada, é fácil se perder entre códigos, arquivos, planilhas, metadados e gráficos. O antídoto é simples: **voltar sempre para a pergunta biológica** (e a hipótese que ela gera). Ela é o seu farol.
 
-![Mapa da aventura do HCI/HCA](../../assets/img/hci-aventura-mapa.webp)
+![Mapa da aventura do HCI/HCA](../../../assets/img/hci-aventura-mapa.webp)
 
 **Pergunta → desenho experimental → aquisição → QC → análise → interpretação → comunicação → reprodutibilidade**
 
@@ -203,7 +203,7 @@ Isso implica um ponto crucial: **mais células não aumentam o $n$ experimental*
 
 ## Termos introduzidos nesta página (glossário)
 - [Hipótese](../../90-glossario/index.md#hipotese)
-- [Hipótese nula ($H_0$)](../../90-glossario/index.md#hipotese-nula)
+- [Hipótese nula ($H_0$)](../../../90-glossario/index.md#hipotese-nula)
 - [Hipótese alternativa ($H_1$)](../../90-glossario/index.md#hipotese-alternativa)
 - [Experimentos exploratórios](../../90-glossario/index.md#experimentos-exploratorios)
 - [Experimentos confirmatórios](../../90-glossario/index.md#experimentos-confirmatorios)

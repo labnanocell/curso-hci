@@ -1,61 +1,61 @@
 site_name: Curso HCI
-site_description: High-Content Imaging & Analysis — material de consulta
 site_url: https://labnanocell.github.io/curso-hci/
 
 theme:
   name: material
-  language: pt
   logo: assets/img/nanocell-logo.png
-  favicon: assets/img/nanocell-logo.ico
+  favicon: assets/img/favicon.ico
+  language: pt
+  features:
+    - navigation.prune
+    - navigation.tracking
+    - search.highlight
+    - search.suggest
+    - content.code.copy
   palette:
     - scheme: default
       primary: custom
       accent: custom
-  features:
-    # - navigation.instant
-    - navigation.tracking
-    - navigation.sections
-    # - navigation.expand
-    - navigation.top
-    - navigation.indexes
-    - search.suggest
-    - search.highlight
-    - content.code.copy
-
-markdown_extensions:
-  - admonition
-  - footnotes
-  - tables
-  - toc:
-      permalink: true
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.inlinehilite
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.arithmatex:
-      generic: true
-      smart_dollar: true
-
-plugins:
-  - search
 
 extra_css:
   - stylesheets/extra.css
 
 extra_javascript:
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - javascripts/ui.js
 
-extra:
-  generator: false
+plugins:
+  - search
+  - i18n:
+      docs_structure: folder
+      fallback_to_default: false
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: pt
+          name: Português
+          default: true
+          build: true
+          nav:
+            - Início: index.md
+            - Onboarding e Higiene Científica:
+                - Visão geral: 00-onboarding/index.md
+                - Introdução ao HCI/HCA: 00-onboarding/intro/index.md
+                - Pergunta científica e operacionalização: 00-onboarding/pergunta/index.md
+                - Desenho experimental: 00-onboarding/desenho-experimental/index.md
+                - Batch effects: 00-onboarding/batch-effects/index.md
+                - Git básico para pós-graduação: 00-onboarding/git/index.md
+            - Glossário: 90-glossario/index.md
 
-nav:
-  - Início: index.md
-  - Onboarding:
-      - Visão geral: 00-onboarding/index.md
-      - 00.0 Introdução ao HCI/HCA: 00-onboarding/intro/index.md
-      - 00.1 Pergunta biológica: 00-onboarding/pergunta/index.md
-      - 00.2 Desenho experimental: 00-onboarding/desenho-experimental/index.md
-      - 00.3 Batch effects: 00-onboarding/batch-effects/index.md
-  - 90 Glossário: 90-glossario/index.md
+        - locale: en
+          name: English
+          build: true
+          nav:
+            - Home: index.md
+            - Onboarding and Scientific Workflow Hygiene:
+                - Overview: 00-onboarding/index.md
+                - Introduction to HCI/HCA: 00-onboarding/intro/index.md
+                - Scientific question and operationalization: 00-onboarding/scientific-question/index.md
+                - Experimental design: 00-onboarding/experimental-design/index.md
+                - Batch effects: 00-onboarding/batch-effects/index.md
+                - Basic Git for graduate students: 00-onboarding/git/index.md
+            - Glossary: 90-glossary/index.md

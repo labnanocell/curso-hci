@@ -7,7 +7,7 @@ Formar pós-graduandos capazes de executar o ciclo completo de um projeto de HCA
 
 **Pergunta → desenho experimental → aquisição → QC → análise → interpretação → comunicação → reprodutibilidade**
 
-![Mapa da aventura do HCI](../assets/img/hci-aventura-mapa.webp)
+![Mapa da aventura do HCI](../../assets/img/hci-aventura-mapa.webp)
 
 ### Perfil de saída
 A pessoa consegue:
