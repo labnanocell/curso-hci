@@ -377,5 +377,5 @@ Essas perguntas não eliminam toda a incerteza do experimento, mas tornam o seu 
 
 ## Para aprofundar (opcional)
 
-- [Guide on Good Cell and Tissue Culture Practice (GCCP 2.0)](https://academic.oup.com/altweb/article/49/2/89/6549021)
-- [Evaluating batch correction methods for image-based cell profiling](https://www.nature.com/articles/s41467-024-50613-5)
+- [Assay Development Guidelines for Image-Based High Content Screening, High Content Analysis and High Content Imaging](https://www.ncbi.nlm.nih.gov/books/NBK100913/)
+- [Advanced Assay Development Guidelines for Image-Based High Content Screening and Analysis](https://www.ncbi.nlm.nih.gov/books/NBK126174/)
