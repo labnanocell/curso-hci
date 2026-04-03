@@ -357,24 +357,6 @@ These questions do not eliminate all the uncertainty of the experiment, but they
    - whether there will be *plate map* variation across days;
    - how this map will be documented for each experimental plate.
 
-## Terms introduced on this page (glossary)
-
-- [Exploratory experiments](../../90-glossario/index.md#experimentos-exploratorios)
-- [Confirmatory experiments](../../90-glossario/index.md#experimentos-confirmatorios)
-- [Pilot experiment](../../90-glossario/index.md#experimento-piloto)
-- [Assay development](../../90-glossario/index.md#assay-development)
-- [Positive control](../../90-glossario/index.md#controle-positivo)
-- [Negative control](../../90-glossario/index.md#controle-negativo)
-- [Vehicle control](../../90-glossario/index.md#controle-de-veiculo)
-- [Biological replicate](../../90-glossario/index.md#replicata-biologica)
-- [Technical replicate](../../90-glossario/index.md#replicata-tecnica)
-- [Randomization](../../90-glossario/index.md#randomizacao)
-- [Plate map](../../90-glossario/index.md#plate-map)
-- [Edge effect](../../90-glossario/index.md#edge-effect)
-- [Batch effect](../../90-glossario/index.md#batch-effect)
-- [Quality Control (QC)](../../90-glossario/index.md#quality-control-qc)
-- [Metadata](../../90-glossario/index.md#metadados)
-
 ## For further reading (optional)
 
 - [Assay Development Guidelines for Image-Based High Content Screening, High Content Analysis and High Content Imaging](https://www.ncbi.nlm.nih.gov/books/NBK100913/)

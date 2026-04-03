@@ -21,7 +21,7 @@ In recent years, our laboratory has focused on high-content analysis (*high-cont
 
 On this journey, it is easy to get lost among code, files, spreadsheets, metadata, and graphs. The antidote is simple: **always return to the biological question** (and the hypothesis it generates). It is your guiding light.
 
-![Map of the HCI/HCA adventure](../../../assets/img/hci-aventura-mapa.webp)
+![Map of the HCI/HCA adventure](../../assets/img/hci-adventure-map.webp)
 
 **Question → experimental design → acquisition → QC → analysis → interpretation → communication → reproducibility**
 
@@ -198,18 +198,6 @@ This implies a crucial point: **more cells do not increase the experimental $n$*
 
 4) **Exploratory or confirmatory?**  
    Say which part of your project is exploration and which is confirmation. What can you conclude in each one?
-
----
-
-## Terms introduced on this page (glossary)
-- [Hypothesis](../../90-glossario/index.md#hipotese)
-- [Null hypothesis ($H_0$)](../../90-glossario/index.md#hipotese-nula)
-- [Alternative hypothesis ($H_1$)](../../90-glossario/index.md#hipotese-alternativa)
-- [Exploratory experiments](../../90-glossario/index.md#experimentos-exploratorios)
-- [Confirmatory experiments](../../90-glossario/index.md#experimentos-confirmatorios)
-- [Biological unit](../../90-glossario/index.md#unidade-biologica)
-- [Experimental unit](../../90-glossario/index.md#unidade-experimental)
-- [Observational unit](../../90-glossario/index.md#unidade-observacional)
 
 ## For further reading (optional)
 - [What exactly is ‘N’ in cell culture and animal experiments?](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.2005282)

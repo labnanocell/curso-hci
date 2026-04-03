@@ -7,7 +7,7 @@ To train graduate students capable of carrying out the full cycle of an HCA/HCI 
 
 **Question → experimental design → acquisition → QC → analysis → interpretation → communication → reproducibility**
 
-![HCI adventure map](../../assets/img/hci-aventura-mapa.webp)
+![HCI/HCA adventure map](../assets/img/hci-adventure-map.webp)
 
 ### Expected outcomes
 The person is able to:
@@ -32,8 +32,8 @@ The person is able to:
 ### Topics
 
 - [Introduction to High-Content Imaging and High-Content Analysis](intro/index.md)
-- [Scientific question and operationalization](pergunta/index.md)
-- [Experimental design I: controls, replication, and randomization](desenho-experimental/index.md)
+- [Scientific question and operationalization](scientific-question/index.md)
+- [Experimental design I: controls, replication, and randomization](experimental-design/index.md)
 - [Experimental design II: *batch effect* — how to recognize, prevent, and interpret it](batch-effects/index.md)
 
 > [!info] About this material
