@@ -41,8 +41,8 @@ plugins:
                 - Visão geral: 00-onboarding/index.md
                 - Introdução ao HCI/HCA: 00-onboarding/intro/index.md
                 - Pergunta científica e operacionalização: 00-onboarding/pergunta/index.md
-                - Desenho experimental: 00-onboarding/desenho-experimental/index.md
-                - Batch effects: 00-onboarding/batch-effects/index.md
+                - Desenho experimental I: 00-onboarding/desenho-experimental/index.md
+                - Desenho Experimental II: 00-onboarding/batch-effects/index.md
                 - Git básico para pós-graduação: 00-onboarding/git/index.md
             - Glossário: 90-glossario/index.md
 
@@ -55,7 +55,7 @@ plugins:
                 - Overview: 00-onboarding/index.md
                 - Introduction to HCI/HCA: 00-onboarding/intro/index.md
                 - Scientific question and operationalization: 00-onboarding/scientific-question/index.md
-                - Experimental design: 00-onboarding/experimental-design/index.md
-                - Batch effects: 00-onboarding/batch-effects/index.md
+                - Experimental design I: 00-onboarding/experimental-design/index.md
+                - Experimental design II: 00-onboarding/batch-effects/index.md
                 - Basic Git for graduate students: 00-onboarding/git/index.md
             - Glossary: 90-glossary/index.md
