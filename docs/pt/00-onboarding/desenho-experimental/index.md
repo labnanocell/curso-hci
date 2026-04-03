@@ -1,4 +1,4 @@
-# HCA — Desenho experimental (controles, replicação, randomização)
+# HCA — Desenho experimental I: controles, replicação e randomização
 
 **Ao final deste módulo, espera-se que você seja capaz de:**
 
