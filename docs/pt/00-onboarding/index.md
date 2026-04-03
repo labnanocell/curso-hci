@@ -33,5 +33,11 @@ A pessoa consegue:
 
 - [Introdução ao High-Content Imaging e High-Content Analysis](intro/index.md)
 - [Pergunta científica e operacionalização](pergunta/index.md)
-- [Desenho experimental](desenho-experimental/index.md)
-- [Batch effects](batch-effects/index.md)
+- [Desenho experimental I: controles, replicação e randomização](desenho-experimental/index.md)
+- [Desenho experimental II: *batch effect* — como reconhecer, prevenir e interpretar](batch-effects/index.md)
+
+
+> [!info] Sobre este material
+> Este material foi criado para apoiar o treinamento do nosso grupo de pesquisa em HCI/HCA. Ele foi pensado primеiramente para a nossa rotina, mas pode ser útil para outras pessoas que estejam aprendendo ou estruturando fluxos semelhantes.
+>
+> Se você encontrar algum erro, inconsistência ou tiver sugestões de melhoria, fique à vontade para abrir uma *issue* no repositório. Se preferir tratar algo de forma privada, envie um e-mail.
