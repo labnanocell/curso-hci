@@ -185,7 +185,7 @@ Isso implica um ponto crucial: **mais células não aumentam o $n$ experimental*
 
 ---
 
-## Exercícios (para hoje)
+## Exercícios
 
 1) **Hipótese em 2 linhas**  
    Escreva sua hipótese no formato: “Se X, então Y (medido por Z), comparado a W.”
@@ -198,18 +198,6 @@ Isso implica um ponto crucial: **mais células não aumentam o $n$ experimental*
 
 4) **Exploratório ou confirmatório?**  
    Diga qual parte do seu projeto é exploração e qual é confirmação. O que você pode concluir em cada uma?
-
----
-
-## Termos introduzidos nesta página (glossário)
-- [Hipótese](../../90-glossario/index.md#hipotese)
-- [Hipótese nula ($H_0$)](../../90-glossario/index.md#hipotese-nula)
-- [Hipótese alternativa ($H_1$)](../../90-glossario/index.md#hipotese-alternativa)
-- [Experimentos exploratórios](../../90-glossario/index.md#experimentos-exploratorios)
-- [Experimentos confirmatórios](../../90-glossario/index.md#experimentos-confirmatorios)
-- [Unidade biológica](../../90-glossario/index.md#unidade-biologica)
-- [Unidade experimental](../../90-glossario/index.md#unidade-experimental)
-- [Unidade observacional](../../90-glossario/index.md#unidade-observacional)
 
 
 ## Para aprofundar (opcional)

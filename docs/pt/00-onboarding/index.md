@@ -37,7 +37,6 @@ A pessoa consegue:
 - [Desenho experimental II: *batch effect* — como reconhecer, prevenir e interpretar](batch-effects/index.md)
 
 
-> [!info] Sobre este material
-> Este material foi criado para apoiar o treinamento do nosso grupo de pesquisa em HCI/HCA. Ele foi pensado primеiramente para a nossa rotina, mas pode ser útil para outras pessoas que estejam aprendendo ou estruturando fluxos semelhantes.
->
-> Se você encontrar algum erro, inconsistência ou tiver sugestões de melhoria, fique à vontade para abrir uma *issue* no repositório. Se preferir tratar algo de forma privada, envie um e-mail.
+!!!info "Sobre este material"
+    Este material foi criado para apoiar o treinamento do nosso grupo de pesquisa em HCI/HCA. Ele foi pensado primеiramente para a nossa rotina, mas pode ser útil para outras pessoas que estejam aprendendo ou estruturando fluxos semelhantes.
+    Se você encontrar algum erro, inconsistência ou tiver sugestões de melhoria, fique à vontade para abrir uma *issue* no repositório. Se preferir tratar algo de forma privada, envie um e-mail.

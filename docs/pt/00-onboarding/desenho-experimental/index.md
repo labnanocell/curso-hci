@@ -333,7 +333,7 @@ Por isso, antes de começar um experimento, vale sempre perguntar:
 
 Essas perguntas não eliminam toda a incerteza do experimento, mas tornam o seu desenho muito mais robusto e muito mais honesto.
 
-## Exercícios (para hoje)
+## Exercícios
 
 1) **Exploratório, confirmatório ou híbrido?**  
    Classifique o seu experimento como mais exploratório, mais confirmatório ou híbrido. Justifique em 3–5 linhas.

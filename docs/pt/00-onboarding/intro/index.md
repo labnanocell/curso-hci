@@ -48,7 +48,7 @@ Nos últimos anos, uma abordagem de HCA que busca extrair um grande número de c
 É importante notar que essas definições não seguem um acordo universal. Na prática, diferentes artigos e diferentes grupos podem usar esses termos de maneiras parcialmente sobrepostas. Aqui, adotamos essa convenção porque ela ajuda a organizar o raciocínio ao longo do curso.
 
 
-## Exercícios (para hoje)
+## Exercícios
 
 1) **HCI ou HCA?**  
    Explique, com suas próprias palavras, a diferença entre *High-Content Imaging* (HCI) e *High-Content Analysis* (HCA).

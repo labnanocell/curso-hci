@@ -185,7 +185,7 @@ This implies a crucial point: **more cells do not increase the experimental $n$*
 
 ---
 
-## Exercises (for today)
+## Exercises
 
 1) **Hypothesis in 2 lines**  
    Write your hypothesis in the format: “If X, then Y (measured by Z), compared with W.”

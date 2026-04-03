@@ -36,7 +36,6 @@ The person is able to:
 - [Experimental design I: controls, replication, and randomization](experimental-design/index.md)
 - [Experimental design II: *batch effect* — how to recognize, prevent, and interpret it](batch-effects/index.md)
 
-> [!info] About this material
-> This material was created to support the training of our research group in HCI/HCA. It was designed primarily for our own workflow, but it may also be useful for others who are learning or organizing similar workflows.
->
-> If you find any errors, inconsistencies, or have suggestions for improvement, feel free to open an *issue* in the repository. If you would prefer to discuss something privately, please send an email.
+!!!info "About this material"
+    This material was created to support the training of our research group in HCI/HCA. It was designed primarily for our own workflow, but it may also be useful for others who are learning or organizing similar workflows.
+    If you find any errors, inconsistencies, or have suggestions for improvement, feel free to open an *issue* in the repository. If you would prefer to discuss something privately, please send an email.

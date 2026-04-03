@@ -333,7 +333,7 @@ For this reason, before starting an experiment, it is always worth asking:
 
 These questions do not eliminate all the uncertainty of the experiment, but they make its design much more robust and much more honest.
 
-## Exercises (for today)
+## Exercises
 
 1) **Exploratory, confirmatory, or hybrid?**  
    Classify your experiment as more exploratory, more confirmatory, or hybrid. Justify your answer in 3–5 lines.
