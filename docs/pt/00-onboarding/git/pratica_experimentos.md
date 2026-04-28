@@ -497,8 +497,4 @@ Essa integração é central para a organização, reprodutibilidade e evoluçã
 
 `YYYY_MM_DD_CellLine_Treatment_Condition`
 
-## Para aprofundar
-- https://gitimmersion.com/
-- https://docs.github.com/en/get-started
-- https://ohshitgit.com/
 
