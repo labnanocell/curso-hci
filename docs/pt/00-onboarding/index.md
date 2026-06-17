@@ -35,7 +35,7 @@ A pessoa consegue:
 - [Pergunta científica e operacionalização](pergunta/index.md)
 - [Desenho experimental I: controles, replicação e randomização](desenho-experimental/index.md)
 - [Desenho experimental II: *batch effect* — como reconhecer, prevenir e interpretar](batch-effects/index.md)
-
+- [Git básico para pós-graduação](git/index.md)
 
 !!!info "Sobre este material"
     Este material foi criado para apoiar o treinamento do nosso grupo de pesquisa em HCI/HCA. Ele foi pensado primеiramente para a nossa rotina, mas pode ser útil para outras pessoas que estejam aprendendo ou estruturando fluxos semelhantes.

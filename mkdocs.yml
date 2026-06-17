@@ -53,8 +53,10 @@ plugins:
                 - Desenho experimental I: 00-onboarding/desenho-experimental/index.md
                 - Desenho Experimental II: 00-onboarding/batch-effects/index.md
                 - Git básico para pós-graduação: 00-onboarding/git/index.md
-            - Glossário: 90-glossario/index.md
-
+            - Microscopia e aquisição:
+                - Fundamentos de microscopia óptica: 10-microscopia-e-aquisicao/microscopia-fundamentos/index.md
+                - Fluorescência, fluoróforos e espectros: 10-microscopia-e-aquisicao/fluorescencia-fundamentos/index.md
+                - Microscopia de Fluorescência: 10-microscopia-e-aquisicao/fluorescencia-otica-filtros-desenho-espectral-HCA/index.md
         - locale: en
           name: English
           build: true
