@@ -115,6 +115,6 @@ Junto com a aula anterior, construímos uma visão integrada: a fluorescência c
 ### Para aprofundar
 
 - Murphy, D. B. & Davidson, M. W. [*Fundamentals of Light Microscopy and Electronic Imaging*.](https://www.wiley.com/en-us/shop/general-introductory-life-sciences/fundamentals-of-light-microscopy-and-electronic-imaging-2nd-edition-p-9781118382936) 2nd ed. Wiley-Blackwell, 2012. — Referência abrangente sobre óptica e formação de imagem em microscopia.
-- North, A. J. [Seeing is believing? A beginners' guide to practical pitfalls in image acquisition.]([https://doi.org/10.1083/jcb.200507103](https://doi.org/10.1083/jcb.200507103)) *Journal of Cell Biology* 172(1): 9–18, 2006. — Artigo clássico sobre armadilhas comuns na aquisição de imagens.
+- North, A. J. [Seeing is believing? A beginners' guide to practical pitfalls in image acquisition.](https://doi.org/10.1083/jcb.200507103) *Journal of Cell Biology* 172(1): 9–18, 2006. — Artigo clássico sobre armadilhas comuns na aquisição de imagens.
 - [ImageJ/FIJI](https://fiji.sc) — Software livre para processamento e análise de imagens microscópicas.
 
