@@ -88,6 +88,7 @@ plugins:
                 # TODO: conteúdo em desenvolvimento
                 # - Controle de micoplasma: 20-cultura-celular-e-cell-health/cultura-mycoplasma-qc/index.md
                 - Conceitos fundamentais de saúde celular: 20-cultura-celular-e-cell-health/cell-health-conceitos-fundamentais/index.md
+                - Ensaios ortogonais: 20-cultura-celular-e-cell-health/cell-health-ensaios-ortogonais/index.md
                 - Metabolismo e métricas de viabilidade: 20-cultura-celular-e-cell-health/cell-health-metricas/index.md
                 # TODO: conteúdo em desenvolvimento
                 # - Respostas subletais e letais: 20-cultura-celular-e-cell-health/cell-health-subletal-vs-letal/index.md
@@ -97,7 +98,6 @@ plugins:
                 # - Controles experimentais: 20-cultura-celular-e-cell-health/cell-health-controles-experimentais/index.md
                 # TODO: conteúdo em desenvolvimento
                 # - Dose, tempo, solvente e controles: 20-cultura-celular-e-cell-health/ensaios-dose-tempo-solvente-controles/index.md
-                - Ensaios ortogonais: 20-cultura-celular-e-cell-health/cell-health-ensaios-ortogonais/index.md
                 # TODO: conteúdo em desenvolvimento
                 # - Interferência de materiais: 20-cultura-celular-e-cell-health/cell-health-interferencia-de-materiais/index.md
                 - IC50: 20-cultura-celular-e-cell-health/cell-health-ic50/index.md

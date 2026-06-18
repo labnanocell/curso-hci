@@ -12,9 +12,9 @@ Ao final desta aula, você deverá ser capaz de:
 
 ## 1. O que significa avaliar saúde celular?
 
-Em experimentos de biologia celular, frequentemente o primeiro passo após expor as células a uma perturbação, como um fármaco, nanopartícula ou extrato, é avaliar se o sistema celular permaneceu funcional. Essa avaliação é normalmente chamada de avaliação da saúde celular (*cell health assessment*) e representa uma das primeiras camadas de caracterização biológica em estudos de toxicologia, farmacologia e biologia celular quantitativa.
+Em experimentos de biologia celular, frequentemente o primeiro passo após expor as células a uma perturbação, como um fármaco, nanopartícula ou extrato, é avaliar seu funcionamento. Essa avaliação é normalmente chamada de avaliação da saúde celular (*cell health assessment*) e representa uma das primeiras camadas de caracterização biológica em estudos de toxicologia, farmacologia e biologia celular quantitativa.
 
-Embora o termo "viabilidade celular" seja amplamente utilizado, ele frequentemente simplifica um fenômeno biológico complexo. Uma célula pode manter metabolismo ativo e, ainda assim, apresentar alterações profundas de morfologia, estresse oxidativo, dano mitocondrial, perda de polaridade, alteração proliferativa ou reorganização fenotípica. Da mesma forma, diferentes ensaios podem produzir respostas distintas para a mesma condição experimental porque medem propriedades celulares diferentes.
+Embora o termo "viabilidade celular" seja amplamente utilizado, ele frequentemente simplifica um fenômeno biológico complexo. Uma célula pode manter metabolismo ativo e, ainda assim, apresentar diversas alterações incluindo morfologia, estresse oxidativo, dano mitocondrial, perda de polaridade, alteração proliferativa ou reorganização fenotípica. Da mesma forma, diferentes ensaios podem produzir respostas distintas para a mesma condição experimental porque medem propriedades celulares diferentes.
 
 No contexto de HCI/HCA, essa distinção é particularmente importante. Muitas vezes, fenótipos subletais surgem antes de qualquer perda evidente de viabilidade. Isso significa que ausência de citotoxicidade evidente não implica ausência de perturbação biológica. Retomando a discussão anterior, a imagem é o dado experimental, e se a imagem captura apenas uma dimensão do estado celular, conclusões baseadas nessa dimensão única podem ser incompletas ou equivocadas.
 
@@ -22,55 +22,77 @@ No contexto de HCI/HCA, essa distinção é particularmente importante. Muitas v
     Ensaios de saúde celular não medem uma propriedade única chamada "viabilidade". Eles medem diferentes dimensões do estado celular, como metabolismo, integridade de membrana, crescimento, massa celular, função mitocondrial, função lisossomal ou positividade para marcadores de morte. Cada dimensão responde a uma pergunta diferente sobre o sistema celular.
 
 !!! tip "Antes de continuar"
-     - Por que o termo "viabilidade celular" pode ser uma simplificação excessiva?
-    - No contexto de HCA, por que a ausência de citotoxicidade não garante ausência de perturbação biológica?
+     - Por que o termo *viabilidade celular* pode ser uma simplificação excessiva?
+     - No contexto de HCA, por que a ausência de citotoxicidade não garante ausência de perturbação biológica?
 
 ## 2. Viabilidade celular, citotoxicidade e citostase
 
-Embora os termos sejam frequentemente utilizados como sinônimos na literatura, viabilidade celular e citotoxicidade não representam exatamente o mesmo conceito biológico. Viabilidade celular geralmente se refere à preservação de uma propriedade funcional ou estrutural compatível com células vivas, enquanto citotoxicidade se refere ao dano induzido por uma perturbação, frequentemente associado à perda de função, integridade ou sobrevivência celular.
+Embora os termos sejam frequentemente utilizados como sinônimos na literatura, viabilidade celular e citotoxicidade não representam exatamente o mesmo conceito biológico. **Viabilidade celular** geralmente se refere à preservação de uma propriedade funcional ou estrutural compatível com células vivas, enquanto **citotoxicidade** se refere ao dano induzido por uma perturbação, frequentemente associado à perda de função, integridade ou sobrevivência celular.
 
-Ensaios de viabilidade normalmente avaliam a preservação de alguma função celular em relação ao controle não tratado. Em muitos casos, o sinal experimental é normalizado em relação às células controle e expresso como porcentagem relativa. Esses ensaios frequentemente utilizam metabolismo, atividade enzimática, conteúdo celular, organelas funcionais ou número de células como aproximações de *fitness* celular.
+Ensaios de viabilidade celular geralmente avaliam a preservação de uma determinada função celular em comparação com um controle não tratado. Em muitos casos, o sinal experimental é normalizado em relação ao controle e expresso como uma porcentagem de viabilidade relativa. Esses ensaios utilizam parâmetros como atividade metabólica, atividade enzimática, conteúdo celular, integridade ou funcionalidade de organelas e número de células como medidas indiretas do fitness celular. Os resultados são frequentemente apresentados na forma de curvas concentração–resposta, nas quais a viabilidade tende a diminuir à medida que a concentração do agente testado aumenta. Esse conceito será explorado em maior detalhe na próxima aula.
 
-Por outro lado, ensaios de citotoxicidade buscam detectar dano celular, perda de integridade de membrana, liberação de componentes intracelulares ou entrada de corantes impermeáveis à membrana. Esses eventos são frequentemente interpretados como evidência de morte celular ou dano celular avançado, mas nem sempre indicam mecanismo específico de morte.
+Por outro lado, ensaios de citotoxicidade buscam detectar dano celular, perda da integridade de membrana plasmática, liberação de componentes intracelulares ou a entrada de moléculas normalmente excluídas por células viáveis. Esses eventos são frequentemente interpretados como evidências de morte celular ou de dano celular avançado. Entretanto, na maioria dos casos, eles não permitem identificar diretamente o mecanismo específico de morte envolvido. Os resultados são frequentemente apresentados na forma de curvas concentração–resposta, nas quais a citotoxicidade tende a aumentar à medida que a concentração do agente testado aumenta. Esse conceito será explorado em maior detalhe na próxima aula.
 
-Existe ainda uma terceira situação muito importante: a citostase. Nesse caso, as células não necessariamente morrem, mas reduzem ou interrompem a proliferação. Isso pode reduzir número de células, conteúdo de DNA, incorporação de EdU ou biomassa total, sem que haja necessariamente morte celular aguda. A citostase é frequentemente ignorada em interpretações simplificadas, mas representa uma resposta biológica relevante em muitos contextos experimentais.
+Existe ainda uma terceira situação muito importante: a citostase. Nesse caso, as células não necessariamente morrem, mas reduzem ou interrompem sua capacidade proliferativa. Como consequência, observa-se uma diminuição no número de células, no conteúdo total de DNA, na incorporação de marcadores de proliferação, como EdU, ou na biomassa celular, sem que haja necessariamente morte celular aguda. A citostase é frequentemente negligenciada em interpretações simplificadas de ensaios de viabilidade, mas representa uma resposta biológica relevante em diversos contextos experimentais, incluindo o desenvolvimento de fármacos antitumorais, a avaliação de biomateriais e os estudos de toxicologia. 
 
 ![Conceitos de cell health](../../assets/img/cell-health-pt.webp)
 
 !!! warning "Redução de sinal não é morte celular"
-    Redução de sinal em um ensaio de viabilidade não significa automaticamente morte celular. A redução pode refletir metabolismo diminuído, parada proliferativa, alteração mitocondrial, perda de adesão, menor biomassa ou interferência técnica do tratamento com o método de leitura. Interpretar qualquer redução como "citotoxicidade" é uma das fontes mais comuns de conclusões equivocadas em biologia celular.
+    **A redução do sinal em um ensaio de viabilidade não significa, necessariamente, morte celular**. Essa redução pode refletir diminuição da atividade metabólica, interrupção da proliferação celular, alterações na função mitocondrial, perda de adesão ao substrato, redução da biomassa celular ou até mesmo interferências técnicas do tratamento com o método de detecção utilizado. Interpretar qualquer diminuição de sinal como evidência direta de citotoxicidade é uma das fontes mais comuns de conclusões equivocadas em estudos de biologia celular e toxicologia.
 
 !!! tip "Antes de continuar"
-     - Um composto reduz o sinal de MTT em 40%. Liste ao menos três explicações possíveis que não envolvem morte celular.
-     - Qual é a diferença entre citotoxicidade e citostase?
+
+    - Um composto reduz o sinal de um ensaio de MTT em 40%. Esse resultado é suficiente para concluir que ocorreu morte celular? Por quê?
+    - Liste pelo menos três explicações biológicas ou técnicas que poderiam justificar essa redução de sinal sem que tenha ocorrido morte celular.
+    - Qual é a diferença entre citotoxicidade e citostase? Como cada uma delas poderia afetar o resultado de um ensaio de viabilidade?
+    - Por que dois tratamentos podem apresentar a mesma redução de viabilidade, mas representar respostas biológicas completamente diferentes?
+
 
 ## 3. Organização dos ensaios segundo a lógica OECD/GIVIMP
 
-O documento OECD/GIVIMP (*Guidance Document on Good In Vitro Method Practices*) organiza os métodos de viabilidade e citotoxicidade de culturas celulares em categorias baseadas no tipo de propriedade celular avaliada. Essa organização é muito útil didaticamente porque evita agrupar todos os ensaios sob o rótulo genérico de "viabilidade".
+A Organisation for Economic Co-operation and Development ([OECD](https://www.oecd.org/)) é uma organização internacional que reúne países membros para desenvolver recomendações, diretrizes e padrões técnicos em diversas áreas, incluindo ciência, meio ambiente, saúde e avaliação de segurança química. Na área de toxicologia e métodos alternativos, os documentos da OECD são amplamente utilizados por pesquisadores, agências regulatórias e pela indústria como referência para o desenvolvimento, validação e aplicação de métodos _in vitro_.
+
+Um desses documentos é o **GIVIMP**  ([*Guidance Document on Good In Vitro Method Practices*](https://www.oecd.org/en/publications/guidance-document-on-good-in-vitro-method-practices-givimp_9789264304796-en.html)) , ou **Guia de Boas Práticas para Métodos In Vitro**, que reúne recomendações para planejamento experimental, controle de qualidade, interpretação de resultados e confiabilidade de ensaios celulares. O documento organiza os métodos de viabilidade e citotoxicidade em categorias baseadas na propriedade celular avaliada. Essa abordagem é particularmente útil do ponto de vista didático, pois evita agrupar todos os ensaios sob o rótulo genérico de “viabilidade” e destaca que diferentes métodos medem aspectos distintos da saúde celular.
 
 A lógica geral pode ser organizada em quatro grandes grupos. O primeiro grupo, dano estrutural não invasivo, inclui avaliações que procuram evidências de alteração celular sem necessariamente destruir, fixar ou corar as células de forma terminal. O segundo grupo, dano estrutural invasivo, utiliza corantes que entram apenas em células com membrana comprometida ou, inversamente, corantes que são retidos em células com membrana funcional. O terceiro grupo, crescimento celular, envolve medidas de proliferação e biomassa. O quarto grupo, metabolismo e função celular, reúne ensaios baseados em atividade metabólica, estado energético e função de organelas.
 
-Cada grupo responde a uma pergunta diferente sobre o sistema celular, e essa diferença deve aparecer tanto no desenho experimental quanto na nomenclatura dos gráficos e na escrita dos resultados. Para HCI/HCA, essa classificação é especialmente útil porque muitas dessas medidas podem ser obtidas no nível de célula individual. Em vez de produzir apenas um valor médio por poço, a imagem permite relacionar número de células, morfologia, positividade para marcadores, localização subcelular e intensidade de sinal em uma mesma análise multiparamétrica.
+Cada categoria de ensaio responde a uma pergunta diferente sobre o estado da célula, e essa distinção deve ser refletida tanto no desenho experimental quanto na nomenclatura utilizada em gráficos, tabelas e na interpretação dos resultados. Um ensaio que mede atividade metabólica, por exemplo, não responde exatamente à mesma pergunta que um ensaio que mede integridade de membrana ou proliferação celular.
+
+Essa classificação é particularmente útil em HCI/HCA, pois muitas dessas propriedades podem ser medidas simultaneamente no nível de célula individual. Em vez de produzir apenas um valor médio por poço, a análise de imagens permite quantificar e relacionar número de células, morfologia, intensidade de fluorescência, localização subcelular e positividade para marcadores específicos dentro de uma mesma abordagem multiparamétrica. Como resultado, torna-se possível distinguir fenômenos como citotoxicidade, citostase e alterações funcionais sutis que frequentemente seriam indistinguíveis em ensaios convencionais baseados em uma única medida agregada.
 
 ![Categorias OECD/GIVIMP](../../assets/img/oecd-givimp-categ-pt.webp)
-
 !!! tip "Antes de continuar"
-     - Quais são as quatro categorias de ensaios segundo a lógica OECD/GIVIMP?
-    - Por que é problemático agrupar todos os ensaios sob o rótulo "viabilidade"?
+
+    - Dois artigos relatam uma redução de 50% após tratamento celular. Um utilizou MTT e o outro utilizou LDH. Como você interpretaria essas diferenças numericamente iguais.
+    - Por que pode ser problemático agrupar todos os ensaios sob o rótulo genérico de "viabilidade"?
+    - Se um tratamento reduz a incorporação de EdU, mas não altera a exclusão de PI nem o sinal de Calceína-AM, qual hipótese biológica você levantaria para explicar esse resultado?
+    - Em um experimento de HCI/HCA, quais informações adicionais você procuraria para diferenciar citotoxicidade de citostase?
 
 ## 4. Por que ensaios diferentes produzem resultados diferentes
 
-Uma das principais dificuldades em experimentos de saúde celular é assumir que todos os ensaios medem o mesmo fenômeno biológico. Na prática, diferentes métodos capturam dimensões distintas da resposta celular, e essa distinção explica por que dois ensaios podem produzir resultados aparentemente contraditórios para a mesma condição experimental.
+Uma das fontes mais comuns de interpretação equivocada em experimentos de saúde celular é assumir que todos os ensaios medem o mesmo fenômeno biológico. Na realidade, cada método observa uma propriedade específica da célula, como atividade metabólica, integridade de membrana, proliferação ou número de células. Como essas propriedades podem ser afetadas de maneira diferente por um tratamento, não é incomum que dois ensaios produzam resultados aparentemente contraditórios para a mesma condição experimental. Compreender o que cada ensaio realmente mede é, portanto, mais importante do que memorizar o nome ou o protocolo utilizado.
 
-Um composto pode reduzir ATP sem causar lise celular. Outro pode alterar metabolismo mitocondrial sem alterar contagem celular. Um terceiro pode reduzir crescimento sem aumentar a proporção de células com membrana comprometida. Em alguns casos, fenótipos subletais surgem muito antes de qualquer alteração detectável em ensaios clássicos de viabilidade. Essas discrepâncias, não são erros experimentais, são consequência direta do fato de que cada ensaio captura uma dimensão diferente do estado celular.
+Um composto pode reduzir os níveis intracelulares de ATP sem causar lise celular. Uma nanopartícula pode alterar o metabolismo mitocondrial sem modificar o número de células. Um extrato pode aumentar a atividade metabólica medida por um ensaio sem promover proliferação celular. Da mesma forma, fenótipos subletais frequentemente podem ser detectados em tempos mais curtos ou em concentrações mais baixas do que aquelas necessárias para produzir alterações detectáveis em ensaios clássicos de viabilidade ou citotoxicidade.
 
-Também é necessário considerar interferências do item testado com o método de leitura. Compostos coloridos podem interferir em absorbância, compostos fluorescentes podem interferir em leituras fluorescentes, agentes redutores podem reduzir MTT ou resazurina diretamente, e nanomateriais podem adsorver corantes, espalhar luz ou interagir com reagentes. Retomando a discussão da Aula 1, esses efeitos técnicos se somam ao sinal biológico e podem comprometer a interpretação dos dados se não forem controlados.
+Esse parágrafo está muito bom porque traz exemplos concretos. Eu faria apenas alguns ajustes de clareza, ritmo e precisão científica:
 
-Por isso, controles adequados são parte essencial do ensaio. Controles sem células, controles de veículo, controles positivos de citotoxicidade, controles de interferência óptica e controles de densidade celular podem ser necessários dependendo do método. A escolha e a interpretação do ensaio devem considerar não apenas a pergunta biológica, mas também as possíveis fontes de interferência técnica.
+Um composto pode reduzir os níveis intracelulares de ATP sem causar lise celular. Uma nanopartícula pode alterar o metabolismo mitocondrial sem modificar o número de células. Um extrato pode aumentar a atividade metabólica medida por um ensaio sem promover proliferação celular. Da mesma forma, fenótipos subletais frequentemente podem ser detectados em tempos mais curtos ou em concentrações mais baixas do que aquelas necessárias para produzir alterações detectáveis em ensaios clássicos de viabilidade ou citotoxicidade.
+
+Essas discrepâncias não representam, necessariamente, erros experimentais. Pelo contrário, são uma consequência direta do fato de que cada ensaio captura uma dimensão diferente do estado celular. Além disso, a resposta celular é dinâmica: alterações em metabolismo, proliferação, morfologia ou integridade de membrana podem surgir em momentos distintos após a exposição a um tratamento. Compreender essa natureza multidimensional e temporal da resposta celular é fundamental para interpretar corretamente os resultados experimentais.
+
+Essa é uma das razões pelas quais abordagens multiparamétricas, como HCI/HCA e Cell Painting, são capazes de revelar respostas celulares que passariam despercebidas em ensaios baseados em uma única medida.  
+
+Também é necessário considerar interferências do item testado com o método de leitura. Compostos que absorvem ou desviam a luz podem interferir em absorbância, compostos fluorescentes podem interferir em leituras fluorescentes, agentes redutores podem reduzir MTT ou resazurina diretamente, e nanomateriais podem adsorver corantes, espalhar luz ou interagir com reagentes. Retomando a discussão da [Microscopia — fundamentos de óptica para HCA](../../10-microscopia-e-aquisicao/microscopia-fundamentos/index.md), esses efeitos técnicos se somam ao sinal biológico e podem comprometer a interpretação dos dados se não forem controlados.
+
+Por essa razão, controles adequados são parte essencial de qualquer ensaio de saúde celular. Entre os controles mais frequentemente utilizados estão os controles sem células, controles contendo apenas células não tratadas, controles de veículo (por exemplo, DMSO), controles positivos e negativos, controles para avaliar interferências ópticas ou químicas e controles de densidade celular.
+
+Alguns desses controles devem fazer parte de praticamente todos os experimentos, enquanto outros podem ser realizados durante a validação do método ou sempre que houver suspeita de interferência experimental. Em muitos casos, uma única avaliação é suficiente para determinar a faixa de concentrações na qual determinada interferência permanece aceitável. A escolha do ensaio e a interpretação dos resultados devem considerar não apenas a pergunta biológica de interesse, mas também as limitações e possíveis fontes de interferência associadas ao método utilizado.
 
 !!! tip "Antes de continuar"
-    - Um composto fluorescente é testado em um ensaio de resazurina. Que tipo de interferência pode ocorrer?
-    - Por que a discrepância entre dois ensaios não é necessariamente um erro experimental?
+
+    - Um composto fluorescente é testado em um ensaio de resazurina. De que maneiras ele poderia interferir na leitura? Como você verificaria essa possibilidade experimentalmente?
+
+    - Em quais situações um controle sem células é indispensável para a interpretação dos resultados?
 
 ## 5. Fechamento
 
@@ -88,7 +110,7 @@ Por fim, vimos que ensaios diferentes podem produzir resultados distintos porque
 
 3. Classifique os seguintes ensaios segundo as categorias OECD/GIVIMP: LDH, EdU, SRB, MTT, Neutral Red Uptake, Calcein-AM e contagem nuclear por HCI.
 
-4. Um nanomaterial é testado em um ensaio de resazurina e apresenta redução de sinal. O mesmo nanomaterial é conhecido por adsorver corantes. Que controle experimental seria essencial para distinguir efeito biológico de interferência técnica?
+4. Um nanomaterial é testado em um ensaio de resazurina e apresenta redução de sinal. Que controle experimental seria essencial para distinguir efeito biológico de interferência técnica?
 
 ### Para aprofundar
 
