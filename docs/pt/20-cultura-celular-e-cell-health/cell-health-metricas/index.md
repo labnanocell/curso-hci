@@ -36,7 +36,7 @@ Essa distinção pode ser organizada em três camadas. A primeira é a medida ex
 
 ## 2. Unidade experimental e organização dos dados
 
-Antes de calcular médias, normalizar dados ou ajustar curvas, é necessário definir qual é a unidade experimental. Em ensaios em placa, a unidade experimental normalmente é o poço, não a célula individual e não o campo de imagem. Retomando a discussão da Aula 1, campos de imagem dentro do mesmo poço são subamostras técnicas — eles ajudam a estimar melhor o valor daquele poço, mas não substituem réplicas independentes.
+Antes de calcular médias, normalizar dados ou ajustar curvas, é necessário definir qual é a unidade experimental. Em ensaios em placa, a unidade experimental normalmente é o poço, não a célula individual e não o campo de imagem. Retomando a discussão da aula [Microscopia — fundamentos de óptica para HCA](../../10-microscopia-e-aquisicao/microscopia-fundamentos/index.md), campos de imagem dentro do mesmo poço são subamostras técnicas — eles ajudam a estimar melhor o valor daquele poço, mas não substituem réplicas independentes.
 
 Portanto, para análise estatística e ajuste de curva, o ideal é primeiro agregar os campos por poço. Essa distinção é especialmente importante em HCI/HCA. Um experimento pode gerar milhares de células segmentadas, mas isso não significa que existam milhares de réplicas biológicas independentes. A inferência estatística deve respeitar o desenho experimental.
 
@@ -70,7 +70,7 @@ A interpretação dessa métrica depende do ensaio. Em MTT, ela representa ativi
 
 ## 4. Viabilidade baseada em contagem celular
 
-Em ensaios de imagem, a viabilidade pode ser calculada a partir de contagens celulares. Um exemplo comum é o ensaio combinado com Hoechst, PI e Calcein-AM, que discutimos na Aula 5. Nesse caso, Hoechst marca os núcleos totais, PI marca células com perda de integridade de membrana e Calcein-AM pode indicar células com atividade esterase e retenção intracelular do corante.
+Em ensaios de imagem, a viabilidade pode ser calculada a partir de contagens celulares. Um exemplo comum é o ensaio combinado com Hoechst, PI e Calcein-AM, que discutimos na aula [Ensaios por categoria e ortogonalidade](../cell-health-ensaios-ortogonais/index.md). Nesse caso, Hoechst marca os núcleos totais, PI marca células com perda de integridade de membrana e Calcein-AM pode indicar células com atividade esterase e retenção intracelular do corante.
 
 A métrica de viabilidade pode ser derivada do número de células viáveis por poço. Uma forma comum de cálculo é:
 
