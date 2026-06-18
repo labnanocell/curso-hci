@@ -16,7 +16,9 @@ theme:
     - scheme: default
       primary: custom
       accent: custom
-
+  font:
+      text: Source Serif 4
+      code: JetBrains Mono
 extra_css:
   - stylesheets/extra.css
 

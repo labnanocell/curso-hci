@@ -61,6 +61,7 @@ Esses corantes são frequentemente utilizados em combinação com marcadores de 
     - Uma célula pode ser Calcein-positiva e, ainda assim, não estar completamente saudável? Explique.
 
     - Por que "células PI-positivas (%)" é uma descrição mais rigorosa do resultado experimental do que "morte celular (%)"?
+
 ## **3. Marcadores de morte celular programada**
 
 A área de morte celular é uma das mais dinâmicas da biologia celular moderna. Durante muitos anos, a discussão foi dominada pela distinção entre apoptose e necrose. Nas últimas décadas, entretanto, diversos mecanismos adicionais foram descritos, incluindo necroptose, piroptose, ferroptose, morte celular dependente de autofagia, cuproptose e outros processos regulados. Como consequência, a classificação da morte celular continua evoluindo à medida que novos mecanismos são descobertos e melhor compreendidos.
@@ -83,10 +84,9 @@ Para os objetivos deste curso, o mais importante é compreender que marcadores d
 
     Leituras recomendadas:
 
-    - Galluzzi et al. (2009) — Guidelines for the use and interpretation of assays for monitoring cell death in higher eukaryotes.
-    - Galluzzi et al. (2018) — Molecular mechanisms of cell death: recommendations of the NCCD 2018.
-    - Vitale et al. (2023) — Apoptotic cell death in disease: current understanding of the NCCD 2023.
-
+    - Galluzzi, L., Aaronson, S., Abrams, J. et al. [Guidelines for the use and interpretation of assays for monitoring cell death in higher eukaryotes.](https://doi.org/10.1038/cdd.2009.44) Cell Death Differ 16, 1093–1107 (2009). 
+    - Galluzzi, L., Vitale, I., Aaronson, S. et al. [Molecular mechanisms of cell death: recommendations of the Nomenclature Committee on Cell Death 2018.](https://doi.org/10.1038/s41418-017-0012-4) Cell Death Differ 25, 486–541 (2018). 
+    - Vitale, I., Pietrocola, F., Guilbaud, E. et al. [Apoptotic cell death in disease—Current understanding of the NCCD 2023.](https://doi.org/10.1038/s41418-023-01153-w) Cell Death Differ 30, 1097–1154 (2023). 
 
 !!! tip "Antes de continuar"
 
@@ -171,13 +171,12 @@ No contexto de HCI/HCA, uma combinação particularmente informativa é integrar
 
 !!! tip “Antes de continuar”
 
-```
 - Por que uma única medida de "viabilidade" raramente é suficiente para concluir que um tratamento é citotóxico?
 
 - Proponha uma combinação ortogonal de ensaios para avaliar se um nanomaterial é citotóxico, justificando o que cada medida acrescenta à interpretação.
 
 - Se MTT diminui, mas PI e contagem nuclear não se alteram, quais hipóteses biológicas ou técnicas poderiam explicar esse resultado?
-```
+
 
 ## **7. Fechamento**
 

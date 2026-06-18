@@ -13,11 +13,11 @@ Ao final desta aula, você deverá ser capaz de:
 
 ## 1. Antes de calcular: o que foi realmente medido?
 
-O primeiro passo antes de calcular qualquer métrica é identificar qual variável experimental foi diretamente medida pelo ensaio. Essa etapa parece óbvia, mas é uma das principais fontes de erros conceituais em trabalhos científicos. Em muitos artigos, o nome do gráfico não corresponde exatamente ao que foi medido.
+O primeiro passo antes de calcular qualquer métrica é identificar qual variável experimental foi diretamente medida pelo ensaio. Essa etapa parece óbvia, mas é uma das principais fontes de confusão na interpretação de resultados. Em muitos artigos, a medida experimental, o processamento matemático e a interpretação biológica aparecem condensados em uma única figura ou expressão, dificultando a identificação do que foi efetivamente observado e do que foi inferido.
 
-No MTT, por exemplo, o que é medido é absorbância gerada pela redução do tetrazólio. Em ensaios de ATP, o sinal corresponde à luminescência associada ao conteúdo energético celular. Em DRAQ7® ou PI, mede-se número de células positivas para um marcador impermeável à membrana. Isso significa que o ensaio não mede diretamente "viabilidade celular" ou "morte celular" — essas interpretações surgem posteriormente, a partir do contexto biológico do experimento.
+No MTT, a medida experimental é a absorbância associada à redução do tetrazólio. Após subtração de branco e normalização, esse sinal pode ser expresso como porcentagem do controle. A partir desse valor processado, o pesquisador pode então inferir alterações na saúde celular. Da mesma forma, em ensaios de ATP mede-se luminescência, enquanto em DRAQ7® ou PI mede-se o número ou a proporção de células positivas para um marcador impermeável à membrana. Em todos os casos, a interpretação biológica surge apenas após o processamento e contextualização desses sinais experimentais.
 
-Essa distinção pode ser organizada em três camadas. A primeira é a medida experimental: o sinal bruto capturado pelo instrumento (absorbância, fluorescência, luminescência, contagem de objetos). A segunda é o processamento matemático: subtração de branco, normalização, cálculo de porcentagem. A terceira é a interpretação biológica: o significado que atribuímos ao resultado processado. Confundir essas camadas é uma das fontes mais comuns de sobreinterpretação em ensaios de cell health.
+Essa distinção pode ser organizada em três camadas. A primeira é a **medida experimental**: o sinal bruto capturado pelo instrumento (absorbância, fluorescência, luminescência, contagem de objetos). A segunda é o **processamento matemático**: subtração de branco, normalização, cálculo de porcentagem. A terceira é a **interpretação biológica**: o significado que atribuímos ao resultado processado. Confundir essas camadas é uma das fontes mais comuns de sobreinterpretação em ensaios de cell health.
 
 !!! warning "Tríade: medida, processamento, interpretação"
     Sempre diferencie:
@@ -36,7 +36,7 @@ Essa distinção pode ser organizada em três camadas. A primeira é a medida ex
 
 ## 2. Unidade experimental e organização dos dados
 
-Antes de calcular médias, normalizar dados ou ajustar curvas, é necessário definir qual é a unidade experimental. Em ensaios em placa, a unidade experimental normalmente é o poço, não a célula individual e não o campo de imagem. Retomando a discussão da aula [Microscopia — fundamentos de óptica para HCA](../../10-microscopia-e-aquisicao/microscopia-fundamentos/index.md), campos de imagem dentro do mesmo poço são subamostras técnicas — eles ajudam a estimar melhor o valor daquele poço, mas não substituem réplicas independentes.
+Antes de calcular médias, normalizar dados ou ajustar curvas, é necessário definir qual é a unidade experimental. Em ensaios em placa, a unidade experimental normalmente é o poço, não a célula individual e não o campo de imagem. Retomando a discussão da aula [Microscopia — fundamentos de óptica para HCA](../../10-microscopia-e-aquisicao/microscopia-fundamentos/index.md), campos de imagem dentro do mesmo poço são subamostras técnicas, eles ajudam a estimar melhor o valor daquele poço, mas não substituem réplicas independentes.
 
 Portanto, para análise estatística e ajuste de curva, o ideal é primeiro agregar os campos por poço. Essa distinção é especialmente importante em HCI/HCA. Um experimento pode gerar milhares de células segmentadas, mas isso não significa que existam milhares de réplicas biológicas independentes. A inferência estatística deve respeitar o desenho experimental.
 
@@ -52,21 +52,23 @@ Essa organização evita um problema comum: começar a análise diretamente com 
 
 ## 3. Subtração de branco e normalização
 
-Em ensaios baseados em absorbância, fluorescência ou luminescência, normalmente é necessário subtrair o branco. O branco representa o sinal do meio, reagente ou placa na ausência de células, e sua remoção evita que o sinal basal seja interpretado como resposta celular.
+Em ensaios baseados em absorbância, fluorescência ou luminescência, normalmente é necessário subtrair o sinal de branco. O branco representa a contribuição de todos os componentes do sistema experimental para a leitura, exceto o fenômeno biológico que se deseja quantificar. Dependendo do ensaio, isso pode incluir sinal proveniente do meio de cultura, da placa, dos reagentes de detecção ou até mesmo do próprio composto testado. A subtração desse valor ajuda a garantir que o resultado reflita principalmente a resposta biológica de interesse e não contribuições basais do sistema de medida.
 
-Após a subtração do branco, a resposta pode ser normalizada em relação ao controle não tratado. Essa etapa transforma o sinal em porcentagem do controle, facilitando a comparação entre placas e experimentos independentes. Para ensaios como MTT, MTS, XTT, WST-1, resazurina ou ATP, a fórmula geral é:
+Após a subtração do branco, a resposta pode ser normalizada em relação ao controle não tratado. Essa etapa transforma o sinal em porcentagem do controle, facilitando a comparação entre placas, experimentos independentes e diferentes dias de aquisição. Em muitos ensaios de cell health, como MTT, MTS, XTT, WST-1, resazurina ou ATP, a normalização utiliza exatamente a mesma operação matemática:
 
 $$
 \text{Resposta normalizada (% controle)} = \frac{\text{sinal tratado} - \text{sinal branco}}{\text{sinal controle} - \text{sinal branco}} \times 100
 $$
 
-A interpretação dessa métrica depende do ensaio. Em MTT, ela representa atividade metabólica relativa. Em resazurina, representa capacidade redutora relativa. Em ATP, representa conteúdo energético relativo. Por isso, o nome do eixo Y deve indicar a métrica de forma precisa: "Metabolic activity (% control)" para MTT, "ATP levels (% control)" para ATP e não simplesmente "Cell viability (% control)" para todos.
+É importante notar que a fórmula é idêntica para todos esses ensaios. O que muda não é o cálculo, mas o significado biológico do resultado. Em outras palavras, a mesma transformação matemática pode ser aplicada a absorbância, fluorescência ou luminescência, mas cada uma dessas medidas continua refletindo uma propriedade celular diferente.
+
+Em MTT, o resultado representa atividade metabólica relativa. Em resazurina, representa capacidade redutora relativa. Em ATP, representa conteúdo energético relativo. Como a interpretação depende da variável originalmente medida, o nome do eixo Y deve refletir a métrica específica do ensaio. Por esse motivo, expressões como “Metabolic activity (% control)” para MTT ou “ATP levels (% control)” para ATP são geralmente mais informativas do que utilizar “Cell viability (% control)” de forma indiscriminada.
 
 !!! tip "Antes de continuar"
 
-    Por que a subtração do branco é necessária antes da normalização?
-
-    Se dois ensaios diferentes (MTT e ATP) são normalizados da mesma forma, por que os eixos Y devem ter nomes diferentes?
+    - Quando a subtração do branco é necessária antes da normalização?
+    - Se dois ensaios diferentes (MTT e ATP) são normalizados da mesma forma, por que os eixos Y devem ter nomes diferentes?
+    - O que permanece igual e o que muda quando aplicamos a mesma fórmula de normalização a um ensaio de ATP e a um ensaio de MTT?
 
 ## 4. Viabilidade baseada em contagem celular
 
@@ -84,7 +86,11 @@ $$
 \text{Viable cell count (% control)} = \frac{\text{células viáveis tratadas}}{\text{células viáveis controle}} \times 100
 $$
 
-Contagem de células viáveis (% controle) (*Viable cell count (% control)*) é mais precisa do que simplesmente "viabilidade celular" (*cell viability*), porque deixa claro que a métrica deriva de contagem celular baseada em imagem. Ela também diferencia esse resultado de ensaios baseados em intensidade total, como MTT ou fluorescência total de Calcein. Essa distinção na nomenclatura não é pedante — ela comunica ao leitor exatamente como o dado foi obtido.
+Contagem de células viáveis (% controle) (*Viable cell count (% control)*) é mais precisa do que simplesmente "viabilidade celular" (*cell viability*), porque deixa claro que a métrica deriva de contagem celular baseada em imagem. Ela também diferencia esse resultado de ensaios baseados em intensidade total, como MTT ou fluorescência total de Calcein. 
+
+É importante notar que essa métrica não informa apenas a fração de células viáveis em um poço, mas também incorpora alterações no número total de células presentes. Consequentemente, reduções nessa medida podem refletir morte celular, citostase, perda de adesão ou combinações desses fenômenos.
+
+Uma das vantagens da análise baseada em imagem é que a mesma aquisição pode gerar múltiplas métricas simultaneamente. A partir de um único ensaio Hoechst/PI/Calcein-AM é possível calcular número total de células, células PI-positivas, células Calcein-positivas, células viáveis, fração de células mortas e diversos parâmetros morfológicos. 
 
 !!! tip "Antes de continuar"
 
@@ -92,7 +98,7 @@ Contagem de células viáveis (% controle) (*Viable cell count (% control)*) é 
 
     Um pesquisador calcula viabilidade como (núcleos totais − PI-positivos) / (núcleos totais controle − PI-positivos controle) × 100. O que essa métrica representa em termos biológicos?
 
-## 5. Citotoxicidade baseada em células positivas
+## 5. Quantificando células positivas para marcadores 
 
 Para ensaios como PI ou DRAQ7®, a métrica mais direta geralmente é a porcentagem de células positivas. Nesse caso, o cálculo deve refletir exatamente o que foi medido.
 
@@ -100,45 +106,79 @@ $$
 \text{PI-positive cells (%)} = \frac{\text{núcleos PI-positivos}}{\text{núcleos Hoechst-positivos}} \times 100
 $$
 
-Essa métrica descreve a observação experimental: a fração de células com marcação positiva para PI. Na seção de resultados, essa é a forma mais rigorosa de apresentar o dado. A interpretação biológica pode aparecer depois, principalmente na discussão. Um aumento de células PI-positivas é consistente com perda de integridade da membrana plasmática e aumento de citotoxicidade, mas PI sozinho não distingue mecanismos específicos de morte celular.
+Essa métrica descreve a observação experimental: a fração de células com marcação positiva para PI. Nesse caso, Hoechst fornece o denominador correspondente ao número total de células detectadas no campo ou poço analisado. Na seção de resultados, essa é a forma mais rigorosa de apresentar o dado. A interpretação biológica pode aparecer depois, principalmente na discussão. Um aumento de células PI-positivas é consistente com perda de integridade da membrana plasmática e aumento de citotoxicidade, mas PI sozinho não distingue mecanismos específicos de morte celular.
 
 !!! tip "Descreva a medida; interprete depois"
 
-    No gráfico e nos resultados, descreva a medida experimental: "PI-positive cells (%)", "DRAQ7-positive cells (%)". Na discussão, interprete o significado biológico: "perda de integridade de membrana compatível com citotoxicidade". Essa separação aumenta o rigor científico e reduz o risco de sobreinterpretação.
+    Em gráficos e resultados, descreva preferencialmente a medida experimental: "PI-positive cells (%)", "DRAQ7-positive cells (%)" ou "Annexin V-positive cells (%)".
+
+    A interpretação biológica pode ser apresentada posteriormente. Por exemplo, um aumento de células PI-positivas pode ser interpretado como aumento da permeabilidade de membrana compatível com dano celular ou citotoxicidade.
+
+    Separar observação experimental e interpretação biológica aumenta o rigor científico e reduz o risco de sobreinterpretação.
 
 !!! tip "Antes de continuar"
 
-    Por que "PI-positive cells (%)" é uma descrição mais rigorosa que "Cell death (%)"?
+    - Por que "PI-positive cells (%)" é uma descrição mais rigorosa que "Cell death (%)"?
 
-    Um aumento de 5% para 40% de células PI-positivas é observado. Como você descreveria esse resultado sem usar o termo "morte celular"?
+    - Um aumento de 5% para 40% de células PI-positivas é observado. Como você descreveria esse resultado sem usar o termo "morte celular"?
+
+    - Quais informações adicionais seriam necessárias para sustentar a interpretação de que o aumento de células PI-positivas corresponde a um aumento de citotoxicidade?
 
 ## 6. Concentração no eixo X: escala logarítmica
 
-Curvas concentração-resposta devem ser apresentadas com a concentração no eixo X em escala logarítmica. Isso facilita a visualização de respostas que ocorrem em diferentes ordens de magnitude e melhora a interpretação da região de transição da curva.
+Curvas concentração-resposta devem ser apresentadas com a concentração no eixo X em escala logarítmica. Isso facilita a visualização de respostas que ocorrem em diferentes ordens de magnitude e melhora a interpretação da região de transição da curva. 
 
-A escala logarítmica é particularmente importante quando as concentrações foram planejadas em diluições seriadas, como 0,1; 1; 10; 100 µg/mL. Nesses casos, a distância visual entre os pontos deve refletir a razão entre concentrações, não a diferença absoluta. Sem escala logarítmica, pontos em concentrações baixas ficam comprimidos próximos à origem, enquanto pontos em concentrações altas dominam o gráfico, distorcendo a percepção da relação dose-resposta.
+A escala logarítmica é particularmente importante quando as concentrações foram planejadas em diluições seriadas, como 0,1; 1; 10; 100 µg/mL. Nesses casos, a distância visual entre os pontos deve refletir a razão entre concentrações, não a diferença absoluta. Além disso, muitas respostas biológicas dependem de mudanças proporcionais na concentração e não apenas de diferenças absolutas. Por exemplo, aumentar uma concentração de 0,1 para 1 µg/mL representa a mesma variação relativa que aumentar de 10 para 100 µg/mL: ambos correspondem a um aumento de dez vezes. A escala logarítmica preserva essa relação proporcional, tornando a visualização e a interpretação das curvas concentração–resposta mais informativas.
 
-Entretanto, concentração zero não pode ser representada em escala logarítmica. O controle não tratado pode ser apresentado na legenda com desvio padrão ou como um ponto separado, como "Control", "Untreated" ou "0" em eixo categórico separado, mas não como log(0).
+Sem escala logarítmica, pontos em concentrações baixas ficam comprimidos próximos à origem, enquanto pontos em concentrações altas dominam o gráfico, distorcendo a percepção da relação dose-resposta. Entretanto, concentração zero não pode ser representada em escala logarítmica. O controle não tratado pode ser apresentado na legenda com desvio padrão ou como um ponto separado, como "Control", "Untreated" ou "0" em eixo categórico separado, mas não como log(0).
 
 !!! warning "Nunca use log(0)"
 
-    Concentração zero é indefinida em escala logarítmica. O controle não tratado deve ser apresentado como ponto separado ou indicado na legenda, nunca como log(0) no eixo X.
-
+    Concentração zero é indefinida em escala logarítmica. O controle não tratado deve ser apresentado separadamente, por exemplo na legenda, em um gráfico complementar ou como uma categoria distinta ("Control" ou "Untreated"), mas nunca como log(0) no eixo X.
+    
 !!! tip "Antes de continuar"
 
-    Por que diluições seriadas (0,1; 1; 10; 100) devem ser apresentadas em escala logarítmica?
+    - Por que diluições seriadas (0,1; 1; 10; 100) devem ser apresentadas em escala logarítmica?
 
-    Como você representaria o controle não tratado em um gráfico com eixo X logarítmico?
+    - Como você representaria o controle não tratado em um gráfico com eixo X logarítmico?
+
+    - Em uma série de concentrações 0,1; 1; 10 e 100 µg/mL, quais pares de pontos representam a mesma variação proporcional na concentração?
 
 ## 7. Como apresentar gráficos de cell health
 
 Uma das práticas mais importantes em apresentação de dados é garantir que o eixo Y descreva exatamente o que foi medido. Essa prática parece simples, mas é frequentemente violada na literatura. Ensaios metabólicos são apresentados como "viabilidade celular", enquanto medidas de permeabilidade de membrana aparecem diretamente como "morte celular".
 
-A nomenclatura correta do eixo Y deve refletir a métrica calculada. Para MTT, o eixo Y pode ser "Metabolic activity (% control)" ou "Cell viability (% control)", desde que o texto deixe claro que se trata de um ensaio metabólico. Para ATP, é mais preciso usar "ATP levels (% control)". Para PI, o melhor é "PI-positive cells (%)". Para contagem baseada em imagem, "Viable cell count (% control)" é uma opção clara.
+A nomenclatura correta do eixo Y deve refletir a métrica calculada. Para MTT, expressões como “Metabolic activity (% control)” ou “Relative metabolic activity (% control)” são geralmente mais informativas do que “Cell viability (% control)”, pois deixam explícita a natureza da medida experimental. Para ATP, é mais preciso usar "ATP levels (% control)". Para PI, o melhor é "PI-positive cells (%)". Para contagem baseada em imagem, "Viable cell count (% control)" é uma opção clara. A tabela abaixo resume exemplos de nomenclatura para o eixo Y que refletem mais diretamente a métrica calculada em diferentes ensaios de saúde celular.
+
+| **Ensaio**                  | **Medida experimental**                        | **Eixo Y (Português)**                                                  | **Eixo Y (Inglês)**                                            |
+| --------------------------- | ---------------------------------------------- | ----------------------------------------------------------------------- | -------------------------------------------------------------- |
+| MTT (e sais tetrazólio)     | Absorbância associada à redução do tetrazólio  | Atividade metabólica (% controle)                                       | Metabolic activity (% control)                                 |
+| ATP luminescente            | Luminescência associada ao ATP                 | Níveis de ATP (% controle)                                              | ATP levels (% control)                                         |
+| PI                          | Células positivas para PI                      | Células PI-positivas (%)                                                | PI-positive cells (%)                                          |
+| DRAQ7®                      | Células positivas para DRAQ7®                  | Células DRAQ7-positivas (%)                                             | DRAQ7-positive cells (%)                                       |
+| Annexin V                   | Células positivas para Annexin V               | Células Annexin V-positivas (%)                                         | Annexin V-positive cells (%)                                   |
+| EdU                         | Células positivas para EdU                     | Células EdU-positivas (%)                                               | EdU-positive cells (%)                                         |
+| Contagem celular por imagem | Número de células viáveis por poço             | Contagem de células viáveis (% controle)                                | Viable cell count (% control)                                  |
+| Calcein-AM                  | Células positivas ou intensidade de Calcein-AM | Células Calcein-positivas (%) ou Intensidade de Calcein-AM (% controle) | Calcein-positive cells (%) or Calcein-AM intensity (% control) |
+| TMRE                        | Intensidade de TMRE                            | Potencial mitocondrial relativo (% controle)                            | Relative mitochondrial membrane potential (% control)          |
+| Neutral Red Uptake          | Absorbância do Neutral Red acumulado           | Captação de Neutral Red (% controle)                                    | Neutral Red Uptake (% control)                                 |
 
 Uma estratégia muito útil é separar visualmente ensaios metabólicos e ensaios de citotoxicidade em painéis distintos. Por exemplo, o Painel A pode apresentar MTT com eixo Y "Metabolic activity (% control)", o Painel B ATP com "ATP levels (% control)", o Painel C PI com "PI-positive cells (%)", e o Painel D o ensaio live:dead com "Viable cell count (% control)". Essa organização ajuda o leitor a compreender imediatamente quais dimensões biológicas estão sendo avaliadas.
 
-Gráficos de linha ou curvas concentração-resposta são geralmente mais adequados do que gráficos de barras quando o objetivo é mostrar dependência da concentração. Barras podem dificultar a percepção da tendência e tornam a comparação entre grupos menos intuitiva. Em experimentos de HCA, frequentemente é útil também apresentar número absoluto de células, número de objetos segmentados, distribuição celular e variabilidade entre poços, especialmente quando alterações de densidade celular podem influenciar análises fenotípicas posteriores.
+Gráficos de linha ou curvas concentração-resposta são geralmente mais adequados do que gráficos de barras quando o objetivo é mostrar dependência da concentração. Barras podem dificultar a percepção da tendência e tornam a comparação entre grupos menos intuitiva. Em experimentos de HCA, frequentemente é útil também apresentar número absoluto de células, número de objetos segmentados, distribuição celular e variabilidade entre poços, especialmente quando alterações de densidade celular podem influenciar análises fenotípicas posteriores. Além disso, curvas permitem visualizar mais facilmente regiões de transição da resposta e são essenciais para ajustes matemáticos utilizados na estimativa de parâmetros como IC50, EC50 ou CC50.
+
+Em experimentos de HCA, frequentemente é útil apresentar não apenas a métrica principal, mas também informações contextuais como número total de células, distribuição de tamanhos celulares, variabilidade entre poços ou porcentagem de células positivas para marcadores específicos. Essas informações auxiliam na interpretação dos resultados e ajudam a identificar possíveis artefatos experimentais ou efeitos secundários do tratamento.
+
+!!! info "Regra prática"
+
+    O eixo Y deve descrever a métrica calculada e não apenas a interpretação biológica desejada.
+
+    Pergunte sempre:
+
+    1. O que foi medido?
+    2. Como o dado foi processado?
+    3. O nome do eixo Y reflete essa métrica?
+
 
 !!! tip "Antes de continuar"
 
@@ -146,26 +186,26 @@ Gráficos de linha ou curvas concentração-resposta são geralmente mais adequa
 
     Por que curvas concentração-resposta são preferíveis a gráficos de barras para mostrar dependência de concentração?
 
-## 8. Fechamento
+## **8. Fechamento**
 
-Nesta aula vimos que a transformação do sinal experimental em métrica biologicamente interpretável exige cuidado em cada etapa. Antes de calcular, é preciso identificar o que foi realmente medido; antes de normalizar, é preciso subtrair o branco e definir a unidade experimental; e antes de apresentar, é preciso nomear eixos e organizar painéis com precisão.
+Nesta aula vimos que a transformação de um sinal experimental em uma métrica biologicamente interpretável envolve uma sequência de etapas conceituais e matemáticas. Antes de calcular qualquer valor, é necessário compreender o que foi realmente medido pelo ensaio. Em seguida, é preciso considerar etapas de processamento, como subtração de branco, definição da unidade experimental e normalização em relação aos controles apropriados. Somente após essas etapas torna-se possível atribuir significado biológico aos resultados.
 
-Discutimos também que a nomenclatura do eixo Y deve refletir exatamente a métrica calculada, e que a escala logarítmica é essencial para curvas concentração-resposta. Essas práticas não são meramente estéticas — elas comunicam ao leitor como o dado foi obtido e evitam interpretações equivocadas.
+Ao longo da aula, reforçamos a distinção entre medida experimental, processamento matemático e interpretação biológica. Vimos que a mesma operação matemática pode ser aplicada a ensaios completamente diferentes, mas que o significado biológico do resultado continua dependente da variável originalmente medida. Por esse motivo, a nomenclatura dos eixos, tabelas e resultados deve refletir a métrica calculada de forma precisa e transparente.
 
-Na próxima aula, abordaremos o ajuste de curvas dose-resposta, o cálculo e a interpretação do IC50, e como escrever resultados e discussão de forma rigorosa, separando medida experimental de interpretação biológica.
+Também discutimos boas práticas para apresentação gráfica de dados de *cell health*, incluindo o uso de escala logarítmica em curvas concentração-resposta, a escolha adequada da nomenclatura do eixo Y e a organização de diferentes dimensões biológicas em painéis distintos. Essas decisões não são apenas estéticas: **elas comunicam ao leitor como o experimento foi realizado e ajudam a evitar interpretações equivocadas**.
 
-### Exercícios
+Na próxima aula, abordaremos o ajuste de curvas concentração–resposta, o cálculo e a interpretação de parâmetros como IC50, EC50 e CC50, além de discutir como apresentar e interpretar esses resultados de forma rigorosa, mantendo a distinção entre observação experimental e inferência biológica.
 
-1. Explique por que "PI-positive cells (%)" é uma descrição mais rigorosa do que "Cell death (%)".
+### **Exercícios**
 
-2. Discuta vantagens e limitações de normalizar ensaios em relação ao controle não tratado.
-
-3. Compare "Cell viability (% control)" e "Viable cell count (% control)". Em que contexto cada um é mais adequado?
-
-4. Explique por que ATP luminescente não mede diretamente viabilidade celular, e proponha uma nomenclatura mais precisa para o eixo Y.
-
+1. Explique por que “PI-positive cells (%)” é uma descrição mais rigorosa do que “Cell death (%)”.
+2. Discuta vantagens e limitações da normalização em relação ao controle não tratado.
+3. Compare “Metabolic activity (% control)” e “Viable cell count (% control)”. Que propriedades celulares cada métrica representa?
+4. Explique por que ATP luminescente não mede diretamente viabilidade celular e proponha uma nomenclatura mais precisa para o eixo Y.
 5. Proponha uma organização de figura contendo MTT, PI e TMRE para um experimento de toxicologia, indicando a nomenclatura de cada eixo Y.
-
+6. Dois ensaios, MTT e ATP, foram normalizados utilizando exatamente a mesma fórmula matemática. Explique por que os eixos Y não devem necessariamente receber o mesmo nome.
+7. Um gráfico apresenta o eixo Y como “Cell death (%)”, mas os dados foram obtidos por MTT. Quais problemas conceituais essa escolha pode gerar?
+8. Uma série de concentrações (0,1; 1; 10; 100 µg/mL) foi apresentada em escala linear. Explique por que essa escolha pode dificultar a interpretação da curva concentração–resposta.
 ### Para aprofundar
 
 - Riss TL, Moravec RA, Niles AL, Duellman S, Benink HA, Worzella TJ, Minor L. [*Cell Viability Assays*.](https://www.ncbi.nlm.nih.gov/books/NBK144065/) Assay Guidance Manual, 2016. 
