@@ -169,7 +169,7 @@ Uma estratégia forte é combinar uma medida populacional com uma medida baseada
 
 No contexto de HCI/HCA, uma combinação particularmente informativa é integrar contagem celular, células PI-positivas, intensidade ou positividade de Calcein-AM e análise de alto conteúdo. Essa estratégia permite distinguir redução de função metabólica, perda de integridade de membrana, redução do número de células e remodelamento fenotípico: quatro dimensões que frequentemente são confundidas quando um único ensaio é utilizado.
 
-!!! tip “Antes de continuar”
+!!! tip "Antes de continuar"
 
 - Por que uma única medida de "viabilidade" raramente é suficiente para concluir que um tratamento é citotóxico?
 
@@ -197,10 +197,11 @@ Na próxima aula, abordaremos como transformar os sinais experimentais desses en
 5. Classifique os seguintes ensaios segundo as categorias OECD/GIVIMP: LDH, EdU, SRB, MTT, Neutral Red Uptake, Calcein-AM, contagem nuclear por HCI, TMRE e Annexin V.
 6. Um pesquisador observa que um composto reduz o sinal de MTT mas não aumenta a proporção de células PI-positivas. Proponha uma interpretação biológica e sugira ensaios complementares para testá-la.
 7. Um artigo conclui que um composto é citotóxico porque reduziu o sinal de MTT em 50%. Quais informações adicionais você procuraria antes de aceitar essa conclusão?
+
 ### Para aprofundar
 
 - OECD. [*Guidance Document on Good In Vitro Method Practices (GIVIMP)*.](https://www.oecd.org/en/publications/guidance-document-on-good-in-vitro-method-practices-givimp_9789264304796-en.html) OECD Series on Testing and Assessment No. 286, 2018.
 - Riss TL, Moravec RA, Niles AL, Duellman S, Benink HA, Worzella TJ, Minor L. [*Cell Viability Assays*.](https://www.ncbi.nlm.nih.gov/books/NBK144065/) Assay Guidance Manual, 2016. 
-- Mosmann T. [Rapid colorimetric assay for cellular growth and survival: application to proliferation and cytotoxicity assays](- [10.1016/0022-1759(83)90303-4](https://doi.org/10.1016/0022-1759\(83\)90303-4)). *Journal of Immunological Methods* 65(1-2):55–63, 1983.
-- Borenfreund E, Puerner JA. [Toxicity determined in vitro by morphological alterations and neutral red absorption.](- [10.1016/0378-4274(85)90046-3](https://doi.org/10.1016/0378-4274\(85\)90046-3)) *Toxicology Letters* 24(2):119–124, 1985.
+- Mosmann T. [Rapid colorimetric assay for cellular growth and survival: application to proliferation and cytotoxicity assays](https://doi.org/10.1016/0022-1759\(83\)90303-4)). *Journal of Immunological Methods* 65(1-2):55–63, 1983.
+- Borenfreund E, Puerner JA. [Toxicity determined in vitro by morphological alterations and neutral red absorption.](https://doi.org/10.1016/0378-4274\(85\)90046-3) _Toxicology Letters_ 24(2):119–124, 1985.
 - Vitale, I., Pietrocola, F., Guilbaud, E. _et al._ [Apoptotic cell death in disease—Current understanding of the NCCD 2023.](https://doi.org/10.1038/s41418-023-01153-w) _Cell Death Differ_ **30**, 1097–1154 (2023).

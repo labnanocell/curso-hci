@@ -26,9 +26,14 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.caret      # sobrescrito H^+^
+  - pymdownx.tilde      # subscrito O~2~
   - pymdownx.arithmatex:
       generic: true
-  
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
@@ -107,21 +112,13 @@ plugins:
                 # - Reportando resultados: 20-cultura-celular-e-cell-health/cell-health-reportando-resultados/index.md
                 # TODO: conteúdo em desenvolvimento
                 # - SOP, preparo de placa e layout: 20-cultura-celular-e-cell-health/sop-preparo-placa-layout/index.md
-            # TODO: módulo em desenvolvimento
-            # - Treinamento em cultura celular:
-                # TODO: conteúdo em desenvolvimento
+            - Treinamento em cultura celular:
                 # - Visão geral: 21-treinamento-cultura-celular/index.md
-                # TODO: conteúdo em desenvolvimento
-                # - Visão geral do treinamento: 21-treinamento-cultura-celular/visao-geral/index.md
-                # TODO: conteúdo em desenvolvimento
-                # - Pré-leitura: 21-treinamento-cultura-celular/pre-leitura/index.md
-                # TODO: conteúdo em desenvolvimento
+                - Visão geral do treinamento: 21-treinamento-cultura-celular/visao-geral/index.md
+                - Pré-leitura: 21-treinamento-cultura-celular/pre-leitura/index.md
                 # - Apostila piloto: 21-treinamento-cultura-celular/apostila-piloto/index.md
-                # TODO: conteúdo em desenvolvimento
-                # - Dia 1 — assepsia, observação e passagem: 21-treinamento-cultura-celular/dia-1-assepsia-observacao-passagem/index.md
-                # TODO: conteúdo em desenvolvimento
-                # - Passagem supervisionada: 21-treinamento-cultura-celular/passagem-supervisionada/index.md
-                # TODO: conteúdo em desenvolvimento
+                - Dia 1 — assepsia, observação e passagem: 21-treinamento-cultura-celular/dia-1-assepsia-observacao-passagem/index.md
+                - Passagem supervisionada: 21-treinamento-cultura-celular/passagem-supervisionada/index.md
                 # - Contagem e plaqueamento em 96 poços: 21-treinamento-cultura-celular/contagem-e-plaqueamento-96-pocos/index.md
                 # TODO: conteúdo em desenvolvimento
                 # - MTT e homogeneidade de plaqueamento: 21-treinamento-cultura-celular/mtt-homogeneidade-de-plaqueamento/index.md
@@ -129,7 +126,7 @@ plugins:
                 # - Curva dose-resposta: 21-treinamento-cultura-celular/curva-dose-resposta/index.md
                 # TODO: conteúdo em desenvolvimento
                 # - Checklists e registros: 21-treinamento-cultura-celular/checklists-e-registros/index.md
-            - Glossário: 90-glossario/index.md
+          # - Glossário: 90-glossario/index.md
         - locale: en
           name: English
           build: true
