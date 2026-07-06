@@ -141,8 +141,9 @@ plugins:
                 - Basic Git for graduate students: 00-onboarding/git/index.md
             - Microscopy and Acquisition:
             # - Overview: 10-microscopy-and-acquisition/index.md
-            # - Microscopy fundamentals: 10-microscopy-and-acquisition/microscopy-fundamentals/index.md
-                - Fluorescence fundamentals: 10-microscopy-and-acquisition/fluorescence-fundamentals/index.md
+                - Optical Microscopy fundamentals: 10-microscopy-and-acquisition/microscopy-fundamentals/index.md
+                - Fluorescence, Fluorophores, and Spectra: 10-microscopy-and-acquisition/fluorescence-fundamentals/index.md
+                - Fluorescence Microscopy: 10-microscopy-and-acquisition/fluorescence-optics-filters-spectral-design-hca/index.md
             #  - Phase contrast and brightfield microscopy: 10-microscopy-and-acquisition/microscopy-phase-contrast-brightfield/index.md
             #   - Resolution, NA, and Nyquist sampling: 10-microscopy-and-acquisition/microscopy-resolution-na-nyquist/index.md
             #   - Bleed-through and autofluorescence: 10-microscopy-and-acquisition/fluorescence-bleedthrough-autofluorescence/index.md
