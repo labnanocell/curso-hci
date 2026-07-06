@@ -140,18 +140,18 @@ plugins:
                 - Experimental design II: 00-onboarding/batch-effects/index.md
                 - Basic Git for graduate students: 00-onboarding/git/index.md
             - Microscopy and Acquisition:
-                - Overview: 10-microscopy-and-acquisition/index.md
-                - Microscopy fundamentals: 10-microscopy-and-acquisition/microscopy-fundamentals/index.md
+            # - Overview: 10-microscopy-and-acquisition/index.md
+            # - Microscopy fundamentals: 10-microscopy-and-acquisition/microscopy-fundamentals/index.md
                 - Fluorescence fundamentals: 10-microscopy-and-acquisition/fluorescence-fundamentals/index.md
-                - Phase contrast and brightfield microscopy: 10-microscopy-and-acquisition/microscopy-phase-contrast-brightfield/index.md
-                - Resolution, NA, and Nyquist sampling: 10-microscopy-and-acquisition/microscopy-resolution-na-nyquist/index.md
-                - Bleed-through and autofluorescence: 10-microscopy-and-acquisition/fluorescence-bleedthrough-autofluorescence/index.md
-                - Acquisition parameters: 10-microscopy-and-acquisition/acquisition-parameters/index.md
-                - Signal-to-noise, background, and saturation: 10-microscopy-and-acquisition/microscopy-snr-background-saturation/index.md
-                - Shading correction: 10-microscopy-and-acquisition/microscopy-shading-correction/index.md
-                - Phototoxicity and photobleaching: 10-microscopy-and-acquisition/acquisition-phototoxicity-photobleaching/index.md
-                - Acquisition metadata and records: 10-microscopy-and-acquisition/acquisition-metadata-records/index.md
-                - Acquisition checklist: 10-microscopy-and-acquisition/acquisition-checklist/index.md
+            #  - Phase contrast and brightfield microscopy: 10-microscopy-and-acquisition/microscopy-phase-contrast-brightfield/index.md
+            #   - Resolution, NA, and Nyquist sampling: 10-microscopy-and-acquisition/microscopy-resolution-na-nyquist/index.md
+            #   - Bleed-through and autofluorescence: 10-microscopy-and-acquisition/fluorescence-bleedthrough-autofluorescence/index.md
+            #   - Acquisition parameters: 10-microscopy-and-acquisition/acquisition-parameters/index.md
+            #   - Signal-to-noise, background, and saturation: 10-microscopy-and-acquisition/microscopy-snr-background-saturation/index.md
+            #   - Shading correction: 10-microscopy-and-acquisition/microscopy-shading-correction/index.md
+            #   - Phototoxicity and photobleaching: 10-microscopy-and-acquisition/acquisition-phototoxicity-photobleaching/index.md
+            #   - Acquisition metadata and records: 10-microscopy-and-acquisition/acquisition-metadata-records/index.md
+            #   - Acquisition checklist: 10-microscopy-and-acquisition/acquisition-checklist/index.md
             - Cell Culture and Cell Health:
                 - Overview: 20-cell-culture-and-cell-health/index.md
                 - Cell culture confluence and passages: 20-cell-culture-and-cell-health/cell-culture-confluence-passages/index.md
