@@ -61,8 +61,8 @@ plugins:
                 - Desenho Experimental II: 00-onboarding/batch-effects/index.md
                 - Git básico para pós-graduação: 00-onboarding/git/index.md
                 - Markdown básico: 00-onboarding/git/markdown.md
-                - Prática: 00-onboarding/git/pratica.md
-                - Prática com experimentos: 00-onboarding/git/pratica_experimentos.md
+                - Prática: 00-onboarding/git/git-na-pratica.md
+                - Prática com experimentos: 00-onboarding/git/github-lab-notebook.md
             - Microscopia e aquisição:
                 # TODO: conteúdo em desenvolvimento
                 # - Visão geral: 10-microscopia-e-aquisicao/index.md

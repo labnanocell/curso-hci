@@ -9,8 +9,13 @@ A ideia aqui **não é** transformar você em desenvolvedor de software, nem cob
 Este módulo deve ser lido em conjunto com [[HCI_Organizacao_projeto|HCA — Organização de projeto (pastas, nomes, rastreabilidade)]], porque Git e organização de projeto caminham juntos.
 
 !!! info "Estrutura desta parte do curso"
-    Esta aula tem foco **conceitual**: por que usamos Git/GitHub, como os repositórios serão organizados e qual é o papel do aluno e do orientador nesse fluxo.
-    A parte prática de criação de conta, uso do repositório e início do lab notebook está no material complementar: [📘 Tutorial: Como usar o GitHub como Lab Notebook](pratica.md)
+    Esta aula tem foco **conceitual**: por que usamos Git e GitHub, como os repositórios serão organizados e qual é o papel do aluno e do orientador nesse fluxo.
+
+    A parte prática é apresentada nos guias complementares:
+
+    - [📘 Usando o GitHub como caderno de laboratório](github-lab-notebook.md)
+    - [📘 Git na prática: conectando seu computador ao projeto](git-na-pratica.md)
+    - [📘 Markdown — primeiros passos](markdown.md)
 
 ## Por que vamos usar Git na pós?
 
@@ -452,10 +457,11 @@ A ideia central não é usar GitHub por modismo, mas como ferramenta de:
 
 Este módulo foi pensado como uma introdução prática para o contexto da pós-graduação.
 
-Para a parte prática desta aula, consulte:
+Para os guias práticos que acompanham esta aula, consulte:
 
-- [📘 Tutorial: Como usar o GitHub como Lab Notebook](pratica.md)
-- [📘 Markdown — primeiros passos (NanoCell)](markdown.md)
+- [📘 Usando o GitHub como caderno de laboratório](github-lab-notebook.md)
+- [📘 Git na prática: conectando seu computador ao projeto](git-na-pratica.md)
+- [📘 Markdown — primeiros passos](markdown.md)
 
 
 Para quem quiser se aprofundar mais em Git e GitHub, consulte também o material complementar:
