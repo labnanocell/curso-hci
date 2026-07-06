@@ -19,7 +19,7 @@ By the end of this module, learners will be able to:
 
 - [Microscopy — Optical Fundamentals for HCA](microscopy-fundamentals/index.md)
 - [Fluorescence — Principles, Fluorophores, and Spectra](fluorescence-fundamentals/index.md)
-- [Fluorescence — Optics, Filters, and Spectral Design for HCA](fluorescence-optics-filters-spectral-design-HCA/index.md)
+- [Fluorescence — Optics, Filters, and Spectral Design for HCA](fluorescence-optics-filters-spectral-design-hca/index.md)
 
 !!! info "About this material"
     This material was developed to support the training activities of our HCI/HCA research group. Although it was created primarily for our own workflows, we hope it will also be useful to others who are learning or developing similar approaches.
