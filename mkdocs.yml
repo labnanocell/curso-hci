@@ -9,6 +9,7 @@ theme:
   features:
     - navigation.prune
     - navigation.tracking
+    - navigation.indexes
     - search.highlight
     - search.suggest
     - content.code.copy
@@ -65,7 +66,7 @@ plugins:
                 - Prática com experimentos: 00-onboarding/git/github-lab-notebook.md
             - Microscopia e aquisição:
                 # TODO: conteúdo em desenvolvimento
-                # - Visão geral: 10-microscopia-e-aquisicao/index.md
+                - Visão geral: 10-microscopia-e-aquisicao/index.md
                 - Fundamentos de microscopia óptica: 10-microscopia-e-aquisicao/microscopia-fundamentos/index.md
                 - Fluorescência, fluoróforos e espectros: 10-microscopia-e-aquisicao/fluorescencia-fundamentos/index.md
                 - Microscopia de Fluorescência: 10-microscopia-e-aquisicao/fluorescencia-otica-filtros-desenho-espectral-HCA/index.md
@@ -86,8 +87,7 @@ plugins:
                 # TODO: conteúdo em desenvolvimento
                 # - Checklist de aquisição: 10-microscopia-e-aquisicao/aquisicao-checklist/index.md
             - Cultura celular e saúde celular:
-                # TODO: conteúdo em desenvolvimento
-                # - Visão geral: 20-cultura-celular-e-cell-health/index.md
+                - Visão geral: 20-cultura-celular-e-cell-health/index.md
                 # TODO: conteúdo em desenvolvimento
                 # - Confluência e passagens: 20-cultura-celular-e-cell-health/cultura-confluencia-passagens/index.md
                 # TODO: conteúdo em desenvolvimento
@@ -113,7 +113,7 @@ plugins:
                 # TODO: conteúdo em desenvolvimento
                 # - SOP, preparo de placa e layout: 20-cultura-celular-e-cell-health/sop-preparo-placa-layout/index.md
             - Treinamento em cultura celular:
-                # - Visão geral: 21-treinamento-cultura-celular/index.md
+                - Visão geral: 21-treinamento-cultura-celular/index.md
                 - Visão geral do treinamento: 21-treinamento-cultura-celular/visao-geral/index.md
                 - Pré-leitura: 21-treinamento-cultura-celular/pre-leitura/index.md
                 # - Apostila piloto: 21-treinamento-cultura-celular/apostila-piloto/index.md
@@ -140,7 +140,7 @@ plugins:
                 - Experimental design II: 00-onboarding/batch-effects/index.md
                 - Basic Git for graduate students: 00-onboarding/git/index.md
             - Microscopy and Acquisition:
-            # - Overview: 10-microscopy-and-acquisition/index.md
+                - Overview: 10-microscopy-and-acquisition/index.md
                 - Optical Microscopy fundamentals: 10-microscopy-and-acquisition/microscopy-fundamentals/index.md
                 - Fluorescence, Fluorophores, and Spectra: 10-microscopy-and-acquisition/fluorescence-fundamentals/index.md
                 - Fluorescence Microscopy: 10-microscopy-and-acquisition/fluorescence-optics-filters-spectral-design-hca/index.md
@@ -153,31 +153,31 @@ plugins:
             #   - Phototoxicity and photobleaching: 10-microscopy-and-acquisition/acquisition-phototoxicity-photobleaching/index.md
             #   - Acquisition metadata and records: 10-microscopy-and-acquisition/acquisition-metadata-records/index.md
             #   - Acquisition checklist: 10-microscopy-and-acquisition/acquisition-checklist/index.md
-            - Cell Culture and Cell Health:
-                - Overview: 20-cell-culture-and-cell-health/index.md
-                - Cell culture confluence and passages: 20-cell-culture-and-cell-health/cell-culture-confluence-passages/index.md
-                - Cell culture density and morphology: 20-cell-culture-and-cell-health/cell-culture-density-morphology/index.md
-                - Mycoplasma QC: 20-cell-culture-and-cell-health/cell-culture-mycoplasma-qc/index.md
-                - Cell health fundamentals: 20-cell-culture-and-cell-health/cell-health-fundamentals/index.md
-                - Metabolism versus viability: 20-cell-culture-and-cell-health/cell-health-metabolism-vs-viability/index.md
-                - Sublethal versus lethal responses: 20-cell-culture-and-cell-health/cell-health-sublethal-vs-lethal/index.md
-                - Cytostatic versus cytotoxic effects: 20-cell-culture-and-cell-health/cell-health-cytostatic-vs-cytotoxic/index.md
-                - Experimental controls: 20-cell-culture-and-cell-health/cell-health-experimental-controls/index.md
-                - Dose, time, solvent, and controls: 20-cell-culture-and-cell-health/assays-dose-time-solvent-controls/index.md
-                - Orthogonal assays: 20-cell-culture-and-cell-health/cell-health-orthogonal-assays/index.md
-                - Material interference: 20-cell-culture-and-cell-health/cell-health-material-interference/index.md
-                - IC50 and EC50: 20-cell-culture-and-cell-health/cell-health-ic50-ec50/index.md
-                - Reporting results: 20-cell-culture-and-cell-health/cell-health-reporting-results/index.md
-                - SOP, plate preparation, and layout: 20-cell-culture-and-cell-health/sop-plate-preparation-layout/index.md
-            - Cell Culture Training:
-                - Overview: 21-cell-culture-training/index.md
-                - Training overview: 21-cell-culture-training/overview/index.md
-                - Pre-reading: 21-cell-culture-training/pre-reading/index.md
-                - Pilot handbook: 21-cell-culture-training/pilot-handbook/index.md
-                - Day 1 — Asepsis, observation, and passaging: 21-cell-culture-training/day-1-asepsis-observation-passaging/index.md
-                - Supervised passaging: 21-cell-culture-training/supervised-passaging/index.md
-                - Counting and 96-well plating: 21-cell-culture-training/counting-and-96-well-plating/index.md
-                - MTT and plating homogeneity: 21-cell-culture-training/mtt-plating-homogeneity/index.md
-                - Dose-response curve: 21-cell-culture-training/dose-response-curve/index.md
-                - Checklists and records: 21-cell-culture-training/checklists-and-records/index.md
-            - Glossary: 90-glossary/index.md
+            # - Cell Culture and Cell Health:
+            #    - Overview: 20-cell-culture-and-cell-health/index.md
+            #    - Cell culture confluence and passages: 20-cell-culture-and-cell-health/cell-culture-confluence-passages/index.md
+            #    - Cell culture density and morphology: 20-cell-culture-and-cell-health/cell-culture-density-morphology/index.md
+            #    - Mycoplasma QC: 20-cell-culture-and-cell-health/cell-culture-mycoplasma-qc/index.md
+            #    - Cell health fundamentals: 20-cell-culture-and-cell-health/cell-health-fundamentals/index.md
+            #    - Metabolism versus viability: 20-cell-culture-and-cell-health/cell-health-metabolism-vs-viability/index.md
+            #    - Sublethal versus lethal responses: 20-cell-culture-and-cell-health/cell-health-sublethal-vs-lethal/index.md
+            #    - Cytostatic versus cytotoxic effects: 20-cell-culture-and-cell-health/cell-health-cytostatic-vs-cytotoxic/index.md
+            #    - Experimental controls: 20-cell-culture-and-cell-health/cell-health-experimental-controls/index.md
+            #    - Dose, time, solvent, and controls: 20-cell-culture-and-cell-health/assays-dose-time-solvent-controls/index.md
+            #    - Orthogonal assays: 20-cell-culture-and-cell-health/cell-health-orthogonal-assays/index.md
+            #    - Material interference: 20-cell-culture-and-cell-health/cell-health-material-interference/index.md
+            #    - IC50 and EC50: 20-cell-culture-and-cell-health/cell-health-ic50-ec50/index.md
+            #    - Reporting results: 20-cell-culture-and-cell-health/cell-health-reporting-results/index.md
+            #    - SOP, plate preparation, and layout: 20-cell-culture-and-cell-health/sop-plate-preparation-layout/index.md
+            # - Cell Culture Training:
+            #    - Overview: 21-cell-culture-training/index.md
+            #    - Training overview: 21-cell-culture-training/overview/index.md
+            #    - Pre-reading: 21-cell-culture-training/pre-reading/index.md
+            #    - Pilot handbook: 21-cell-culture-training/pilot-handbook/index.md
+            #    - Day 1 — Asepsis, observation, and passaging: 21-cell-culture-training/day-1-asepsis-observation-passaging/index.md
+            #    - Supervised passaging: 21-cell-culture-training/supervised-passaging/index.md
+            #    - Counting and 96-well plating: 21-cell-culture-training/counting-and-96-well-plating/index.md
+            #    - MTT and plating homogeneity: 21-cell-culture-training/mtt-plating-homogeneity/index.md
+            #    - Dose-response curve: 21-cell-culture-training/dose-response-curve/index.md
+            #    - Checklists and records: 21-cell-culture-training/checklists-and-records/index.md
+            # - Glossary: 90-glossary/index.md
