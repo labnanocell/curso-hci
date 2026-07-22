@@ -138,6 +138,7 @@ plugins:
             - Tutoriais:
                 - Visão geral: 40-tutoriais/index.md
                 - SuperPlots em Python: 40-tutoriais/superplots/index.md
+                - Instalar Cellprofiler & Cellpose: 40-tutoriais/install_cellprofiler/index.md
         - locale: en
           name: English
           build: true
@@ -202,4 +203,4 @@ plugins:
             - Tutorials:
               - Overview: 40-tutorials/index.md
               - SuperPlots in Python: 40-tutorials/superplots/index.md
-
+              - Install Cellprifiles with Cellpose: 40-tutorials/install_cellprofiler/index.md
