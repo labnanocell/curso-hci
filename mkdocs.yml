@@ -25,6 +25,7 @@ extra_css:
 
 markdown_extensions:
   - admonition
+  - attr_list
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.caret      # sobrescrito H^+^
@@ -126,7 +127,17 @@ plugins:
                 # - Curva dose-resposta: 21-treinamento-cultura-celular/curva-dose-resposta/index.md
                 # TODO: conteúdo em desenvolvimento
                 # - Checklists e registros: 21-treinamento-cultura-celular/checklists-e-registros/index.md
-          # - Glossário: 90-glossario/index.md
+            - Ensaios de HCA:
+                - Visão Geral: 30-ensaios-de-hca/index.md
+                - CP Indrodução: 30-ensaios-de-hca/cell-painting-principios-e-aplicacoes/index.md
+                - CP Workflow experimental & análise: 30-ensaios-de-hca/cell-painting-workflow-experimental-e-analise/index.md
+                - LCP Indtrodução: 30-ensaios-de-hca/live-cell-painting/index.md
+            # - Glossário: 90-glossario/index.md
+            #---------------------------------------------------------------------------------------------------------------------
+            # Tutoriais sempre no final
+            - Tutoriais:
+                - Visão geral: 40-tutoriais/index.md
+                - SuperPlots em Python: 40-tutoriais/superplots/index.md
         - locale: en
           name: English
           build: true
@@ -181,3 +192,14 @@ plugins:
             #    - Dose-response curve: 21-cell-culture-training/dose-response-curve/index.md
             #    - Checklists and records: 21-cell-culture-training/checklists-and-records/index.md
             # - Glossary: 90-glossary/index.md
+            - HCA Assays:
+              - Overview: 30-hca-assays/index.md
+              - CP Introduction: 30-hca-assays/cell-painting-principles-and-applications/index.md
+              - CP Experimental & Analsysis Workflow: 30-hca-assays/cell-painting-experimental-and-analysis-workflow/index.md
+              - LCP Introduction: 30-hca-assays/live-cell-painting/index.md
+                      #---------------------------------------------------------------------------------------------------------------------
+            # Tutorials always at the end
+            - Tutorials:
+              - Overview: 40-tutorials/index.md
+              - SuperPlots in Python: 40-tutorials/superplots/index.md
+
