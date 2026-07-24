@@ -87,6 +87,9 @@ plugins:
                 # - Metadados e registros de aquisição: 10-microscopia-e-aquisicao/aquisicao-metadados-registro/index.md
                 # TODO: conteúdo em desenvolvimento
                 # - Checklist de aquisição: 10-microscopia-e-aquisicao/aquisicao-checklist/index.md
+            - Intro a análise de imagem:
+                - Visão geral: 11-imagem-digital-e-analise/index.md
+                - Imagem como dado: 11-imagem-digital-e-analise/imagem-como-dado/index.md 
             - Cultura celular e saúde celular:
                 - Visão geral: 20-cultura-celular-e-cell-health/index.md
                 # TODO: conteúdo em desenvolvimento
@@ -193,6 +196,9 @@ plugins:
             #    - Dose-response curve: 21-cell-culture-training/dose-response-curve/index.md
             #    - Checklists and records: 21-cell-culture-training/checklists-and-records/index.md
             # - Glossary: 90-glossary/index.md
+            - Intro to Image analysis:
+              - Overview: 11-digital-images-and-analysis/index.md
+              - Image as data: 11-digital-images-and-analysis/image-as-data/index.md
             - HCA Assays:
               - Overview: 30-hca-assays/index.md
               - CP Introduction: 30-hca-assays/cell-painting-principles-and-applications/index.md
