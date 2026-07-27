@@ -6,14 +6,20 @@ Os tutoriais podem ser utilizados de forma independente ou como complemento aos 
 
 ## Tutoriais disponíveis
 
-### SuperPlots em Python
-
-Aprenda a representar simultaneamente dados em nível celular e a variabilidade entre replicatas biológicas usando Python, Matplotlib e Seaborn.
-
-[Ver o tutorial](superplots/index.md)
-
 ### CellProfiler com RunCellpose
 
 Aprenda a instalar e executar o CellProfiler com o plugin RunCellpose usando um ambiente Pixi reproduzível ou, alternativamente, Docker.
 
 [Ver o tutorial](install_cellprofiler/index.md)
+
+### Visual Studio Code (VSCode) para Análise de Imagem
+
+Aprenda a instalar e executar o VSCode, bem como os *plugins* usados no curso, explore a interface, e uma breve introdução ao Python, Jupyter notebooks e *Pixi envs*.
+
+[Ver o tutorial](install_vscode/index.md)
+
+### SuperPlots em Python
+
+Aprenda a representar simultaneamente dados em nível celular e a variabilidade entre replicatas biológicas usando Python, Matplotlib e Seaborn.
+
+[Ver o tutorial](superplots/index.md)

@@ -17,3 +17,10 @@ Learn how to simultaneously represent cell-level data and variability across bio
 Learn how to install and run CellProfiler with the RunCellpose plugin using a reproducible Pixi environment or, alternatively, Docker.
 
 [View the tutorial⁠](install_cellprofiler/index.md)
+
+### Visual Studio Code for Image Analysis
+
+Learn how to install and configure Visual Studio Code, use the extensions adopted in the course, explore the interface, and work with Python, Jupyter notebooks, and Pixi environments.
+
+[View the tutorial](install_vscode/index.md)
+
