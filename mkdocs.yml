@@ -87,9 +87,16 @@ plugins:
                 # - Metadados e registros de aquisição: 10-microscopia-e-aquisicao/aquisicao-metadados-registro/index.md
                 # TODO: conteúdo em desenvolvimento
                 # - Checklist de aquisição: 10-microscopia-e-aquisicao/aquisicao-checklist/index.md
-            - Intro a análise de imagem:
+            - Intro à análise de imagem:
                 - Visão geral: 11-imagem-digital-e-analise/index.md
                 - Imagem como dado: 11-imagem-digital-e-analise/imagem-como-dado/index.md 
+            - Intro à análise computacional de imagens:
+                - Visão geral: 12-fundamentos-computacionais-analise-imagens/index.md
+                - Ambiente computacional e reprodutibilidade: 12-fundamentos-computacionais-analise-imagens/ambiente-computacional/index.md
+           #     - Python para leitura de pipelines: python-leitura-pipelines/index.md
+           #     - Validação, erros e sanity checks: validacao-sanity-checks/index.md
+           #     - Dados tabulares e DataFrames: dados-tabulares/index.md
+           #     - Investigando resultados e artefatos: investigando-resultados/index.md
             - Cultura celular e saúde celular:
                 - Visão geral: 20-cultura-celular-e-cell-health/index.md
                 # TODO: conteúdo em desenvolvimento
@@ -200,6 +207,13 @@ plugins:
             - Intro to Image analysis:
               - Overview: 11-digital-images-and-analysis/index.md
               - Image as data: 11-digital-images-and-analysis/image-as-data/index.md
+            - Introduction to Computational Image Analysis:
+                - Overview: 12-computational-foundations-image-analysis/index.md
+                - Computational Environment and Reproducibility: 12-computational-foundations-image-analysis/computational-environment/index.md
+           #     - Python for Reading Pipelines: python-for-reading-pipelines/index.md
+           #     - Validation, Errors, and Sanity Checks: validation-and-sanity-checks/index.md
+           #     - Tabular Data and DataFrames: tabular-data/index.md
+           #     - Investigating Results and Artifacts: investigating-results/index.md
             - HCA Assays:
               - Overview: 30-hca-assays/index.md
               - CP Introduction: 30-hca-assays/cell-painting-principles-and-applications/index.md

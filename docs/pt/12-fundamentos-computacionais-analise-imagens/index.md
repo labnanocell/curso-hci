@@ -27,7 +27,7 @@ Ao final deste módulo, a pessoa será capaz de:
 
 ### Tópicos
 
-:- [Ambiente computacional e reprodutibilidade](ambiente-computacional/index.md)
+- [Ambiente computacional e reprodutibilidade](ambiente-computacional/index.md)
 - [Python para leitura de pipelines](python-leitura-pipelines/index.md)
 - [Validação, erros e sanity checks](validacao-sanity-checks/index.md)
 - [Dados tabulares e DataFrames](dados-tabulares/index.md)
