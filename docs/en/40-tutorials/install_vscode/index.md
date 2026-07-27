@@ -71,6 +71,3 @@ When you begin using notebooks or reproducible environments, consult the section
 
     In the HTML version, code blocks include a button for copying their contents. This allows you to follow the explanations and test the commands and shortcuts directly in your project.
 
-## Source file
-
-- [Quarto source file](tutorial_vscode_hci_hca.qmd)

@@ -71,6 +71,3 @@ Quando começar a utilizar notebooks ou ambientes reproduzíveis, consulte as se
 
     Na versão HTML, os blocos de código possuem um botão para copiar o conteúdo. Assim, você pode acompanhar as explicações e testar os comandos e atalhos diretamente no seu projeto.
 
-## Arquivo-fonte
-
-- [Arquivo Quarto do tutorial](tutorial_vscode_hci_hca.qmd)
