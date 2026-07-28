@@ -23,7 +23,7 @@ Human beings are highly visual. We depend heavily on vision and, as a result, te
 
 Some limitations of this characteristic will be discussed later, especially when we talk about ethics and image interpretation. For now, let us use our vision to evaluate the image below.
 
-**Insert a Live Cell Painting image here.**
+![Live Cell Painting](../../../assets/img/lcp.jpg)
 
 When we look at an image like this, depending on our experience, even without knowing exactly what is being labeled, we may make an assessment like this:
 

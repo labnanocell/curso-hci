@@ -23,7 +23,7 @@ Os seres humanos são altamente visuais. Dependemos bastante da visão e, por co
 
 Algumas limitações dessa característica serão discutidas mais adiante, especialmente quando falarmos sobre ética e interpretação de imagens. Por enquanto, vamos usar a nossa visão para avaliar a imagem abaixo.
 
-**Inserir aqui uma imagem de Live Cell Painting.**
+![Live Cell Painting](../../assets/img/lcp.jpg)
 
 Quando vemos uma imagem como essa, dependendo da nossa experiência, mesmo sem saber exatamente o que está sendo marcado, é possível fazer uma análise parecida com esta:
 
