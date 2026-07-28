@@ -99,30 +99,10 @@ plugins:
            #     - Investigando resultados e artefatos: investigando-resultados/index.md
             - Cultura celular e saúde celular:
                 - Visão geral: 20-cultura-celular-e-cell-health/index.md
-                # TODO: conteúdo em desenvolvimento
-                # - Confluência e passagens: 20-cultura-celular-e-cell-health/cultura-confluencia-passagens/index.md
-                # TODO: conteúdo em desenvolvimento
-                # - Densidade e morfologia: 20-cultura-celular-e-cell-health/cultura-densidade-morfologia/index.md
-                # TODO: conteúdo em desenvolvimento
-                # - Controle de micoplasma: 20-cultura-celular-e-cell-health/cultura-mycoplasma-qc/index.md
                 - Conceitos fundamentais de saúde celular: 20-cultura-celular-e-cell-health/cell-health-conceitos-fundamentais/index.md
                 - Ensaios ortogonais: 20-cultura-celular-e-cell-health/cell-health-ensaios-ortogonais/index.md
                 - Metabolismo e métricas de viabilidade: 20-cultura-celular-e-cell-health/cell-health-metricas/index.md
-                # TODO: conteúdo em desenvolvimento
-                # - Respostas subletais e letais: 20-cultura-celular-e-cell-health/cell-health-subletal-vs-letal/index.md
-                # TODO: conteúdo em desenvolvimento
-                # - Efeitos citostáticos e citotóxicos: 20-cultura-celular-e-cell-health/cell-health-citostatico-vs-citotoxico/index.md
-                # TODO: conteúdo em desenvolvimento
-                # - Controles experimentais: 20-cultura-celular-e-cell-health/cell-health-controles-experimentais/index.md
-                # TODO: conteúdo em desenvolvimento
-                # - Dose, tempo, solvente e controles: 20-cultura-celular-e-cell-health/ensaios-dose-tempo-solvente-controles/index.md
-                # TODO: conteúdo em desenvolvimento
-                # - Interferência de materiais: 20-cultura-celular-e-cell-health/cell-health-interferencia-de-materiais/index.md
                 - IC50: 20-cultura-celular-e-cell-health/cell-health-ic50/index.md
-                # TODO: conteúdo em desenvolvimento
-                # - Reportando resultados: 20-cultura-celular-e-cell-health/cell-health-reportando-resultados/index.md
-                # TODO: conteúdo em desenvolvimento
-                # - SOP, preparo de placa e layout: 20-cultura-celular-e-cell-health/sop-preparo-placa-layout/index.md
             - Treinamento em cultura celular:
                 - Visão geral: 21-treinamento-cultura-celular/index.md
                 - Visão geral do treinamento: 21-treinamento-cultura-celular/visao-geral/index.md
@@ -176,22 +156,12 @@ plugins:
             #   - Phototoxicity and photobleaching: 10-microscopy-and-acquisition/acquisition-phototoxicity-photobleaching/index.md
             #   - Acquisition metadata and records: 10-microscopy-and-acquisition/acquisition-metadata-records/index.md
             #   - Acquisition checklist: 10-microscopy-and-acquisition/acquisition-checklist/index.md
-            # - Cell Culture and Cell Health:
-            #    - Overview: 20-cell-culture-and-cell-health/index.md
-            #    - Cell culture confluence and passages: 20-cell-culture-and-cell-health/cell-culture-confluence-passages/index.md
-            #    - Cell culture density and morphology: 20-cell-culture-and-cell-health/cell-culture-density-morphology/index.md
-            #    - Mycoplasma QC: 20-cell-culture-and-cell-health/cell-culture-mycoplasma-qc/index.md
-            #    - Cell health fundamentals: 20-cell-culture-and-cell-health/cell-health-fundamentals/index.md
-            #    - Metabolism versus viability: 20-cell-culture-and-cell-health/cell-health-metabolism-vs-viability/index.md
-            #    - Sublethal versus lethal responses: 20-cell-culture-and-cell-health/cell-health-sublethal-vs-lethal/index.md
-            #    - Cytostatic versus cytotoxic effects: 20-cell-culture-and-cell-health/cell-health-cytostatic-vs-cytotoxic/index.md
-            #    - Experimental controls: 20-cell-culture-and-cell-health/cell-health-experimental-controls/index.md
-            #    - Dose, time, solvent, and controls: 20-cell-culture-and-cell-health/assays-dose-time-solvent-controls/index.md
-            #    - Orthogonal assays: 20-cell-culture-and-cell-health/cell-health-orthogonal-assays/index.md
-            #    - Material interference: 20-cell-culture-and-cell-health/cell-health-material-interference/index.md
-            #    - IC50 and EC50: 20-cell-culture-and-cell-health/cell-health-ic50-ec50/index.md
-            #    - Reporting results: 20-cell-culture-and-cell-health/cell-health-reporting-results/index.md
-            #    - SOP, plate preparation, and layout: 20-cell-culture-and-cell-health/sop-plate-preparation-layout/index.md
+            - Cell Culture and Cell Health:
+                - Overview: 20-cell-culture-and-cell-health/index.md
+                - Cell health fundamentals: 20-cell-culture-and-cell-health/cell-health-fundamentals/index.md
+                - Metabolism versus viability: 20-cell-culture-and-cell-health/cell-health-metabolism-vs-viability/index.md
+                - Orthogonal assays: 20-cell-culture-and-cell-health/cell-health-orthogonal-assays/index.md
+                - IC50: 20-cell-culture-and-cell-health/cell-health-ic50-ec50/index.md
             # - Cell Culture Training:
             #    - Overview: 21-cell-culture-training/index.md
             #    - Training overview: 21-cell-culture-training/overview/index.md
