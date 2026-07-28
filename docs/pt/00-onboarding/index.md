@@ -1,35 +1,30 @@
 # Onboarding
- 
-## 0) Visão geral
 
-### Propósito
-Formar pós-graduandos capazes de executar o ciclo completo de um projeto de HCA/HCI com rigor e reprodutibilidade:
+O módulo de onboarding apresenta os fundamentos conceituais e operacionais necessários para iniciar um projeto de **High-Content Imaging** e **High-Content Analysis** (HCI/HCA) com clareza, rigor e reprodutibilidade.
 
-**Pergunta → desenho experimental → aquisição → QC → análise → interpretação → comunicação → reprodutibilidade**
+Antes de adquirir imagens ou construir pipelines, é preciso definir uma pergunta científica clara, traduzi-la em um desenho experimental adequado e organizar o trabalho de forma que decisões, dados e análises possam ser compreendidos e reproduzidos.
 
-![Mapa da aventura do HCI](../../assets/img/hci-aventura-mapa.webp)
+## Objetivos do módulo
 
-### Perfil de saída
-A pessoa consegue:
+Ao concluir este módulo, você deverá ser capaz de:
 
-- Desenhar um ensaio de HCA (ex.: *Live Cell Painting*) com controles e mitigação de *batch effects*.
-- Adquirir imagens com parâmetros coerentes e justificar escolhas de aquisição.
-- Implementar QC (sigla do inglês, *Quality Control*) e critérios de exclusão (imagem e/ou poço) e documentar racional.
-- Construir pipeline de segmentação/medição (ex.: CellProfiler) e integrar metadados.
-- Gerar perfis fenotípicos, normalizar, diagnosticar batches e produzir relatórios reprodutíveis.
-- Treinar modelos baseline (e avançados quando necessário) com validação correta.
-- Entregar artefatos reprodutíveis (repositório + ambiente + notebooks + README + figuras).
+- explicar os princípios gerais de HCI/HCA e reconhecer as principais etapas de um projeto;
+- transformar uma pergunta científica em objetivos, variáveis e resultados mensuráveis;
+- planejar controles, réplicas, randomização e organização de placas;
+- reconhecer fontes de *batch effect* e incorporar estratégias de prevenção ao desenho experimental;
+- organizar arquivos, versões e registros do projeto de maneira reprodutível;
+- utilizar Git e Markdown como ferramentas de documentação e colaboração.
 
-### Princípios operacionais do curso
+## Princípios de trabalho
 
-- **Rigor > velocidade:** primeiro funciona, depois otimiza.
-- **Reprodutibilidade desde o dia 1:** ambiente, versões, seeds, dados organizados.
-- **Aprender fazendo:** cada módulo termina em um entregável avaliável.
-- **Trilha dupla:** 
-	1. biologia/microscopia/ensaio e 
-	2. dados/software/ML, convergindo em projetos.
+Os conteúdos deste módulo são guiados por quatro princípios:
 
-### Tópicos
+- **A pergunta vem antes da ferramenta:** a escolha do ensaio, da aquisição e da análise deve responder a uma necessidade científica bem definida.
+- **Rigor antes da complexidade:** um fluxo simples, validado e compreendido é preferível a uma análise sofisticada sem controles adequados.
+- **Reprodutibilidade desde o início:** ambientes, versões, metadados, decisões e desvios devem ser registrados durante todo o projeto.
+- **Prevenção antes da correção:** problemas de desenho experimental e *batch effects* devem ser reduzidos sempre que possível antes da coleta dos dados.
+
+## Conteúdo do módulo
 
 - [Introdução ao High-Content Imaging e High-Content Analysis](intro/index.md)
 - [Pergunta científica e operacionalização](pergunta/index.md)
@@ -37,6 +32,8 @@ A pessoa consegue:
 - [Desenho experimental II: *batch effect* — como reconhecer, prevenir e interpretar](batch-effects/index.md)
 - [Git básico para pós-graduação](git/index.md)
 
-!!!info "Sobre este material"
-    Este material foi criado para apoiar o treinamento do nosso grupo de pesquisa em HCI/HCA. Ele foi pensado primеiramente para a nossa rotina, mas pode ser útil para outras pessoas que estejam aprendendo ou estruturando fluxos semelhantes.
-    Se você encontrar algum erro, inconsistência ou tiver sugestões de melhoria, fique à vontade para abrir uma *issue* no repositório. Se preferir tratar algo de forma privada, envie um e-mail.
+## Como usar este módulo
+
+Recomenda-se seguir as aulas na ordem apresentada, porque cada uma estabelece conceitos utilizados nas etapas seguintes.
+
+Ao final do onboarding, você deverá ter uma visão clara da pergunta que deseja responder, do desenho experimental necessário e da forma como o projeto será organizado antes de avançar para os módulos de microscopia, cultura celular, aquisição e análise.

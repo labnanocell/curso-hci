@@ -1,41 +1,39 @@
 # Onboarding
 
-## 0) Overview
+The onboarding module introduces the conceptual and operational foundations needed to begin a **High-Content Imaging** and **High-Content Analysis** (HCI/HCA) project with clarity, rigor, and reproducibility.
 
-### Purpose
-To train graduate students capable of carrying out the full cycle of an HCA/HCI project with rigor and reproducibility:
+Before acquiring images or building pipelines, it is necessary to define a clear scientific question, translate it into an appropriate experimental design, and organize the work so that decisions, data, and analyses can be understood and reproduced.
 
-**Question → experimental design → acquisition → QC → analysis → interpretation → communication → reproducibility**
+## Module objectives
 
-![HCI/HCA adventure map](../assets/img/hci-adventure-map.webp)
+By the end of this module, you should be able to:
 
-### Expected outcomes
-The person is able to:
+- explain the general principles of HCI/HCA and recognize the main stages of a project;
+- transform a scientific question into objectives, variables, and measurable outcomes;
+- plan controls, replicates, randomization, and plate organization;
+- recognize sources of *batch effect* and incorporate prevention strategies into the experimental design;
+- organize files, versions, and project records in a reproducible manner;
+- use Git and Markdown as tools for documentation and collaboration.
 
-- Design an HCA assay (e.g., *Live Cell Painting*) with proper controls and *batch effect* mitigation.
-- Acquire images with coherent parameters and justify acquisition choices.
-- Implement QC (*Quality Control*) and exclusion criteria (image and/or well) and document the rationale.
-- Build a segmentation/measurement pipeline (e.g., CellProfiler) and integrate metadata.
-- Generate phenotypic profiles, normalize data, diagnose batches, and produce reproducible reports.
-- Train baseline models (and advanced ones when necessary) with proper validation.
-- Deliver reproducible artifacts (repository + environment + notebooks + README + figures).
+## Working principles
 
-### Operational principles of the course
+The content in this module is guided by four principles:
 
-- **Rigor > speed:** first make it work, then optimize.
-- **Reproducibility from day 1:** environment, versions, seeds, organized data.
-- **Learn by doing:** each module ends with an assessable deliverable.
-- **Dual track:** 
-    1. biology/microscopy/assay and 
-    2. data/software/ML, converging in projects.
+- **The question comes before the tool:** the choice of assay, acquisition strategy, and analysis should respond to a clearly defined scientific need.
+- **Rigor before complexity:** a simple, validated, and well-understood workflow is preferable to a sophisticated analysis without adequate controls.
+- **Reproducibility from the beginning:** environments, versions, metadata, decisions, and deviations should be recorded throughout the project.
+- **Prevention before correction:** experimental-design problems and *batch effects* should be minimized whenever possible before data collection.
 
-### Topics
+## Module content
 
 - [Introduction to High-Content Imaging and High-Content Analysis](intro/index.md)
 - [Scientific question and operationalization](scientific-question/index.md)
 - [Experimental design I: controls, replication, and randomization](experimental-design/index.md)
-- [Experimental design II: *batch effect* — how to recognize, prevent, and interpret it](batch-effects/index.md)
+- [Experimental design II: *batch effects* — how to recognize, prevent, and interpret them](batch-effects/index.md)
+- [Basic Git for graduate students](git/index.md)
 
-!!!info "About this material"
-    This material was created to support the training of our research group in HCI/HCA. It was designed primarily for our own workflow, but it may also be useful for others who are learning or organizing similar workflows.
-    If you find any errors, inconsistencies, or have suggestions for improvement, feel free to open an *issue* in the repository. If you would prefer to discuss something privately, please send an email.
+## How to use this module
+
+We recommend following the lessons in the order presented because each one establishes concepts used in the subsequent stages.
+
+By the end of the onboarding module, you should have a clear understanding of the question you want to answer, the experimental design required, and how the project will be organized before moving on to the microscopy, cell culture, acquisition, and analysis modules.
