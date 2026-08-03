@@ -122,6 +122,15 @@ plugins:
                 - CP Indrodução: 30-ensaios-de-hca/cell-painting-principios-e-aplicacoes/index.md
                 - CP Workflow experimental & análise: 30-ensaios-de-hca/cell-painting-workflow-experimental-e-analise/index.md
                 - LCP Indtrodução: 30-ensaios-de-hca/live-cell-painting/index.md
+            - Pipeline de Live Cell Painting:
+                - Visão geral: 31-pipeline-live-cell-painting/index.md
+                - Organização dos dados: 31-pipeline-live-cell-painting/organizacao-dos-dados/index.md
+                - Criando seu projeto: 31-pipeline-live-cell-painting/criando-o-projeto/index.md
+                - Organização dos metadados: 31-pipeline-live-cell-painting/organizacao-dos-metadados/index.md
+                - Metadados no CellProfiler: 31-pipeline-live-cell-painting/metadados-no-cellprofiler/index.md
+                - AssayDev e controle de qualidade: 31-pipeline-live-cell-painting/assaydev/index.md
+                - Extração de features: 31-pipeline-live-cell-painting/extracao-de-features/index.md
+                - Pré-processamento e perfis: 31-pipeline-live-cell-painting/preprocessamento/index.md
             # - Glossário: 90-glossario/index.md
             #---------------------------------------------------------------------------------------------------------------------
             # Tutoriais sempre no final
