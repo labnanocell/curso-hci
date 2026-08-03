@@ -217,7 +217,13 @@ O laboratório usa dois programas (atalhos nos computadores do laboratório) pen
 
 Rodando o LDG:
 
-1. Selecione a pasta com as imagens do experimento (ex.: `images/$EXP/images/250808_101736_AONPPS_Protocol/`). **Não renomeie pastas ou arquivos depois deste passo** — o CellProfiler perde a referência.
+1. Selecione a pasta com as imagens do experimento, por exemplo:
+
+   ```text
+   images/$EXP/images/protocolo_aquisicao/
+   ```
+
+   **Não renomeie pastas ou arquivos depois deste passo** — o CellProfiler perde a referência.
 2. O programa reconhece os canais pelo nome dos arquivos. No Live Cell Painting, o padrão é:
    - GFP → **AOGFP**
    - Propidium Iodide → **AOPI**
@@ -248,7 +254,7 @@ Exemplo válido: `Huh7 NPPS 1000 trt`.
 
 | Campo | Descrição | Exemplo | Observação |
 |---|---|---|---|
-| 1. Linhagem | linhagem celular | `Huh7` | sempre o mesmo formato — evite `HUH7`, `Huh-7` |
+| 1. Linhagem | linhagem celular | `Huh7` | mesmo formato sempre; evite `HUH7`/`Huh-7` |
 | 2. Tratamento | composto/nanopartícula | `NPPS` | sem espaços (`NonTreated`, não `Non treated`) |
 | 3. Concentração | valor numérico | `1000` | sem unidade — documente a unidade separadamente |
 | 4. Tipo | papel do poço | `trt`, `negcon`, `poscon` | minúsculo, sem espaço |
@@ -426,15 +432,47 @@ Uma variável cujo nome comece com `_` é privada à célula onde foi criada. Se
 
 ## Percorrendo o pipeline: NB01 → NB07
 
-| Notebook | Entrada | Saída | O que faz |
-|---|---|---|---|
-| `01_samples_retrieval.py` | CSV/SQLite do CellProfiler | `single_cell_profiles.parquet` | lê e consolida os perfis, checagens estruturais (SC-01→SC-05) |
-| `02_aggregate_normalize_featureselect.py` | `single_cell_profiles.parquet` | `per_well_features_selected.parquet` | anota com o platemap, agrega para o nível de poço, normaliza (`mad_robustize`), seleciona *features* (SC-06→SC-10) |
-| `03_phenotypic_profiling.py` | `per_well_features_selected.parquet` | figuras/modelos PCA, UMAP, LDA | PCA, UMAP, LDA com CV leave-one-plate-out, Cohen's d, KMeans, comparação sem correção vs. Harmony (SC-11→SC-13) |
-| `04_phenotypic_fingerprints.py` | `per_well_features_selected.parquet` | *fingerprints* por taxonomia de feature | taxonomia de features, Cohen's d por condição, *heatmaps*/radares — eixo de dose é opcional |
-| `05_quality_metrics.py` | `per_well_features_selected.parquet` | métricas de qualidade + decisão | Percent Replicating, mAP, avaliação de *batch*, dose-resposta, decisão **Go/No-Go** (SC-18→SC-22) |
-| `06_single_cell_analysis.py` | `single_cell_ready.parquet` (cache do NB02) | SHAP, relatório de classificação, figuras | PCA/UMAP no nível de célula única, HDBSCAN+KMeans, LightGBM+SHAP, distância de Mahalanobis (SC-14→SC-17) |
-| `07_recovery_axis_analysis.py` (opcional) | `per_well_features_selected.parquet` | eixo de recuperação | eixo geométrico entre dois estados de referência — só se aplica a desenhos experimentais com essa estrutura; pula automaticamente se não configurado |
+**`01_samples_retrieval.py`**
+
+- Entrada: CSV/SQLite do CellProfiler
+- Saída: `single_cell_profiles.parquet`
+- O que faz: lê e consolida os perfis, checagens estruturais (SC-01→SC-05)
+
+**`02_aggregate_normalize_featureselect.py`**
+
+- Entrada: `single_cell_profiles.parquet`
+- Saída: `per_well_features_selected.parquet`
+- O que faz: anota com o platemap, agrega para o nível de poço, normaliza (`mad_robustize`), seleciona *features* (SC-06→SC-10)
+
+**`03_phenotypic_profiling.py`**
+
+- Entrada: `per_well_features_selected.parquet`
+- Saída: figuras/modelos de PCA, UMAP, LDA
+- O que faz: PCA, UMAP, LDA com CV leave-one-plate-out, Cohen's d, KMeans, comparação sem correção vs. Harmony (SC-11→SC-13)
+
+**`04_phenotypic_fingerprints.py`**
+
+- Entrada: `per_well_features_selected.parquet`
+- Saída: *fingerprints* por taxonomia de feature
+- O que faz: taxonomia de features, Cohen's d por condição, *heatmaps*/radares — eixo de dose é opcional
+
+**`05_quality_metrics.py`**
+
+- Entrada: `per_well_features_selected.parquet`
+- Saída: métricas de qualidade + decisão
+- O que faz: Percent Replicating, mAP, avaliação de *batch*, dose-resposta, decisão **Go/No-Go** (SC-18→SC-22)
+
+**`06_single_cell_analysis.py`**
+
+- Entrada: `single_cell_ready.parquet` (cache do NB02)
+- Saída: SHAP, relatório de classificação, figuras
+- O que faz: PCA/UMAP no nível de célula única, HDBSCAN+KMeans, LightGBM+SHAP, distância de Mahalanobis (SC-14→SC-17)
+
+**`07_recovery_axis_analysis.py`** (opcional)
+
+- Entrada: `per_well_features_selected.parquet`
+- Saída: eixo de recuperação
+- O que faz: eixo geométrico entre dois estados de referência — só se aplica a desenhos experimentais com essa estrutura; pula automaticamente se não configurado
 
 Rode-os em ordem, sempre revisando os widgets no topo antes de seguir para o próximo:
 

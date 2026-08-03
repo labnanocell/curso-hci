@@ -3335,14 +3335,16 @@ Avoid renaming once created
 </ul>
 <p>Running the LDG:</p>
 <ol type="1">
-<li>Select the folder containing the experiment’s images (e.g. <code>images/$EXP/images/250808_101736_AONPPS_Protocol/</code>). <strong>Do not rename folders or files after this step</strong> — CellProfiler will lose the reference.</li>
-<li>The program recognizes channels from the image file names. In Live Cell Painting, the convention is:
+<li><p>Select the folder containing the experiment’s images, for example:</p>
+<pre class="text"><code>images/$EXP/images/acquisition_protocol/</code></pre>
+<p><strong>Do not rename folders or files after this step</strong> — CellProfiler will lose the reference.</p></li>
+<li><p>The program recognizes channels from the image file names. In Live Cell Painting, the convention is:</p>
 <ul>
 <li>GFP → <strong>AOGFP</strong></li>
 <li>Propidium Iodide → <strong>AOPI</strong></li>
 <li>DAPI (if used) → <strong>Nuclei</strong></li>
 </ul></li>
-<li>Click <strong>OK</strong>. It runs quickly and closes, creating a <code>load_data_csv/</code> subfolder inside the image folder.</li>
+<li><p>Click <strong>OK</strong>. It runs quickly and closes, creating a <code>load_data_csv/</code> subfolder inside the image folder.</p></li>
 </ol>
 <p>If you have biological replicates run on different days, repeat this once per day/folder.</p>
 <p>The generated <code>load_data_csv/</code> folder contains three files:</p>
@@ -3399,7 +3401,7 @@ Avoid renaming once created
 <td>1. Cell line</td>
 <td>cell line name</td>
 <td><code>Huh7</code></td>
-<td>always the same format — avoid <code>HUH7</code>, <code>Huh-7</code></td>
+<td>same format always; avoid <code>HUH7</code>/<code>Huh-7</code></td>
 </tr>
 <tr class="even">
 <td>2. Treatment</td>
@@ -3481,8 +3483,8 @@ The Layout Generator is sensitive to inconsistency
 <section id="loading-metadata-into-cellprofiler" class="level2" data-number="5">
 <h2 data-number="5" class="anchored" data-anchor-id="loading-metadata-into-cellprofiler"><span class="header-section-number">5</span> Loading metadata into CellProfiler</h2>
 <p>Open CellProfiler in the environment with plugins (Cellpose included) — see <a href="https://labnanocell.github.io/curso-hci/en/40-tutorials/install_cellprofiler/">Install CellProfiler &amp; Cellpose</a> if you haven’t set it up yet.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate cp_cellpose</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">cellprofiler</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate cp_cellpose</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="ex">cellprofiler</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -3669,10 +3671,10 @@ Tracing an object’s flow
 <h2 data-number="9" class="anchored" data-anchor-id="pixi-environment-and-marimo-notebooks"><span class="header-section-number">9</span> Pixi environment and marimo notebooks</h2>
 <p>The analysis notebooks are <strong>not Jupyter</strong> — they’re <a href="https://marimo.io/">marimo</a> notebooks: plain reactive <code>.py</code> files (<code>app = marimo.App()</code>), with no hidden cell state.</p>
 <p>Edit a notebook (opens the reactive editor in your browser):</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> run marimo edit workspace/analysis/<span class="va">$EXP</span>/analysis/01_samples_retrieval.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> run marimo edit workspace/analysis/<span class="va">$EXP</span>/analysis/01_samples_retrieval.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The widgets at the top of each notebook (experiment picker, thresholds, checkboxes) are <code>mo.ui</code> elements — changing one automatically re-runs every cell that depends on it.</p>
 <p>Run a notebook headlessly (deterministic, every <code>mo.ui</code> falls back to its default value — this is what you’d use for “just run the whole pipeline” or in CI):</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> run python3 workspace/analysis/<span class="va">$EXP</span>/analysis/01_samples_retrieval.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> run python3 workspace/analysis/<span class="va">$EXP</span>/analysis/01_samples_retrieval.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -3689,73 +3691,55 @@ A marimo naming detail
 </section>
 <section id="walking-through-the-pipeline-nb01-nb07" class="level2" data-number="10">
 <h2 data-number="10" class="anchored" data-anchor-id="walking-through-the-pipeline-nb01-nb07"><span class="header-section-number">10</span> Walking through the pipeline: NB01 → NB07</h2>
-<table class="table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Notebook</th>
-<th>Input</th>
-<th>Output</th>
-<th>What it does</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>01_samples_retrieval.py</code></td>
-<td>CellProfiler CSV/SQLite</td>
-<td><code>single_cell_profiles.parquet</code></td>
-<td>reads and consolidates profiles, structural sanity checks (SC-01→SC-05)</td>
-</tr>
-<tr class="even">
-<td><code>02_aggregate_normalize_featureselect.py</code></td>
-<td><code>single_cell_profiles.parquet</code></td>
-<td><code>per_well_features_selected.parquet</code></td>
-<td>annotates with the platemap, aggregates to well level, normalizes (<code>mad_robustize</code>), selects features (SC-06→SC-10)</td>
-</tr>
-<tr class="odd">
-<td><code>03_phenotypic_profiling.py</code></td>
-<td><code>per_well_features_selected.parquet</code></td>
-<td>PCA/UMAP/LDA figures and models</td>
-<td>PCA, UMAP, LDA with leave-one-plate-out CV, Cohen’s d, KMeans, uncorrected-vs-Harmony comparison (SC-11→SC-13)</td>
-</tr>
-<tr class="even">
-<td><code>04_phenotypic_fingerprints.py</code></td>
-<td><code>per_well_features_selected.parquet</code></td>
-<td>fingerprints by feature taxonomy</td>
-<td>feature taxonomy, per-condition Cohen’s d, heatmaps/radar plots — dose axis optional</td>
-</tr>
-<tr class="odd">
-<td><code>05_quality_metrics.py</code></td>
-<td><code>per_well_features_selected.parquet</code></td>
-<td>quality metrics + decision</td>
-<td>Percent Replicating, mAP, batch assessment, dose-response, <strong>Go/No-Go</strong> decision (SC-18→SC-22)</td>
-</tr>
-<tr class="even">
-<td><code>06_single_cell_analysis.py</code></td>
-<td><code>single_cell_ready.parquet</code> (NB02 cache)</td>
-<td>SHAP, classification report, figures</td>
-<td>single-cell PCA/UMAP, HDBSCAN+KMeans, LightGBM+SHAP, Mahalanobis distance (SC-14→SC-17)</td>
-</tr>
-<tr class="odd">
-<td><code>07_recovery_axis_analysis.py</code> (optional)</td>
-<td><code>per_well_features_selected.parquet</code></td>
-<td>recovery axis</td>
-<td>geometric axis between two reference states — only applies to experimental designs with that structure; skips itself automatically if not configured</td>
-</tr>
-</tbody>
-</table>
+<p><strong><code>01_samples_retrieval.py</code></strong></p>
+<ul>
+<li>Input: CellProfiler CSV/SQLite</li>
+<li>Output: <code>single_cell_profiles.parquet</code></li>
+<li>What it does: reads and consolidates profiles, structural sanity checks (SC-01→SC-05)</li>
+</ul>
+<p><strong><code>02_aggregate_normalize_featureselect.py</code></strong></p>
+<ul>
+<li>Input: <code>single_cell_profiles.parquet</code></li>
+<li>Output: <code>per_well_features_selected.parquet</code></li>
+<li>What it does: annotates with the platemap, aggregates to well level, normalizes (<code>mad_robustize</code>), selects features (SC-06→SC-10)</li>
+</ul>
+<p><strong><code>03_phenotypic_profiling.py</code></strong></p>
+<ul>
+<li>Input: <code>per_well_features_selected.parquet</code></li>
+<li>Output: PCA/UMAP/LDA figures and models</li>
+<li>What it does: PCA, UMAP, LDA with leave-one-plate-out CV, Cohen’s d, KMeans, uncorrected-vs-Harmony comparison (SC-11→SC-13)</li>
+</ul>
+<p><strong><code>04_phenotypic_fingerprints.py</code></strong></p>
+<ul>
+<li>Input: <code>per_well_features_selected.parquet</code></li>
+<li>Output: fingerprints by feature taxonomy</li>
+<li>What it does: feature taxonomy, per-condition Cohen’s d, heatmaps/radar plots — dose axis optional</li>
+</ul>
+<p><strong><code>05_quality_metrics.py</code></strong></p>
+<ul>
+<li>Input: <code>per_well_features_selected.parquet</code></li>
+<li>Output: quality metrics + decision</li>
+<li>What it does: Percent Replicating, mAP, batch assessment, dose-response, <strong>Go/No-Go</strong> decision (SC-18→SC-22)</li>
+</ul>
+<p><strong><code>06_single_cell_analysis.py</code></strong></p>
+<ul>
+<li>Input: <code>single_cell_ready.parquet</code> (NB02 cache)</li>
+<li>Output: SHAP, classification report, figures</li>
+<li>What it does: single-cell PCA/UMAP, HDBSCAN+KMeans, LightGBM+SHAP, Mahalanobis distance (SC-14→SC-17)</li>
+</ul>
+<p><strong><code>07_recovery_axis_analysis.py</code></strong> (optional)</p>
+<ul>
+<li>Input: <code>per_well_features_selected.parquet</code></li>
+<li>Output: recovery axis</li>
+<li>What it does: geometric axis between two reference states — only applies to experimental designs with that structure; skips itself automatically if not configured</li>
+</ul>
 <p>Run them in order, reviewing the widgets at the top of each before moving to the next:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> run python3 workspace/analysis/<span class="va">$EXP</span>/analysis/01_samples_retrieval.py</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> run python3 workspace/analysis/<span class="va">$EXP</span>/analysis/02_aggregate_normalize_featureselect.py</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> run python3 workspace/analysis/<span class="va">$EXP</span>/analysis/03_phenotypic_profiling.py</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> run python3 workspace/analysis/<span class="va">$EXP</span>/analysis/04_phenotypic_fingerprints.py</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> run python3 workspace/analysis/<span class="va">$EXP</span>/analysis/05_quality_metrics.py</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> run python3 workspace/analysis/<span class="va">$EXP</span>/analysis/06_single_cell_analysis.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> run python3 workspace/analysis/<span class="va">$EXP</span>/analysis/01_samples_retrieval.py</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> run python3 workspace/analysis/<span class="va">$EXP</span>/analysis/02_aggregate_normalize_featureselect.py</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> run python3 workspace/analysis/<span class="va">$EXP</span>/analysis/03_phenotypic_profiling.py</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> run python3 workspace/analysis/<span class="va">$EXP</span>/analysis/04_phenotypic_fingerprints.py</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> run python3 workspace/analysis/<span class="va">$EXP</span>/analysis/05_quality_metrics.py</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> run python3 workspace/analysis/<span class="va">$EXP</span>/analysis/06_single_cell_analysis.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Every notebook imports from one shared Python package, <code>hca_pipeline</code> (<code>workspace/hca_pipeline/</code>) — it’s what knows how to read <code>experiment_config.json</code>, apply normalization, compute quality metrics, and so on. You don’t need to edit that package to run the pipeline on a new experiment; it’s written to be dataset-agnostic.</p>
 </section>
 <section id="quality-metrics-and-the-gono-go-decision" class="level2" data-number="11">
