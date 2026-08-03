@@ -24,3 +24,9 @@ Learn how to install and configure Visual Studio Code, use the extensions adopte
 
 [View the tutorial](install_vscode/index.md)
 
+### Live Cell Painting (LCP): full pipeline
+
+Walk through the Live Cell Painting pipeline end to end: project setup, metadata, CellProfiler (AssayDev/Analysis), and the Python/marimo analysis pipeline up to the Go/No-Go decision.
+
+[View the tutorial](lcp_pipeline/index.md)
+

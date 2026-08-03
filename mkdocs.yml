@@ -197,3 +197,4 @@ plugins:
               - Install Cellprifiles with Cellpose: 40-tutorials/install_cellprofiler/index.md
               - Install VSCode: 40-tutorials/install_vscode/index.md
               - SuperPlots in Python: 40-tutorials/superplots/index.md
+              - "LCP: full pipeline": 40-tutorials/lcp_pipeline/index.md
