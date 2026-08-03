@@ -130,6 +130,7 @@ plugins:
                 - Instalar Cellprofiler & Cellpose: 40-tutoriais/install_cellprofiler/index.md
                 - Instalar VSCode: 40-tutoriais/install_vscode/index.md
                 - SuperPlots em Python: 40-tutoriais/superplots/index.md
+                - "LCP: pipeline completo": 40-tutoriais/lcp_pipeline/index.md
         - locale: en
           name: English
           build: true

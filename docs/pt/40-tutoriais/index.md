@@ -23,3 +23,9 @@ Aprenda a instalar e executar o VSCode, bem como os *plugins* usados no curso, e
 Aprenda a representar simultaneamente dados em nível celular e a variabilidade entre replicatas biológicas usando Python, Matplotlib e Seaborn.
 
 [Ver o tutorial](superplots/index.md)
+
+### Live Cell Painting (LCP): pipeline completo
+
+Percorra o pipeline de Live Cell Painting de ponta a ponta: criação do projeto, metadados, CellProfiler (AssayDev/Analysis) e o pipeline de análise em Python/marimo até a decisão de Go/No-Go.
+
+[Ver o tutorial](lcp_pipeline/index.md)
