@@ -47,7 +47,7 @@ The pipeline has two quite distinct halves, which talk to each other through one
 
 ```text
 Acquisition (Cytation 5)
-    -> Metadata (platemap + LoadData)
+    -> Metadata (platemap; LoadData in Analysis)
     -> AssayDev (segmentation QC)
     -> Analysis (feature extraction)
     -> backend/ (CSV / SQLite)
@@ -285,7 +285,7 @@ Once you've started filling in metadata and running CellProfiler against this `E
 
 ## Preparing metadata
 
-This step creates the files that will **replace CellProfiler's first four modules** (`Images`, `Metadata`, `NamesAndTypes`, `Groups`) with a single `LoadData` module — far more reproducible and much less error-prone.
+This step creates the files later used by the `LoadData` module in the **Analysis** pipeline. In **AssayDev**, the lab keeps the template's `Images`, `Metadata`, `NamesAndTypes`, and `Groups` modules and uses `FlagImage` to select the development site.
 
 ### 1. Load Data Generator
 
@@ -396,7 +396,7 @@ workspace/metadata/2025_06_28_Huh7_NPPS_24h/
     └── layout_day1.txt
 ```
 
-## Loading metadata into CellProfiler
+## Configuring input in CellProfiler
 
 Open CellProfiler in the environment with plugins (Cellpose included) — see [Install CellProfiler & Cellpose](https://labnanocell.github.io/curso-hci/en/40-tutorials/install_cellprofiler/) if you haven't set it up yet.
 
@@ -409,19 +409,29 @@ cellprofiler
 On Windows, stay on the `C:` drive to open CellProfiler — opening it from another drive (e.g. `D:`) tends to error out.
 :::
 
-Copy `assaydev.cppipe` and `analysis.cppipe` from `workspace/pipelines/$EXP/` (you already copied them from `templates/` when you created the experiment) and open `assaydev.cppipe` first:
+Copy `assaydev.cppipe` and `analysis.cppipe` from `workspace/pipelines/$EXP/` (you already copied them from `templates/` when you created the experiment) and open `assaydev.cppipe` first.
 
-1. Add the **LoadData** module (`+` → search "LoadData"). CellProfiler will ask whether you want to remove `Images`, `Metadata`, `NamesAndTypes`, and `Groups` — confirm with **OK**.
-2. Under **Input data file location**, point to the **folder** containing `load_data.csv` (not the file itself).
-3. Select the `load_data.csv` file. Use the **View** button to confirm channels, wells, sites, and plates were read correctly.
-4. Recommended settings:
-   - **Load images based on this data?** → `Yes`
-   - **Rescale intensities?** → `Yes`
-   - **Base image location** → confirm it points to the real image folder (adjust if it's set to `Default Input Folder`)
-   - **Select metadata tags for grouping** → usually `Well`, `Site`, `Plate`
-   - **Process just a range of rows?** → `No` (only use `Yes` to test on a subset)
+### AssayDev input: internal modules and `FlagImage`
 
-Test the setup by adding a temporary `IdentifyPrimaryObjects` module, choosing `AOGFP` as the input image, and running **Start Test Mode**. You should see a table with `FileName_AOGFP`, `FileName_AOPI`, `Metadata_Well`, `Metadata_Site`, and `Metadata_Plate` correctly populated.
+AssayDev **does not use `LoadData`**. Keep the four input modules already present in the template:
+
+1. In **Images**, drag in the folder containing all experiment images. Do not manually select only one well or site: `FlagImage` will perform that selection later.
+2. In **Metadata**, run **Update** and confirm that the file-name pattern correctly extracts `Plate`, `Well`, `Site`, and `Channel`. The template already contains the regular expressions used for Cytation 5 images.
+3. In **NamesAndTypes**, confirm the channel pairing:
+   - files containing `GFP` → **AOGFP**;
+   - files containing `Propidium` → **AOPI**.
+4. In **Groups**, keep the template setting with no additional grouping.
+5. In the first **FlagImage**, use the `Metadata_Site` measurement to retain only the chosen site from every well. To select site `N`, set the limits to `N − 0.5` and `N + 0.5`; for example, for site `10`, use a minimum of `9.5` and maximum of `10.5`. Keep **Skip image set if flagged?** set to `Yes`.
+
+Run **Update** and confirm that the image sets contain `AOGFP`, `AOPI`, `Metadata_Well`, `Metadata_Site`, and `Metadata_Plate`. Then use **Start Test Mode** to verify that `FlagImage` allows only the selected site from each well to proceed.
+
+::: {.callout-important}
+## Preserve the lab pipeline
+
+In `assaydev.cppipe`, do not replace `Images`, `Metadata`, `NamesAndTypes`, and `Groups` with `LoadData`. Do not change regular expressions, channel names, grouping, modules, segmentation parameters, or output settings beyond what this protocol explicitly requests for the current experiment. If something appears incompatible, record the issue and confirm the change before modifying other parts of the pipeline.
+:::
+
+The `load_data.csv` file is used later in `analysis.cppipe`, when all experiment images are processed.
 
 ## AssayDev — segmentation quality control
 
@@ -450,7 +460,7 @@ In `assaydev.cppipe`, the main modules (already configured in the template, but 
 Running it:
 
 1. Clear whatever images were loaded in the pipeline and add this experiment's.
-2. Run **Update** on the `Metadata`/`LoadData` module and confirm the extraction makes sense.
+2. Run **Update** on the `Metadata` module and confirm that `Plate`, `Well`, `Site`, and `Channel` were extracted correctly.
 3. Run **Start Test Mode** and review each module.
 4. Run the full pipeline (`assaydev.cppipe`, still just 1 site/well).
 5. Evaluate the output folder — if segmentation is *good enough*, move the QC images to `workspace/assaydev/$EXP/outlines_qc/`.
@@ -458,8 +468,9 @@ Running it:
 ::: {.callout-important}
 ## AssayDev checklist
 
-- [ ] Folders and metadata configured
-- [ ] `LoadData` working (tested)
+- [ ] Image folder loaded in the `Images` module
+- [ ] `Metadata` and `NamesAndTypes` recognize plates, wells, sites, and channels
+- [ ] The four original input modules were preserved; `LoadData` was not added to AssayDev
 - [ ] `FlagImage` filtering exactly 1 site per well
 - [ ] Nucleus/cell/cytoplasm/nucleolus/vesicle segmentation tuned
 - [ ] QC via `SaveImages` working (montages + outlines)

@@ -12,7 +12,7 @@ The tutorial shows how to:
 - create a new project from the `cookiecutter-lcp` template;
 - create a new experiment (`EXPERIMENT_ID`) by copying from `templates/`;
 - prepare metadata (platemap, Load Data Generator, Layout Generator, `barcode_platemap.csv`);
-- load metadata into CellProfiler with the `LoadData` module;
+- configure AssayDev with the internal input modules and `FlagImage`, using `LoadData` only in the Analysis pipeline;
 - run AssayDev (segmentation QC) and Analysis (feature extraction);
 - install the Pixi environment and run the marimo notebooks (NB01 → NB07);
 - interpret quality metrics (PR, PM, mAP) and the Go/No-Go decision.

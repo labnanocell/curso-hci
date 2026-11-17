@@ -3088,7 +3088,10 @@ vertical-align: -.125em;
   <li><a href="#platemap-e-layout-generator" id="toc-platemap-e-layout-generator" class="nav-link" data-scroll-target="#platemap-e-layout-generator"><span class="header-section-number">4.2</span> 2. Platemap e Layout Generator</a></li>
   <li><a href="#barcode_platemap.csv" id="toc-barcode_platemap.csv" class="nav-link" data-scroll-target="#barcode_platemap.csv"><span class="header-section-number">4.3</span> 3. <code>barcode_platemap.csv</code></a></li>
   </ul></li>
-  <li><a href="#carregando-os-metadados-no-cellprofiler" id="toc-carregando-os-metadados-no-cellprofiler" class="nav-link" data-scroll-target="#carregando-os-metadados-no-cellprofiler"><span class="header-section-number">5</span> Carregando os metadados no CellProfiler</a></li>
+  <li><a href="#configurando-a-entrada-no-cellprofiler" id="toc-configurando-a-entrada-no-cellprofiler" class="nav-link" data-scroll-target="#configurando-a-entrada-no-cellprofiler"><span class="header-section-number">5</span> Configurando a entrada no CellProfiler</a>
+  <ul class="collapse">
+  <li><a href="#entrada-do-assaydev-módulos-internos-e-flagimage" id="toc-entrada-do-assaydev-módulos-internos-e-flagimage" class="nav-link" data-scroll-target="#entrada-do-assaydev-módulos-internos-e-flagimage"><span class="header-section-number">5.1</span> Entrada do AssayDev: módulos internos e <code>FlagImage</code></a></li>
+  </ul></li>
   <li><a href="#assaydev-controle-de-qualidade-da-segmentação" id="toc-assaydev-controle-de-qualidade-da-segmentação" class="nav-link" data-scroll-target="#assaydev-controle-de-qualidade-da-segmentação"><span class="header-section-number">6</span> AssayDev — controle de qualidade da segmentação</a></li>
   <li><a href="#analysis-extração-de-features-em-toda-a-placa" id="toc-analysis-extração-de-features-em-toda-a-placa" class="nav-link" data-scroll-target="#analysis-extração-de-features-em-toda-a-placa"><span class="header-section-number">7</span> Analysis — extração de features em toda a placa</a></li>
   <li><a href="#do-cellprofiler-ao-pipeline-de-análise" id="toc-do-cellprofiler-ao-pipeline-de-análise" class="nav-link" data-scroll-target="#do-cellprofiler-ao-pipeline-de-análise"><span class="header-section-number">8</span> Do CellProfiler ao pipeline de análise</a></li>
@@ -3157,7 +3160,7 @@ Antes de começar
 <h2 data-number="1" class="anchored" data-anchor-id="visão-geral-do-fluxo"><span class="header-section-number">1</span> Visão geral do fluxo</h2>
 <p>O pipeline tem duas metades bem distintas, que conversam entre si através de uma pasta (<code>workspace/backend/</code>):</p>
 <pre class="text"><code>Aquisição (Cytation 5)
-    -&gt; Metadados (platemap + LoadData)
+    -&gt; Metadados (platemap; LoadData na Analysis)
     -&gt; AssayDev (QC de segmentação)
     -&gt; Analysis (extração de features)
     -&gt; backend/ (CSV / SQLite)
@@ -3402,7 +3405,7 @@ Depois de criado, evite renomear
 </section>
 <section id="preparando-os-metadados" class="level2" data-number="4">
 <h2 data-number="4" class="anchored" data-anchor-id="preparando-os-metadados"><span class="header-section-number">4</span> Preparando os metadados</h2>
-<p>Esta etapa cria os arquivos que vão <strong>substituir os quatro primeiros módulos do CellProfiler</strong> (<code>Images</code>, <code>Metadata</code>, <code>NamesAndTypes</code>, <code>Groups</code>) por um único módulo <code>LoadData</code> — muito mais reprodutível e menos sujeito a erro humano.</p>
+<p>Esta etapa cria os arquivos usados posteriormente pelo módulo <code>LoadData</code> no pipeline de <strong>Analysis</strong>. No <strong>AssayDev</strong>, o laboratório mantém os módulos <code>Images</code>, <code>Metadata</code>, <code>NamesAndTypes</code> e <code>Groups</code> do template e usa <code>FlagImage</code> para selecionar o sítio de desenvolvimento.</p>
 <section id="load-data-generator" class="level3" data-number="4.1">
 <h3 data-number="4.1" class="anchored" data-anchor-id="load-data-generator"><span class="header-section-number">4.1</span> 1. Load Data Generator</h3>
 <p>O laboratório usa dois programas (atalhos nos computadores do laboratório) pensados para o Live Cell Painting no Cytation 5:</p>
@@ -3578,8 +3581,8 @@ O Layout Generator é sensível a inconsistências
     └── layout_day1.txt</code></pre>
 </section>
 </section>
-<section id="carregando-os-metadados-no-cellprofiler" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="carregando-os-metadados-no-cellprofiler"><span class="header-section-number">5</span> Carregando os metadados no CellProfiler</h2>
+<section id="configurando-a-entrada-no-cellprofiler" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="configurando-a-entrada-no-cellprofiler"><span class="header-section-number">5</span> Configurando a entrada no CellProfiler</h2>
 <p>Abra o CellProfiler no ambiente com os plugins (Cellpose incluído) — veja <a href="https://labnanocell.github.io/curso-hci/40-tutoriais/install_cellprofiler/">Instalar CellProfiler &amp; Cellpose</a> se ainda não configurou.</p>
 <div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate cp_cellpose</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="ex">cellprofiler</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -3596,21 +3599,37 @@ Aviso
 <p>No Windows, permaneça no drive <code>C:</code> para abrir o CellProfiler — abrir a partir de outro drive (ex. <code>D:</code>) costuma gerar erro.</p>
 </div>
 </div>
-<p>Copie <code>assaydev.cppipe</code> e <code>analysis.cppipe</code> de <code>workspace/pipelines/$EXP/</code> (você já os copiou de <code>templates/</code> na etapa de criação do experimento) e abra o <code>assaydev.cppipe</code> primeiro:</p>
+<p>Copie <code>assaydev.cppipe</code> e <code>analysis.cppipe</code> de <code>workspace/pipelines/$EXP/</code> (você já os copiou de <code>templates/</code> na etapa de criação do experimento) e abra o <code>assaydev.cppipe</code> primeiro.</p>
+<section id="entrada-do-assaydev-módulos-internos-e-flagimage" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="entrada-do-assaydev-módulos-internos-e-flagimage"><span class="header-section-number">5.1</span> Entrada do AssayDev: módulos internos e <code>FlagImage</code></h3>
+<p>O AssayDev <strong>não usa <code>LoadData</code></strong>. Mantenha os quatro módulos de entrada que já existem no template:</p>
 <ol type="1">
-<li>Adicione o módulo <strong>LoadData</strong> (<code>+</code> → buscar “LoadData”). O CellProfiler vai perguntar se você quer remover <code>Images</code>, <code>Metadata</code>, <code>NamesAndTypes</code> e <code>Groups</code> — confirme com <strong>OK</strong>.</li>
-<li>Em <strong>Input data file location</strong>, indique a <strong>pasta</strong> onde está <code>load_data.csv</code> (não o arquivo em si).</li>
-<li>Selecione o arquivo <code>load_data.csv</code>. Use o botão <strong>View</strong> para confirmar que canais, poços, sites e placas foram lidos corretamente.</li>
-<li>Ajustes recomendados:
+<li>Em <strong>Images</strong>, arraste a pasta que contém todas as imagens do experimento. Não escolha manualmente apenas um poço ou sítio: a seleção será feita mais adiante pelo <code>FlagImage</code>.</li>
+<li>Em <strong>Metadata</strong>, rode <strong>Update</strong> e confirme que o padrão dos nomes extrai corretamente <code>Plate</code>, <code>Well</code>, <code>Site</code> e <code>Channel</code>. O template já contém as expressões regulares usadas para imagens do Cytation 5.</li>
+<li>Em <strong>NamesAndTypes</strong>, confirme o pareamento dos canais:
 <ul>
-<li><strong>Load images based on this data?</strong> → <code>Yes</code></li>
-<li><strong>Rescale intensities?</strong> → <code>Yes</code></li>
-<li><strong>Base image location</strong> → confirme que aponta para a pasta real de imagens (ajuste se estiver em <code>Default Input Folder</code>)</li>
-<li><strong>Select metadata tags for grouping</strong> → normalmente <code>Well</code>, <code>Site</code>, <code>Plate</code></li>
-<li><strong>Process just a range of rows?</strong> → <code>No</code> (só use <code>Yes</code> para testar em um subconjunto)</li>
+<li>arquivos com <code>GFP</code> → <strong>AOGFP</strong>;</li>
+<li>arquivos com <code>Propidium</code> → <strong>AOPI</strong>.</li>
 </ul></li>
+<li>Em <strong>Groups</strong>, mantenha a configuração do template sem agrupamento adicional.</li>
+<li>No primeiro <strong>FlagImage</strong>, use a medida <code>Metadata_Site</code> para manter somente o sítio escolhido em todos os poços. Para selecionar o sítio <code>N</code>, use como limites <code>N − 0,5</code> e <code>N + 0,5</code>; por exemplo, para o sítio <code>10</code>, mínimo <code>9,5</code> e máximo <code>10,5</code>. Mantenha <strong>Skip image set if flagged?</strong> como <code>Yes</code>.</li>
 </ol>
-<p>Teste a configuração adicionando um módulo <code>IdentifyPrimaryObjects</code> temporário, escolhendo <code>AOGFP</code> como imagem de entrada, e rodando <strong>Start Test Mode</strong>. Você deve ver uma tabela com as colunas <code>FileName_AOGFP</code>, <code>FileName_AOPI</code>, <code>Metadata_Well</code>, <code>Metadata_Site</code>, <code>Metadata_Plate</code> preenchidas corretamente.</p>
+<p>Rode <strong>Update</strong> e confirme que os conjuntos de imagens contêm <code>AOGFP</code>, <code>AOPI</code>, <code>Metadata_Well</code>, <code>Metadata_Site</code> e <code>Metadata_Plate</code>. Em seguida, use <strong>Start Test Mode</strong> para verificar que o <code>FlagImage</code> deixa passar apenas o sítio escolhido de cada poço.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Preserve o pipeline do laboratório
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>No <code>assaydev.cppipe</code>, não substitua <code>Images</code>, <code>Metadata</code>, <code>NamesAndTypes</code> e <code>Groups</code> por <code>LoadData</code>. Não altere expressões regulares, nomes de canais, agrupamentos, módulos, parâmetros de segmentação ou configurações de saída além do que for solicitado explicitamente neste protocolo para o experimento atual. Se algo parecer incompatível, registre o problema e confirme a mudança antes de modificar outras partes do pipeline.</p>
+</div>
+</div>
+<p>O arquivo <code>load_data.csv</code> será usado depois, no <code>analysis.cppipe</code>, quando todas as imagens do experimento forem processadas.</p>
+</section>
 </section>
 <section id="assaydev-controle-de-qualidade-da-segmentação" class="level2" data-number="6">
 <h2 data-number="6" class="anchored" data-anchor-id="assaydev-controle-de-qualidade-da-segmentação"><span class="header-section-number">6</span> AssayDev — controle de qualidade da segmentação</h2>
@@ -3682,7 +3701,7 @@ Mantenha núcleos/células que tocam a borda da imagem
 <p>Rodando:</p>
 <ol type="1">
 <li>Limpe as imagens que estavam carregadas no pipeline e adicione as do experimento atual.</li>
-<li>Rode <strong>Update</strong> no módulo <code>Metadata</code>/<code>LoadData</code> e confirme que a extração fez sentido.</li>
+<li>Rode <strong>Update</strong> no módulo <code>Metadata</code> e confirme que <code>Plate</code>, <code>Well</code>, <code>Site</code> e <code>Channel</code> foram extraídos corretamente.</li>
 <li>Rode <strong>Start Test Mode</strong> e revise os módulos um a um.</li>
 <li>Rode o pipeline completo (<code>assaydev.cppipe</code>, ainda só 1 site/poço).</li>
 <li>Avalie a pasta de saída — se a segmentação estiver <em>good enough</em>, mova as imagens de QC para <code>workspace/assaydev/$EXP/outlines_qc/</code>.</li>
@@ -3698,8 +3717,9 @@ Checklist de AssayDev
 </div>
 <div class="callout-body-container callout-body">
 <ul class="task-list">
-<li><label><input type="checkbox">Pastas e metadados configurados</label></li>
-<li><label><input type="checkbox"><code>LoadData</code> funcionando (teste feito)</label></li>
+<li><label><input type="checkbox">Pasta de imagens carregada no módulo <code>Images</code></label></li>
+<li><label><input type="checkbox"><code>Metadata</code> e <code>NamesAndTypes</code> reconhecendo placas, poços, sítios e canais</label></li>
+<li><label><input type="checkbox">Os quatro módulos de entrada originais foram preservados; <code>LoadData</code> não foi adicionado ao AssayDev</label></li>
 <li><label><input type="checkbox"><code>FlagImage</code> filtrando exatamente 1 site por poço</label></li>
 <li><label><input type="checkbox">Segmentação de núcleo/célula/citoplasma/nucléolo/vesícula ajustada</label></li>
 <li><label><input type="checkbox">QC via <code>SaveImages</code> funcionando (montagens + <em>outlines</em>)</label></li>

@@ -47,7 +47,7 @@ O pipeline tem duas metades bem distintas, que conversam entre si através de um
 
 ```text
 Aquisição (Cytation 5)
-    -> Metadados (platemap + LoadData)
+    -> Metadados (platemap; LoadData na Analysis)
     -> AssayDev (QC de segmentação)
     -> Analysis (extração de features)
     -> backend/ (CSV / SQLite)
@@ -285,7 +285,7 @@ Uma vez que você começou a preencher metadados e a rodar o CellProfiler aponta
 
 ## Preparando os metadados
 
-Esta etapa cria os arquivos que vão **substituir os quatro primeiros módulos do CellProfiler** (`Images`, `Metadata`, `NamesAndTypes`, `Groups`) por um único módulo `LoadData` — muito mais reprodutível e menos sujeito a erro humano.
+Esta etapa cria os arquivos usados posteriormente pelo módulo `LoadData` no pipeline de **Analysis**. No **AssayDev**, o laboratório mantém os módulos `Images`, `Metadata`, `NamesAndTypes` e `Groups` do template e usa `FlagImage` para selecionar o sítio de desenvolvimento.
 
 ### 1. Load Data Generator
 
@@ -396,7 +396,7 @@ workspace/metadata/2025_06_28_Huh7_NPPS_24h/
     └── layout_day1.txt
 ```
 
-## Carregando os metadados no CellProfiler
+## Configurando a entrada no CellProfiler
 
 Abra o CellProfiler no ambiente com os plugins (Cellpose incluído) — veja [Instalar CellProfiler & Cellpose](https://labnanocell.github.io/curso-hci/40-tutoriais/install_cellprofiler/) se ainda não configurou.
 
@@ -409,19 +409,29 @@ cellprofiler
 No Windows, permaneça no drive `C:` para abrir o CellProfiler — abrir a partir de outro drive (ex. `D:`) costuma gerar erro.
 :::
 
-Copie `assaydev.cppipe` e `analysis.cppipe` de `workspace/pipelines/$EXP/` (você já os copiou de `templates/` na etapa de criação do experimento) e abra o `assaydev.cppipe` primeiro:
+Copie `assaydev.cppipe` e `analysis.cppipe` de `workspace/pipelines/$EXP/` (você já os copiou de `templates/` na etapa de criação do experimento) e abra o `assaydev.cppipe` primeiro.
 
-1. Adicione o módulo **LoadData** (`+` → buscar "LoadData"). O CellProfiler vai perguntar se você quer remover `Images`, `Metadata`, `NamesAndTypes` e `Groups` — confirme com **OK**.
-2. Em **Input data file location**, indique a **pasta** onde está `load_data.csv` (não o arquivo em si).
-3. Selecione o arquivo `load_data.csv`. Use o botão **View** para confirmar que canais, poços, sites e placas foram lidos corretamente.
-4. Ajustes recomendados:
-   - **Load images based on this data?** → `Yes`
-   - **Rescale intensities?** → `Yes`
-   - **Base image location** → confirme que aponta para a pasta real de imagens (ajuste se estiver em `Default Input Folder`)
-   - **Select metadata tags for grouping** → normalmente `Well`, `Site`, `Plate`
-   - **Process just a range of rows?** → `No` (só use `Yes` para testar em um subconjunto)
+### Entrada do AssayDev: módulos internos e `FlagImage`
 
-Teste a configuração adicionando um módulo `IdentifyPrimaryObjects` temporário, escolhendo `AOGFP` como imagem de entrada, e rodando **Start Test Mode**. Você deve ver uma tabela com as colunas `FileName_AOGFP`, `FileName_AOPI`, `Metadata_Well`, `Metadata_Site`, `Metadata_Plate` preenchidas corretamente.
+O AssayDev **não usa `LoadData`**. Mantenha os quatro módulos de entrada que já existem no template:
+
+1. Em **Images**, arraste a pasta que contém todas as imagens do experimento. Não escolha manualmente apenas um poço ou sítio: a seleção será feita mais adiante pelo `FlagImage`.
+2. Em **Metadata**, rode **Update** e confirme que o padrão dos nomes extrai corretamente `Plate`, `Well`, `Site` e `Channel`. O template já contém as expressões regulares usadas para imagens do Cytation 5.
+3. Em **NamesAndTypes**, confirme o pareamento dos canais:
+   - arquivos com `GFP` → **AOGFP**;
+   - arquivos com `Propidium` → **AOPI**.
+4. Em **Groups**, mantenha a configuração do template sem agrupamento adicional.
+5. No primeiro **FlagImage**, use a medida `Metadata_Site` para manter somente o sítio escolhido em todos os poços. Para selecionar o sítio `N`, use como limites `N − 0,5` e `N + 0,5`; por exemplo, para o sítio `10`, mínimo `9,5` e máximo `10,5`. Mantenha **Skip image set if flagged?** como `Yes`.
+
+Rode **Update** e confirme que os conjuntos de imagens contêm `AOGFP`, `AOPI`, `Metadata_Well`, `Metadata_Site` e `Metadata_Plate`. Em seguida, use **Start Test Mode** para verificar que o `FlagImage` deixa passar apenas o sítio escolhido de cada poço.
+
+::: {.callout-important}
+## Preserve o pipeline do laboratório
+
+No `assaydev.cppipe`, não substitua `Images`, `Metadata`, `NamesAndTypes` e `Groups` por `LoadData`. Não altere expressões regulares, nomes de canais, agrupamentos, módulos, parâmetros de segmentação ou configurações de saída além do que for solicitado explicitamente neste protocolo para o experimento atual. Se algo parecer incompatível, registre o problema e confirme a mudança antes de modificar outras partes do pipeline.
+:::
+
+O arquivo `load_data.csv` será usado depois, no `analysis.cppipe`, quando todas as imagens do experimento forem processadas.
 
 ## AssayDev — controle de qualidade da segmentação
 
@@ -450,7 +460,7 @@ No pipeline `assaydev.cppipe`, os módulos principais (já configurados no templ
 Rodando:
 
 1. Limpe as imagens que estavam carregadas no pipeline e adicione as do experimento atual.
-2. Rode **Update** no módulo `Metadata`/`LoadData` e confirme que a extração fez sentido.
+2. Rode **Update** no módulo `Metadata` e confirme que `Plate`, `Well`, `Site` e `Channel` foram extraídos corretamente.
 3. Rode **Start Test Mode** e revise os módulos um a um.
 4. Rode o pipeline completo (`assaydev.cppipe`, ainda só 1 site/poço).
 5. Avalie a pasta de saída — se a segmentação estiver *good enough*, mova as imagens de QC para `workspace/assaydev/$EXP/outlines_qc/`.
@@ -458,8 +468,9 @@ Rodando:
 ::: {.callout-important}
 ## Checklist de AssayDev
 
-- [ ] Pastas e metadados configurados
-- [ ] `LoadData` funcionando (teste feito)
+- [ ] Pasta de imagens carregada no módulo `Images`
+- [ ] `Metadata` e `NamesAndTypes` reconhecendo placas, poços, sítios e canais
+- [ ] Os quatro módulos de entrada originais foram preservados; `LoadData` não foi adicionado ao AssayDev
 - [ ] `FlagImage` filtrando exatamente 1 site por poço
 - [ ] Segmentação de núcleo/célula/citoplasma/nucléolo/vesícula ajustada
 - [ ] QC via `SaveImages` funcionando (montagens + *outlines*)

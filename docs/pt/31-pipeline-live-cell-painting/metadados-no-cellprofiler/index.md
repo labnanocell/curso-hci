@@ -35,7 +35,7 @@ Se imagens de sites diferentes forem pareadas, o pipeline poderá segmentar norm
 
 O CellProfiler oferece módulos como `Images`, `Metadata`, `NamesAndTypes` e `Groups`. Em conjunto, eles localizam arquivos, extraem informações dos nomes, atribuem canais e organizam o processamento.
 
-O módulo `LoadData` recebe essas associações já explicitadas em uma tabela. No fluxo adotado pelo laboratório, ele substitui os quatro módulos iniciais.
+O módulo `LoadData` recebe essas associações já explicitadas em uma tabela. No fluxo adotado pelo laboratório, ele substitui os quatro módulos iniciais no pipeline de **Analysis**. O **AssayDev** é a exceção: nele são preservados `Images`, `Metadata`, `NamesAndTypes` e `Groups`, e `FlagImage` seleciona um sítio por poço.
 
 | Configuração interna | `LoadData` |
 |---|---|
@@ -128,5 +128,5 @@ O `LoadData` transforma uma descrição tabular em conjuntos de imagens process�
 
 ### Para aprofundar
 
-- Use a seção [Carregando os metadados no CellProfiler](../../40-tutoriais/lcp_pipeline/lcp_pipeline.html#carregando-os-metadados-no-cellprofiler) para configurar e inspecionar o `LoadData`.
+- Use a seção [Configurando a entrada no CellProfiler](../../40-tutoriais/lcp_pipeline/lcp_pipeline.html#configurando-a-entrada-no-cellprofiler) para distinguir a entrada do AssayDev da configuração de `LoadData` usada na Analysis.
 - O [tutorial 00 — Instalar CellProfiler & Cellpose](../../40-tutoriais/install_cellprofiler/index.md) descreve a instalação e abertura do programa com o plugin Cellpose.
