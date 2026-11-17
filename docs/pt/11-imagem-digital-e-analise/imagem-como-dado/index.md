@@ -577,7 +577,7 @@ Também vale notar que o histograma descreve a distribuição de intensidades, m
 
 Duas imagens com distribuições semelhantes podem ter organizações espaciais completamente diferentes.
 
-## 24. Implicações para HCI/HCA
+## 6. Implicações para HCI/HCA
 
 Em HCI/HCA, operações realizadas no início do pipeline afetam todas as etapas seguintes.
 
@@ -606,7 +606,7 @@ Por isso, é necessário documentar:
 
 O objetivo não é evitar todo processamento. O objetivo é compreender o que cada operação faz e garantir que ela seja aplicada de forma consistente e justificada.
 
-## 25. Fechamento
+## 7. Fechamento
 
 Nesta aula, vimos que uma imagem digital não é apenas aquilo que aparece na tela.
 

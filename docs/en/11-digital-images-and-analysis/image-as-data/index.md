@@ -494,7 +494,7 @@ This is one of the most important points of the lesson:
 
 It is also worth noting that the histogram describes the distribution of intensities but does not show where the pixels are located. Two images with similar distributions may have completely different spatial organizations.
 
-## 24. Implications for HCI/HCA
+## 6. Implications for HCI/HCA
 
 In HCI/HCA, operations performed early in the *pipeline* affect every subsequent step.
 
@@ -523,7 +523,7 @@ For this reason, it is necessary to document:
 
 The goal is to understand what each operation does and ensure that it is applied consistently and with justification.
 
-## 25. Closing
+## 7. Closing
 
 In this lesson, we saw that a digital image is not only what appears on the screen. It is a numerical structure organized in space. We also saw that:
 

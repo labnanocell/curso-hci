@@ -12,7 +12,7 @@ Ao final desta aula, você deverá ser capaz de:
 
 ## 1. Da imagem ao conhecimento biológico
 
-Um experimento de High Content Imaging (HCI) não termina quando as imagens são adquiridas. As imagens são registros produzidos por um sistema óptico e precisam ser associadas ao desenho experimental, processadas, segmentadas e convertidas em medidas antes que possam sustentar uma interpretação biológica.
+Um experimento de *High Content Imaging* (HCI) não termina quando as imagens são adquiridas. As imagens são registros produzidos por um sistema óptico e precisam ser associadas ao desenho experimental, processadas, segmentadas e convertidas em medidas antes que possam sustentar uma interpretação biológica.
 
 O fluxo pode ser representado como uma cadeia:
 
@@ -28,7 +28,7 @@ pergunta biológica
     → interpretação biológica
 ```
 
-A estrutura de arquivos torna essa cadeia visível. Ela registra quais entradas foram usadas, quais operações foram realizadas e quais produtos foram gerados. Quando imagens, pipelines e resultados são armazenados sem uma regra comum, perde-se a capacidade de reconstruir a análise — mesmo que todos os arquivos ainda existam.
+A estrutura de arquivos torna essa cadeia visível. Ela registra quais entradas foram usadas, quais operações foram realizadas e quais produtos (também chamamos de artefatos) foram gerados. Quando imagens, pipelines e resultados são armazenados sem uma regra comum, perde-se a capacidade de reconstruir a análise, mesmo que todos os arquivos ainda existam.
 
 Por isso, organizar dados não é apenas uma tarefa administrativa. É uma forma de controlar a proveniência dos dados e reduzir erros.
 

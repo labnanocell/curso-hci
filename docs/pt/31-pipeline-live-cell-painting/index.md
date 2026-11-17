@@ -2,11 +2,11 @@
 
 ## Propósito
 
-Este módulo apresenta os fundamentos científicos e computacionais do pipeline de Live Cell Painting (LCP), conectando a organização do projeto à produção de perfis fenotípicos analisáveis.
+Este módulo apresenta os fundamentos científicos e computacionais do pipeline de *Live Cell Painting* (LCP), conectando a organização do projeto à produção de perfis fenotípicos analisáveis.
 
 A proposta não é repetir comandos ou telas do software. O objetivo é compreender por que cada etapa existe, quais decisões dependem dela e como erros introduzidos no início podem se propagar até a interpretação biológica.
 
-O módulo funciona como uma ponte entre as aulas conceituais sobre Live Cell Painting e o tutorial prático do pipeline completo.
+O módulo funciona como uma ponte entre as aulas conceituais sobre *Live Cell Painting* e o tutorial prático do pipeline completo.
 
 ## Perfil de saída
 
