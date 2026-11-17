@@ -67,13 +67,60 @@ Every stage lives in its own folder under `workspace/`, all organized by the sam
 
 ## Creating the project with `cookiecutter-lcp`
 
-If you don't have a project yet, install Cookiecutter (once, on your machine):
+If you don't have a project yet, install Cookiecutter (once, on your machine). First, confirm which Python runtime is in use and install `pipx` through that same runtime:
 
 ```bash
-pip install --user pipx
+python --version
+python -m pip --version
+python -m pip install --user pipx
+python -m pipx ensurepath
+```
+
+Using `python -m pipx ensurepath` matters on Windows: it works even when the `pipx` executable is not yet on `PATH`, and it automatically adds the current user's Python scripts directory.
+
+After this command, **close Git Bash completely**, open it again, and verify the installation:
+
+```bash
+pipx --version
 pipx install cookiecutter
 cookiecutter --version
 ```
+
+::: {.callout-note}
+## How the path works on Windows
+
+The scripts directory depends on the account name and installed Python version. Its general pattern is:
+
+```text
+%APPDATA%\Python\Python3xx\Scripts
+```
+
+For example, `Python313` means Python 3.13. In Git Bash, a Windows path such as `C:\Users\<user>\...` is represented as `/c/Users/<user>/...`. This is only a difference in terminal path notation; it is not a laptop-specific or Windows-version-specific problem.
+:::
+
+::: {.callout-warning}
+## If `pipx` is still not found
+
+Automatically discover the correct scripts directory for the Python runtime in use:
+
+```bash
+python -c "import sysconfig; print(sysconfig.get_path('scripts', 'nt_user'))"
+```
+
+The result will look similar to:
+
+```text
+C:\Users\<user>\AppData\Roaming\Python\Python313\Scripts
+```
+
+First confirm that you closed and reopened Git Bash after running `ensurepath`. Only as a last resort, convert the returned path to Git Bash notation and add it temporarily to `PATH`:
+
+```bash
+export PATH="$PATH:/c/Users/<user>/AppData/Roaming/Python/Python313/Scripts"
+```
+
+Replace `<user>` and `Python313` with the values from your computer. This `export` applies only to the current session. Making it persistent would require adding it to `~/.bashrc`, but `python -m pipx ensurepath` followed by reopening the terminal is the recommended solution.
+:::
 
 Generate the project from the lab's template:
 
@@ -146,14 +193,46 @@ git branch -M main
 git push -u origin main
 ```
 
-Install the computational environment (Pixi handles every Python dependency — `marimo`, `pandas`, `scikit-learn`, `pycytominer`, `copairs`, etc.):
+Install the computational environment (Pixi handles every Python dependency — `marimo`, `pandas`, `scikit-learn`, `pycytominer`, `copairs`, etc.).
+
+### Windows installation: Harmony 2.x
+
+`harmonypy` 2.x **does not provide a Windows wheel**. On Windows, `pixi install` must therefore build the package from source.
+
+Before installing the environment, open **Visual Studio Installer**, choose **Modify** for the Visual Studio Build Tools installation, and install:
+
+- the **Desktop development with C++** workload;
+- the **ClangCL** toolset (the Clang tools for C++ on Windows component).
+
+Then open **Command Prompt (`cmd.exe`)**, go to the root of the project created by Cookiecutter, and run:
+
+```bat
+set CMAKE_GENERATOR=Visual Studio 18 2026
+set CMAKE_GENERATOR_TOOLSET=ClangCL
+pixi install
+pixi run python -c "import harmonypy, inmoose; print('harmonypy', harmonypy.__version__); print('inmoose imported')"
+```
+
+The two variables explicitly select the Visual Studio generator and the ClangCL compiler for the build. They apply only to the current Command Prompt window. The last command validates both Harmony and `inmoose`; consider the installation complete only when both imports succeed.
+
+::: {.callout-warning}
+## Diagnosing common Windows errors
+
+- **`No CMAKE_CXX_COMPILER could be found`** or another compiler-not-found message: confirm that the **Desktop development with C++** workload is installed. Close and reopen Command Prompt after modifying Visual Studio.
+- **`Generator toolset: ClangCL ... not found`** or an error involving `clang-cl`: return to Visual Studio Installer and add the Clang/LLVM component for C++ on Windows. The workload may not include it in every installation.
+- **`Could not create named generator Visual Studio 18 2026`**: CMake did not find that Visual Studio version. Confirm that Visual Studio Build Tools 2026 is installed, then retry in a new Command Prompt window.
+- **The `set` commands had no effect**: the block above uses `cmd.exe` syntax, not PowerShell or Git Bash syntax. Run it in Command Prompt.
+- **`ModuleNotFoundError: harmonypy` or `ModuleNotFoundError: inmoose`**: installation did not finish correctly. From the project root, set both variables again and run `pixi install -v` to expose the failing step; then repeat the validation command.
+:::
+
+On other operating systems, install normally:
 
 ```bash
 pixi install
 pixi run check
 ```
 
-`pixi run check` runs `scripts/check_environment.py`, which simply tries to import every required package. If it prints `Environment check passed.`, you're good to go.
+On Windows, after the platform-specific command above finishes successfully, also run `pixi run check`. It executes `scripts/check_environment.py`, which tries to import every required package. If it prints `Environment check passed.`, you're good to go.
 
 ## Creating a new experiment
 

@@ -81,6 +81,8 @@ Você precisará de:
 - Pixi;
 - um terminal.
 
+No Windows, também será necessário instalar alguns componentes de compilação da Microsoft, descritos abaixo.
+
 ### Git para Windows
 
 Para este tutorial, recomendamos usar o **Git Bash** no Windows. Ele oferece um terminal semelhante ao usado em Linux e macOS e foi o ambiente em que este procedimento foi testado.
@@ -98,6 +100,17 @@ Os comandos deste tutorial funcionaram de forma consistente no Git Bash. Depende
 
 Isso não significa que o PowerShell seja incompatível, mas, para reduzir variações durante o treinamento, recomendamos executar os comandos abaixo no Git Bash.
 :::
+
+### Ferramentas de compilação no Windows
+
+No Windows, instale o **Visual Studio Build Tools** e, no instalador, selecione estes componentes individuais:
+
+- **Ferramentas de Build do MSVC para x64/x86**;
+- **SDK do Windows 11 (10.0.26100.8249)**.
+
+O instalador apresenta uma lista extensa de componentes, mas, para este tutorial, esses dois são suficientes. Não é necessário selecionar todos os itens disponíveis.
+
+[Baixar o Visual Studio Build Tools](https://visualstudio.microsoft.com/pt-br/downloads/)
 
 ### Pixi
 
