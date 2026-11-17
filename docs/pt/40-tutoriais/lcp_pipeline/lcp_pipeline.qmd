@@ -294,6 +294,23 @@ O laboratório usa dois programas (atalhos nos computadores do laboratório) pen
 - **Load Data Generator (LDG)** — gera os arquivos com a localização e as informações mínimas de cada imagem;
 - **Layout Generator** — converte o *platemap* em arquivos de metadados experimentais.
 
+::: {.callout-note}
+## Download para quem está fora do laboratório
+
+Esses programas foram desenvolvidos por **Fernanda Garcia Fossa** e estão disponíveis publicamente no repositório [`broadinstitute/scripts_notebooks_fossa`](https://github.com/broadinstitute/scripts_notebooks_fossa/tree/main/metadata). No repositório, o programa chamado de **Layout Generator** neste curso aparece com o nome **Layout to CSV**.
+
+Para usar no Windows, baixe os dois executáveis:
+
+- [Baixar `Load Data Generator.exe`](https://github.com/broadinstitute/scripts_notebooks_fossa/raw/refs/heads/main/metadata/app/Load%20Data%20Generator.exe);
+- [Baixar `Layout to CSV.exe`](https://github.com/broadinstitute/scripts_notebooks_fossa/raw/refs/heads/main/metadata/app/Layout%20to%20CSV.exe).
+
+Salve os arquivos em uma pasta conhecida e abra cada programa com um clique duplo. Eles são voltados ao **Cytation 5** e reconhecem as imagens usando o padrão de nomes produzido por esse equipamento. Consulte também as [instruções e os arquivos de exemplo](https://github.com/broadinstitute/scripts_notebooks_fossa/blob/main/metadata/README.md).
+
+Para outros sistemas operacionais, o mesmo repositório disponibiliza os notebooks [`Load_Data_Generator.ipynb`](https://github.com/broadinstitute/scripts_notebooks_fossa/blob/main/metadata/Load_Data_Generator.ipynb) e [`Layout_to_CSV.ipynb`](https://github.com/broadinstitute/scripts_notebooks_fossa/blob/main/metadata/Layout_to_CSV.ipynb).
+
+Esta é uma solução provisória para tornar o curso acessível fora do laboratório. No futuro, esses programas serão substituídos por ferramentas mantidas diretamente no fluxo do curso.
+:::
+
 Rodando o LDG:
 
 1. Selecione a pasta com as imagens do experimento, por exemplo:
